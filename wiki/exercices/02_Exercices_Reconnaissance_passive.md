@@ -1,0 +1,42 @@
+# Exercices - Reconnaissance passive
+
+## Mise en situation - 1
+
+Vous voulez en savoir plus sur votre professeur. Vous connaissez les informations suivantes :  
+
+-  Son nom est Étienne Rivard  
+-  Son courriel personnel est etienne@kerzo.ca  
+
+Trouvez les informations suivantes :  
+
+- Noms des membres de sa famille  
+- Adresse civique en 2015  
+- Adresse civique en 2020  
+- Quelles écoles il a fréquenté  
+- Quels diplômes il a reçu  
+- Publication scientifique  
+- Endroit où il s'est marié  
+- Salaire comme enseignant    
+
+## Mise en situation - 2
+
+Vous êtes dans une équipe de piratage éthique. Votre rôle est de faire la reconnaissance passive pour votre client. Le client est le Cégep de Victoriaville.
+
+### 1 - Mode manuel
+
+Commencer avec les outils manuels. Faire la recherche des sous-domaines avec NMMapper's Subdomain Finder.
+
+Voir si vous pouvez trouver d'autres sous-domaines avec le rapport de Google (Google Certificate Transparency Report).
+
+### 2 - Mode automatique
+
+Dans Kali, utiliser l'outil `recon-ng`.
+
+Étapes :  
+
+1. Créer un espace de travail  
+2. Ajouter le domaine principal à la base de données  
+3. Installer et utiliser les différents modules pour la reconnaissance (certificate_transparency, whois_pocs, brute_hosts, recon/hosts-hosts/resolve)  
+4. Générer un rapport en html  
+
+Référence : [Cours 2 - Reconnaissance passive](../lecons/02_Reconnaissance_passive.md)

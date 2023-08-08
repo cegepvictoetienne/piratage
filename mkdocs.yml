@@ -1,0 +1,92 @@
+site_name: Cours de piratage éthique
+site_author: Étienne Rivard
+site_url: https://piratage.kerzo.ca
+theme:
+  name: material
+
+plugins:
+  - search
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - javascript/linktarget.js
+
+nav:
+  - 'Page principale': 'index.md'
+  - 'Leçons':
+      - 'Introduction': 'lecons/01_Introduction.md'
+      - 'Mots de passe': 'lecons/01b_Mots_de_passe.md'
+      - 'Reconnaissance passive': 'lecons/02_Reconnaissance_passive.md'
+      - 'Vaxicode': 'lecons/99_Vaxicode.md'
+      - 'Reconnaissance active': 'lecons/03_Reconnaissance_active.md'
+      - 'Écoute du réseau': 'lecons/04_Ecoute_reseau.md'
+      - 'Gestion de risques': 'lecons/05_Gestion_de_risques.md'
+      - 'Introduction à Metasploit': 'lecons/06_Intro_Metasploit.md'
+      - 'Stratégies de sauvegarde': 'lecons/07_Strategies_sauvegarde.md'
+      - 'Pare-feux': 'lecons/08_Pare_feu.md'
+      - "Inventaire d'actifs": 'lecons/11_Inventaire_Actifs.md'
+      - 'Vulnérabilités Web': 'lecons/19_Vulnerabilites_Web.md'
+      - 'Injections SQL': 'lecons/20_Injection_SQL.md'
+      - 'Cryptographie': 'lecons/10_Cryptographie.md'
+      - 'Pénétration de réseaux sans-fils': 'lecons/13_Penetration_reseau_sans_fils.md'
+      - 'Tests de pénétration': 'lecons/14_Tests_penetration.md'
+      - "Détection d'intrusion": 'lecons/17_Detection_intrusion.md'
+      - 'Lois': 'lecons/18_Lois.md'
+      - 'Antivirus et PDF malicieux': 'lecons/09_Antivirus_et_PDF_malicieux.md'
+      - 'Hameçonnage': 'lecons/10_Hameconnage.md'
+      - 'Sécuriser serveur Apache': 'lecons/21_Securiser_Apache.md'
+      - 'Programmer application sécurisée': 'lecons/22_Programmer_application_securisee.md'
+      - 'Protection injection SQL': 'lecons/23_Protection_Injection_SQL.md'
+      - 'Chiffrement et données sensibles': 'lecons/24_Chiffrement_et_donnees_sensibles.md'
+      - 'Authentification': 'lecons/25_Authentification.md'
+      - 'Cacher du code malicieux': 'lecons/99_CacherCodeMalicieux.md'
+      - 'Attaque de Uber': 'lecons/99_Attaque_Uber.md'
+  - 'Exercices':
+      - 'Bâtir le laboratoire': 'exercices/01_Exercices_Laboratoire.md'
+      - 'Reconnaissance passive': 'exercices/02_Exercices_Reconnaissance_passive.md'
+      - 'Reconnaissance active': 'exercices/03_Reconnaissance_active.md'
+      - 'Écoute du réseau': 'exercices/04_Ecoute_reseau.md'
+      - 'Gestion du risque': 'exercices/05_Gestion_de_risques.md'
+      - 'Intro à Metasploit': 'exercices/06_Intro_Metasploit.md'
+      - 'Stratégie de sauvegarde': 'exercices/07_strategie_sauvegarde.md'
+      - 'Pare-feux': 'exercices/08_Pare_feu.md'
+      - "Classification d'actifs": 'exercices/10_classification_actifs.md'
+      - 'Vulnérabilités Web': 'exercices/19_Vulnerabilites_Web.md'
+      - 'Injections SQL': 'exercices/20_Injection_SQL.md'
+      - 'Cryptographie': 'exercices/10_Cryptographie.md'
+      - 'Pénétration réseau sans-fils': 'exercices/13_Penetration_reseau_sans_fils.md'
+      - 'Tests de pénétration': 'exercices/14_Tests_penetration.md'
+      - "Détection d'intrusion": 'exercices/17_Detection_intrusion.md'
+      - 'Lois': 'exercices/18_Lois.md'
+      - 'PDF Malicieux': 'exercices/09_PDF_Malicieux.md'
+      - 'Hameçonnage': 'exercices/10_Hameconnage.md'
+      - 'Sécuriser serveur Apache': 'exercices/21_Securiser_Apache.md'
+      - 'Programmer application sécurisée': 'exercices/22_Programmer_application_securisee.md'
+      - 'Protection injection SQL': 'exercices/23_Proteger_injection_SQL.md'
+      - 'Chiffrement': 'exercices/24_Chiffrement.md'
+      - 'Authentification': 'exercices/25_Authentification.md'
+  - 'Outils':
+      - 'Cartographie': 'outils/cartographie.md'
+      - 'Labo':
+          - 'Kali': 'labo/Installation_Kali_VirtualBox.md'
+          - 'Metasploitable': 'labo/Installation_Metasploitable_VirtualBox.md'
+          - 'Windows XP': 'labo/Installation_WindowsXP_VirtualBox.md'
+          - 'Gogo': 'labo/Installation_Gogo_VirtualBox.md'
+          - 'Dundermifflin': 'labo/Installation_DunderMifflin.md'
+          - 'Snort': 'labo/Installation_Snort_VirtualBox.md'
+          - 'MonMur': 'labo/Installation_MonMur_VirtualBox.md'
+          - 'Capturer le trafic dans VirtualBox': 'labo/capturer_trafic_virtualbox.md'
+          - 'Démarrer PostGreSQL': 'labo/kali_demarrer_bd_postgresql.md'
+  - 'Évaluations':
+      - 'Évaluation sommative': 'evaluations/evaluation_sommative.md'
+      - 'Examen mi-session': 'evaluations/examen_mi_session.md'
+      - 'Hack Lab': 'evaluations/Hack_lab.md'
+
+markdown_extensions:
+  - admonition
+
+docs_dir: 'wiki'
+site_dir: 'www'
+use_directory_urls: True
