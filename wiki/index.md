@@ -8,7 +8,6 @@ Nom : Étienne Rivard
 
 - Maîtrise en TI
 - Maîtrise en technologies éducatives
-- Doctorat en technologies éducatives (en cours)
 
 Derniers emplois :
 
