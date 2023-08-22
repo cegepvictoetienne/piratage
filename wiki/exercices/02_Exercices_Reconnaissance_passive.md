@@ -16,7 +16,8 @@ Trouvez les informations suivantes :
 - Quels diplômes il a reçu  
 - Publication scientifique  
 - Endroit où il s'est marié  
-- Salaire comme enseignant    
+
+[Inscrivez vos réponses dans ce formulaire](https://forms.office.com/Pages/ResponsePage.aspx?id=JvVsnYGt-EanOqUHqvBs2h4e_CrnfMxFsMr2ZqveBNhURDRTVFZQMVpXRUdYV0JOQzNDUFk3VlpQMi4u)  
 
 ## Mise en situation - 2
 
