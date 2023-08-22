@@ -25,10 +25,9 @@ Quelques outils pour découvrir de l'information sur une entreprise et ses emplo
 Outil  | Utilité    
 --|--
 [LinkedIn](https://www.linkedin.com) | On peut voir facilement la liste des employés d'une entreprise    
-[Registre des entreprise (Québec)](http://www.registreentreprises.gouv.qc.ca/fr/default.aspx)  |  Donne de l'information sur l'entreprise, incluant le nom du propriétaire et possiblement des adresses
+[Registre des entreprise (Québec)](https://www.quebec.ca/entreprises-et-travailleurs-autonomes/obtenir-renseignements-entreprise/recherche-registre-entreprises/acceder-registre-entreprises)  |  Donne de l'information sur l'entreprise, incluant le nom du propriétaire et possiblement des adresses
 [Cadastre du Québec](https://appli.mern.gouv.qc.ca/infolot/) | Consultation du cadastre du Québec  
 [CanLII](https://www.canlii.org/fr/)  |  Tous les documents des tribunaux canadiens  
-[OSINT Framework](https://osintframework.com/)  |  Une grande quantité d'outils d'intelligence du domaine public  
 
 ## Recherche de sous-domaines
 
@@ -42,10 +41,6 @@ Outils utilisés :
 
 ## Recherche par certificats émis
 
-Lorsqu'une compagnie veut protéger les communications d'un serveur, elle achète des certificats. L'information est publique.
-
-[Google Certificate Transparency Report](https://transparencyreport.google.com/https/certificates?hl=en)
-
 Pour trouver l'adresse IP du nom de domaine :
 
 `nslookup aeti.cegepvicto.ca`
@@ -57,18 +52,6 @@ Pour trouver de l'information sur le propriétaire de l'adresse IP :
 Pour avoir plus d'information, censys.io peut aider :
 
 [censys.io search](https://censys.io/ipv4)
-
-## Recherche de surfaces d'attaque avec Google Dorks
-
-Grâce à des recherches dans Google, vous pouvez trouver des services ou des documents qui peuvent aider à découvrir les surfaces d'attaque.
-
-[Google Dorks Database](https://www.exploit-db.com/google-hacking-database)
-
-Ex:
-
-`site:*.cegepvicto.ca intext:"Welcome to JIRA" "Powered by a free Atlassian Jira community"`
-
-`site:*.ca intitle:"index of"`
 
 ## SpiderFoot
 
@@ -102,21 +85,30 @@ Renseigner les champs :
 
 `Note (TEXT) : Cégep de Victoriaville`
 
+Ajouter le cégep comme compagnie :
+
+`db insert companies`
+
+Renseigner les champs :
+
+`company (TEXT) : Cegep de Victoriaville`
+
+
 Les modules de recon-ng sont accessibles via le marketplace.
 
 Pour rechercher un module :
 
-`marketplace search domains`
+`marketplace search whois`
 
 Retourne la liste des modules relatifs aux domaines.
 
 Pour installer un module :
 
-`marketplace install certificate_transparency`
+`marketplace install recon/companies-multi/whois_miner`
 
 Pour utiliser un module :
 
-`modules load certificate_transparency`
+`modules load whois_miner`
 
 Pour avoir de l'information sur le module :
 
@@ -126,17 +118,13 @@ Commencer par voir la liste des options :
 
 `options list`
 
-Assigner une variable :
-
-`options set SOURCE cegepvicto.ca`
-
 Exécuter le module :
 
 `run`
 
-Avec le module certificate_transparency, la découverte des actifs (HOSTS) ajoute les éléments dans la BD. Pour voir la liste des HOSTS :
+Avec le module whois_miner, la découverte des contacts ajoute les éléments dans la BD. Pour voir la liste des contacts :
 
-`show hosts`
+`db query select * from contacts`
 
 Pour faire le suivi de notre reconnaissance, utiliser la commande suivante :
 
