@@ -247,6 +247,13 @@ Essayons d'aller chercher les fichiers de mots de passe de Metasploitable :
 
 ![06-msfconsole-loot](../images/2020/06/06-msfconsole-loot.png)
 
+Après l'extraction des _loot_, il est possible de les déchiffrer avec l'outil `john` :  
+
+`john --wordlist=/usr/share/john/password.lst --rules /root/.msf4/loot/20200605161359_default_192.168.40.7_linux.hashdump_159137603`
+
+![06-john-hashdump](../images/2020/06/06-john-hashdump.png)
+
+
 !!! important  
     Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
 
