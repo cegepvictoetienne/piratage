@@ -56,6 +56,13 @@ Quels sont les autres devoirs des entreprises ?
   -   Du recours à une telle technologie ;
   -   Des moyens offerts pour activer les fonctions permettant d’identifier, de localiser ou d’effectuer un profilage. En d’autres mots, ces technologies ne pourront être activées par défaut; ce sera à la personne concernée de les activer si elle le souhaite.
 
+### Section de la loi sur les témois (cookies)
+
+La loi 25 prévoit que les organisations devront obtenir le consentement de la personne concernée avant de recueillir, d’utiliser ou de communiquer des renseignements personnels à l’aide de témoins (cookies) ou de technologies similaires.
+
+Les organisations devront également informer les personnes concernées de la finalité de l’utilisation de ces technologies et des moyens offerts pour les désactiver.
+
+![image](../images/18-banniere-temoins.png)
 
 [Pour plus de détails](https://www.cai.gouv.qc.ca/espace-evolutif-modernisation-lois/)   
 
