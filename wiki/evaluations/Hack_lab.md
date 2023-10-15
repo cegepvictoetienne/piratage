@@ -15,7 +15,7 @@ Pour ceux qui terminent plus tôt, essayez de cracker [la VM gogo][gogo] et son 
 
 Vous allez produire un rapport qui détaillera toutes les étapes de vos tests de pénétration.
 
-Le modèle de rapport se trouve [ici.](https://cegepvicto.sharepoint.com/:w:/s/Section_26332/EUpJiMuoaLhAtCjdgmHtTFcBPeWExzOHUu4LbDgoKLkxOA?e=zMRysq)
+Le modèle de rapport se trouve [ici.](https://cegepvicto.sharepoint.com/:w:/s/guidemac/Ef6q_OhmqwlCsLsHjHSCPPQBRlHKMBUIuyldcp4-Oq7eZQ?e=EOhbCf)
 
 Voici les sections de votre rapport :
 
