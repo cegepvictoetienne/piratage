@@ -28,6 +28,7 @@ Que sont les renseignements personnels sensibles ?
 - dossier de crédit,  
 
 Qu'est-ce qui exclut de la loi ?  
+
 - Le titre de votre poste,  
 - Le numéro de téléphone au bureau,  
 - Le courriel professionnel,  
@@ -49,14 +50,14 @@ Quels sont les autres devoirs des entreprises ?
 - les entreprises doivent détruire les renseignements personnels lorsque les fins auxquelles ils ont été recueillis ou utilisés sont accomplies.  
 - les entreprises doivent divulguer à la Commission d'accès à l'information la création d'une banque de renseignements biométriques au moins 60 jours avant sa mise en place.  
 - Sauf exception, un renseignement personnel ne pourra être utilisé à une autre fin par une organisation, à moins que la personne concernée n’y consente.  
-- À compter du 22 septembre 2023, les personnes pourront demander aux entreprises de cesser de diffuser leurs renseignements personnels ou de désindexer tout hyperlien rattaché à leur nom donnant accès à des renseignements si cette diffusion leur cause préjudice ou contrevient à la loi ou à une ordonnance judiciaire (droit à l’effacement ou à l’oubli).  
+- Les personnes pourront demander aux entreprises de cesser de diffuser leurs renseignements personnels ou de désindexer tout hyperlien rattaché à leur nom donnant accès à des renseignements si cette diffusion leur cause préjudice ou contrevient à la loi ou à une ordonnance judiciaire (droit à l’effacement ou à l’oubli).  
 - Les organisations devront aviser la Commission et les personnes concernées de tout incident de confidentialité impliquant un renseignement personnel qu’elles détiennent et présentant un risque de préjudice sérieux.
 - les organisations recueillant des renseignements personnels auprès de la personne concernée en ayant recours à une technologie comprenant des fonctions permettant de l’identifier, de la localiser ou d’effectuer un profilage de celle-ci devront au préalable l’informer :
 
   -   Du recours à une telle technologie ;
   -   Des moyens offerts pour activer les fonctions permettant d’identifier, de localiser ou d’effectuer un profilage. En d’autres mots, ces technologies ne pourront être activées par défaut; ce sera à la personne concernée de les activer si elle le souhaite.
 
-### Section de la loi sur les témois (cookies)
+### Section de la loi sur les témoins (cookies)
 
 La loi 25 prévoit que les organisations devront obtenir le consentement de la personne concernée avant de recueillir, d’utiliser ou de communiquer des renseignements personnels à l’aide de témoins (cookies) ou de technologies similaires.
 
@@ -77,7 +78,8 @@ Les organisations assujetties à des lois provinciales essentiellement similaire
 - Toutes les entreprises qui exercent des activités au Canada
 - Les organisations sous réglementation fédérale qui exercent leurs activités au Canada sont toujours assujetties à la LPRPDE.
 
-Ex:
+Ex :  
+
 - Les banques  
 - Les aéroports  
 - Les radiodiffuseurs  
@@ -173,6 +175,7 @@ Quels sont les droits des employés ?
 
 
 Quels sont les devoirs des entreprises ?  
+
 - Ne pas obliger les employés de connaître une autre langue que le français.  
 - Offrir tout produit ou service en français.  
 - Les communications avec les clients québécois doivent être en français par défaut et par la suite le client peut choisir de changer la langue.  
@@ -180,7 +183,8 @@ Quels sont les devoirs des entreprises ?
 
 ## Loi canadienne anti-pourriel  
 
-Qu'est-ce qu'un pourriel?
+Qu'est-ce qu'un pourriel?  
+
 - Un courriel non sollicité.  
 
 Qu'est-ce qu'un pourriel au sens de la loi?  
@@ -199,7 +203,8 @@ La définition juridique de pourriel comprend également :
 
 La LCAP exige que tout envoi de courriel commercial soit consenti par le destinataire.  
 
-Les messages doivent contenir : 
+Les messages doivent contenir :  
+
 - Le nom commercial de l'entreprise;  
 - Une adresse postale actuelle et un numéro de téléphone;  
 - une adresse électronique ou une adresse de site Web;  
