@@ -86,7 +86,11 @@ nav:
 
 markdown_extensions:
   - admonition
-
+  - pymdownx.critic
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 docs_dir: 'wiki'
 site_dir: 'www'
 use_directory_urls: True
