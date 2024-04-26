@@ -50,6 +50,11 @@ Exécutons la nouvelle page :
 
 Certaines application Web sont susceptibles à une attaque par force brute. Pour démontrer comment faire une telle attaque, nous allons utiliser BurpSuite.  
 
+Pour installer BurpSuite :  
+
+`sudo apt install burpsuite` 
+
+
 1 - Créer un projet temporaire :  
 
 ![20-burpsuite-projet-temporaire](../images/2020/07/20-burpsuite-projet-temporaire.png)
@@ -58,53 +63,50 @@ Certaines application Web sont susceptibles à une attaque par force brute. Pour
 
 ![20-burpsuite-demarrer-burp](../images/2020/07/20-burpsuite-demarrer-burp.png)
 
-3 - Dans l'onglet proxy, mettre intercept à off :  
 
-![20-burpsuite-intercept-off](../images/2020/07/20-burpsuite-intercept-off.png)
-
-4 - Dans firefox, configurer le proxy :  
+3 - Dans firefox, configurer le proxy :  
 
 ![20-firefox-proxy](../images/2020/07/20-firefox-proxy.png)
 
-5 - Dans firefox, accéder à la page de DVWA :
+4 - Dans firefox, accéder à la page de DVWA :
 
 ![19-firefox-brute-force](../images/2020/07/19-firefox-brute-force.png)  
 
-6 - Mettre intercept à on dans Burpsuite :  
+5 - Mettre intercept à on dans Burpsuite :  
 
 ![20-burpsuite-intercept-on](../images/2020/07/20-burpsuite-intercept-on.png)
 
-7 - Dans firefox, entrer 'user1' et 'pass1' et cliquer sur **login** :  
+6 - Dans firefox, entrer 'user1' et 'pass1' et cliquer sur **login** :  
 
 ![19-firefox-login-user1-pass1](../images/2020/07/19-firefox-login-user1-pass1.png)
 
-8 - Dans BurpSuite, sélectionner l'action **send to intruder** :  
+7 - Dans BurpSuite, sélectionner l'action **send to intruder** :  
 
 ![19-burpsuite-send-to-intruder](../images/2020/07/19-burpsuite-send-to-intruder.png)
 
-9 - Sélectionner l'onglet **intruder**, le sous-onglet **position** et changer le type d'attaque pour **cluster bomb** :  
+8 - Sélectionner l'onglet **intruder**, le sous-onglet **position** et changer le type d'attaque pour **cluster bomb** :  
 
 ![19-burpsuite-payload-position-attack-type](../images/2020/07/19-burpsuite-payload-position-attack-type.png)
 
-10 - Effacer les positions et sélectionner **user1** et **pass1** :  
+9 - Sélectionner **user1** et **pass1** :  
 
 ![19-burpsuite-positions-add](../images/2020/07/19-burpsuite-positions-add.png)
 
-11 - Dans l'onglet payloads, ajouter les codes utilisateurs dans le payload 1 et les mots de passe dans le payload 2 :  
+10 - Dans l'onglet payloads, ajouter les codes utilisateurs dans le payload 1 et les mots de passe dans le payload 2 :  
 
 ![19-burpsuite-payload-1](../images/2020/07/19-burpsuite-payload-1.png)
 
 ![19-burpsuite-payload-2](../images/2020/07/19-burpsuite-payload-2.png)
 
-12 - Dans l'onglet options, ajouter un Grep - Match pour déterminer si l'attaque a réussi ou non :  
+11 - Dans l'onglet options, ajouter un Grep - Match pour déterminer si l'attaque a réussi ou non :  
 
 ![19-burpsuite-option-grep-match](../images/2020/07/19-burpsuite-option-grep-match.png)
 
-13 - Lancer l'attaque :  
+12 - Lancer l'attaque :  
 
 ![19-burpsuite-start-attack](../images/2020/07/19-burpsuite-start-attack.png)
 
-14 - Résultats de l'attaque, nous avons trouvé 2 mots de passe valides :  
+13 - Résultats de l'attaque, nous avons trouvé 1 mot de passe valide :  
 
 ![19-burpsuite-attack-results](../images/2020/07/19-burpsuite-attack-results.png)
 

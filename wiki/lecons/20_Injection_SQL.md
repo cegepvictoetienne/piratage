@@ -238,43 +238,17 @@ Truc:  `0x0a` et le caractère de retour de chariot, permet d'afficher sur plusi
 
 Pour notre prochain test, nous allons utiliser deux outils :
 
-1. Burpsuite : pour capturer les cookies  
+1. Firefox : pour capturer les cookies  
 2. SQLMap : pour automatiser l'injection SQL    
 
 
-### BurpSuite  
+### Firefox  
 
-BurpSuite est un outil qui permet d'intercepter les communications HTTP en agissant comme proxy.  
+Nous voulons extraire les cookies de la page Web de DVWA car les cookies contiendrons les informations de la session PHP qui est créée lors du login. SQLMap ne peut se loguer lui-même, mais peut utiliser les cookies.
 
-Nous voulons intercepter les cookies de la page Web de DVWA car les cookies contiendrons les informations de la session PHP qui est créée lors du login. SQLMap ne peut se loguer lui-même, mais peut utiliser les cookies.
+1 - Dans les outils développeur de Firefox, ouvrir le stockage des cookies:  
 
-1 - Créer un projet temporaire :  
-
-![20-burpsuite-projet-temporaire](../images/2020/07/20-burpsuite-projet-temporaire.png)
-
-2 - Démarrer Burp :  
-
-![20-burpsuite-demarrer-burp](../images/2020/07/20-burpsuite-demarrer-burp.png)
-
-3 - Dans l'onglet proxy, mettre intercept à off :  
-
-![20-burpsuite-intercept-off](../images/2020/07/20-burpsuite-intercept-off.png)
-
-4 - Dans firefox, configurer le proxy :  
-
-![20-firefox-proxy](../images/2020/07/20-firefox-proxy.png)
-
-5 - Dans firefox, accéder à la page de DVWA :  
-
-![20-firefox-dvwa-login-page](../images/2020/07/20-firefox-dvwa-login-page.png)
-
-6 - Une fois authentifié, mettre intercept à on dans Burpsuite :  
-
-![20-burpsuite-intercept-on](../images/2020/07/20-burpsuite-intercept-on.png)
-
-7 - Rafraichir la page Web. Dans BurpSuite, vous devriez voir le cookie :  
-
-![20-burpsuite-cookie-captured](../images/2020/07/20-burpsuite-cookie-captured.png)
+![20-firefox-cookies](../images/2020/11/20-firefox-cookies.png)
 
 Nous avons maintenant le cookie pour utiliser SQLMap.
 

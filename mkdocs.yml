@@ -15,11 +15,11 @@ extra_javascript:
 
 nav:
   - 'Page principale': 'index.md'
+  - 'Horaire': 'horaire.md'
   - 'Leçons':
       - 'Introduction': 'lecons/01_Introduction.md'
       - 'Mots de passe': 'lecons/01b_Mots_de_passe.md'
       - 'Reconnaissance passive': 'lecons/02_Reconnaissance_passive.md'
-      - 'Vaxicode': 'lecons/99_Vaxicode.md'
       - 'Reconnaissance active': 'lecons/03_Reconnaissance_active.md'
       - 'Écoute du réseau': 'lecons/04_Ecoute_reseau.md'
       - 'Gestion de risques': 'lecons/05_Gestion_de_risques.md'
@@ -89,8 +89,9 @@ markdown_extensions:
   - pymdownx.critic
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 docs_dir: 'wiki'
 site_dir: 'www'
 use_directory_urls: True

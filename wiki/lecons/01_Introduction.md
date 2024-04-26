@@ -86,4 +86,3 @@ Machine 3 - Poste de travail Windows XP ([Installer Windows XP](../labo/Installa
 [Liste des outils de Kali Linux](https://tools.kali.org/tools-listing)  
 [OWASP - Vulnerabilities](https://owasp.org/www-community/vulnerabilities/)  
 [CVE List](https://cve.mitre.org/cve/)  
-[Équipe rouge vs équipe bleue](https://blog.eccouncil.org/red-team-vs-blue-team/)  
