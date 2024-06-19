@@ -50,6 +50,7 @@ nav:
       - 'Écoute du réseau': 'exercices/04_Ecoute_reseau.md'
       - 'Gestion du risque': 'exercices/05_Gestion_de_risques.md'
       - 'Intro à Metasploit': 'exercices/06_Intro_Metasploit.md'
+      - 'Dossier de sécurité': 'exercices/dossier_securite.md'
       - 'Stratégie de sauvegarde': 'exercices/07_strategie_sauvegarde.md'
       - 'Pare-feux': 'exercices/08_Pare_feu.md'
       - "Classification d'actifs": 'exercices/10_classification_actifs.md'
