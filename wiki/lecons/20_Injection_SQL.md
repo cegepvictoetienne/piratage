@@ -238,19 +238,19 @@ Truc:  `0x0a` et le caractère de retour de chariot, permet d'afficher sur plusi
 
 Pour notre prochain test, nous allons utiliser deux outils :
 
-1. Firefox : pour capturer les cookies  
+1. Firefox : pour capturer les témoins  
 2. SQLMap : pour automatiser l'injection SQL    
 
 
 ### Firefox  
 
-Nous voulons extraire les cookies de la page Web de DVWA car les cookies contiendrons les informations de la session PHP qui est créée lors du login. SQLMap ne peut se loguer lui-même, mais peut utiliser les cookies.
+Nous voulons extraire les témoins de la page Web de DVWA car les témoins contiendrons les informations de la session PHP qui est créée lors du login. SQLMap ne peut se loguer lui-même, mais peut utiliser les témoins.
 
-1 - Dans les outils développeur de Firefox, ouvrir le stockage des cookies:  
+1 - Dans les outils développeur de Firefox, ouvrir le stockage des témoins:  
 
 ![20-firefox-cookies](../images/2020/11/20-firefox-cookies.png)
 
-Nous avons maintenant le cookie pour utiliser SQLMap.
+Nous avons maintenant le témoin pour utiliser SQLMap.
 
 ### SQLMap
 

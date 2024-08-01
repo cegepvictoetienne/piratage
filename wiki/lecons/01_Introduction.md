@@ -38,7 +38,7 @@ Une vulnérabilité peut être trouvée dans :
 Exemples de vulnérabilités :  
 
 - Injection SQL   
-- Dépassement de mémoire tampon (Buffer Overflow)  
+- Dépassement de mémoire tampon
 
 La communauté de cybersécurité compile la liste des vulnérabilités nommée CVE (Common vulnerabilities and exposures)
 

@@ -2,7 +2,7 @@
 
 Définition de wikipedia :
 
-Un pare-feu (de l'anglais _firewall_) est un logiciel et/ou un matériel permettant de faire respecter la politique de sécurité du réseau, celle-ci définissant quels sont les types de communications autorisés sur ce réseau informatique. Il surveille et contrôle les applications et les flux de données (paquets).
+Un pare-feu est un logiciel et/ou un matériel permettant de faire respecter la politique de sécurité du réseau, celle-ci définissant quels sont les types de communications autorisés sur ce réseau informatique. Il surveille et contrôle les applications et les flux de données (paquets).
 
 Types de pare-feux :  
 
@@ -57,7 +57,7 @@ Appareils spécialisés qui n'ont qu'une fonction, protéger le réseau interne 
 
 ### Windows
 
-Le pare-feu de Microsoft Windows et un pare-feu personnel.
+Le pare-feu de Microsoft Windows est un pare-feu personnel.
 
 ![08-pare-feu-windows-status](../images/2020/06/08-pare-feu-windows-status.png)
 

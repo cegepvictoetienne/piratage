@@ -12,6 +12,7 @@ extra_css:
 
 extra_javascript:
   - javascript/linktarget.js
+  - javascript/addTranslations.js
 
 nav:
   - 'Page principale': 'index.md'

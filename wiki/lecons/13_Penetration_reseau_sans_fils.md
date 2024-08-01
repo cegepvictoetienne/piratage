@@ -4,18 +4,18 @@
 
 Le protocole 802.11 permet la communication entre appareils via les ondes radio. Les ondes radio voyagent librement dans l'air et peuvent être écoutées par n'importe quel appareil qui se trouve assez proche pour recevoir l'onde.
 
-C'est pourquoi il a fallu avoir des protocoles de cryptage des paquets d'informations envoyées, pour éliminer l'écoute illicite.
+C'est pourquoi il a fallu avoir des protocoles de chiffrement des paquets d'informations envoyées, pour éliminer l'écoute illicite.
 
 ## Protocoles de sécurité
 
-Il y a 3 protocoles de cryptage des communications sans-fils :  
+Il y a 3 protocoles de chiffrement des communications sans-fils :  
 - WEP : Très insécure, utilise l'algorithme RC4  
 - WPA : Utilise TKIP et est basé sur WEP  
 - WPA2 : Utilise AES, jugé très sécuritaire, même aujourd'hui  
 
 ## WPA2 et l'échange en 4 étapes
 
-WPA2 utilise un échange entre le point d'accès (_access point ou AP_) et le client en 4 étapes (_4-way handshake_). L'échange est pour prouver que AP et le client connaissent tous les deux la clé de cryptage, sans divulguer la clé. Les deux parties cryptent des messages pour l'autre avec la clé et lorsqu'ils décryptent le message de l'autre, ils ont la certitude que l'autre possède la clé.
+WPA2 utilise un échange entre le point d'accès (_access point ou AP_) et le client en 4 étapes (_4-way handshake_). L'échange est pour prouver que AP et le client connaissent tous les deux la clé de chiffrement, sans divulguer la clé. Les deux parties chiffrent des messages pour l'autre avec la clé et lorsqu'ils déchiffrent le message de l'autre, ils ont la certitude que l'autre possède la clé.
 
 ![13-WPA2-4-way-handshake](../images/2020/06/13-wpa2-4-way-handshake.png)
 

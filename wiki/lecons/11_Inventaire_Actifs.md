@@ -64,7 +64,7 @@ Avoir un inventaire de tout ce qui est connecté sur le réseau de l'entreprise 
 
 Pour être bien protégé, il faut connaître ces informations :  
 
-- Les systèmes d'exploitation, leurs versions et leurs niveaux de rustines (_patch_)  
+- Les systèmes d'exploitation, leurs versions et leurs niveaux de rustines  
 - Les logiciels installés et leurs versions  
 - Les aspects matériels tels que le processeur et autres périphériques
 

@@ -2,7 +2,7 @@
 
 Wireshark est un analyseur de protocole réseau. Avec cet outil, nous pouvons collecter tous les paquets IP qui se transigent sur le réseau.
 
-Dans notre laboratoire, Wireshark sera utilisé dans Kali. Normalement, VirtualBox gère le réseau comme un commutateur (_switch_). Le trafic réseau entre 2 machines ne peut pas être vu par une 3ème machine.
+Dans notre laboratoire, Wireshark sera utilisé dans Kali. Normalement, VirtualBox gère le réseau comme un commutateur. Le trafic réseau entre 2 machines ne peut pas être vu par une 3ème machine.
 
 Ex:
 
@@ -60,7 +60,7 @@ Ce que ça donne est le filtre `dns.id==<id_transaction>`
     `ip.src == 172.217.13.195 or ip.dst == 172.217.13.195`
     ![04-wireshark-ip-src-or-ip-dst](../images/2020/06/04-wireshark-ip-src-or-ip-dst.png)
 
-Prendre note des 3 premières transactions avec le protocole TCP. On peut y voir clairement la négociation à 3 étapes (_3-way-handshake_) de TCP entre les deux intervenants.
+Prendre note des 3 premières transactions avec le protocole TCP. On peut y voir clairement la connexion en trois étapes de TCP entre les deux intervenants.
 
 À noter que `ip.addr == 172.217.13.195` est équivalent à `ip.src == 172.217.13.195 or ip.dst == 172.217.13.195`
 

@@ -140,7 +140,7 @@ Médium | Coûts | Vitesse | Accessibilité | Protection en cas de feu
 --|--|--|--|--
 NAS | $$ | +++ | Toujours | Non
 HDD Externe  | $  | ++ | Quand connecté | Quand entreposé hors du bâtiment
-Librairie rubans (Tape)  | $$ | ++ | Quand le ruban est dans le lecteur | Quand entreposé hors du bâtiment
+Librairie de rubans  | $$ | ++ | Quand le ruban est dans le lecteur | Quand entreposé hors du bâtiment
 Infonuagique  | $$ | + | Toujours | Oui
 
 ### Stratégie typique

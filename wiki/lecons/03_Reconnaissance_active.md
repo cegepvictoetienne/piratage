@@ -2,23 +2,23 @@
 
 ## Reconnaissance active avec nmap
 
-Nous allons activement se connecter aux actifs, soit avec des ping, soit des balayages de ports. Ce peut actives des alarmes du côté de la cible.
+Nous allons activement se connecter aux actifs, soit avec des ping, soit des balayages de ports. Ceci peut activer des alarmes du côté de la cible.
 
 ### Découverte d’actifs avec nmap
 
-Nmap (network mapping) peut découvrir quels actifs se retrouve dans un réseau
+Nmap (network mapping) peut découvrir quels actifs se retrouvent dans un réseau
 
 Utilise le ICMP Ping
 
 `nmap -sn 192.168.40.0/24`
 
-La switch **–sn** sert à faire un simple ping pour chaque adresse de la plage sélectionnée.
+Le drapeau **–sn** sert à faire un simple ping pour chaque adresse de la plage sélectionnée.
 
 ### Découverte de services d'un actif
 
 Nmap (network mapping) peut découvrir quels services (ports) sont ouverts chez la cible.
 
-Une des méthodes de nmap pour découvrir les services d'un actif est de faire une connexion complète TCP. Le diagramme suivant explique l'établissement de la connexion en trois étapes. (3-way handshake)
+Une des méthodes de nmap pour découvrir les services d'un actif est de faire une connexion complète TCP. Le diagramme suivant explique l'établissement de la connexion en trois étapes.
 
 !!! figure "Transaction TCP"
     ![02_Transaction_TCP](../images/2020/05/02-transaction-tcp.png)  
@@ -28,7 +28,7 @@ Pour balayer un actif :
 
 `nmap -sT 192.168.40.2`
 
-La switch **–sT** fait une connection complète (SYN,SYN/ACK,ACK) sur tous les ports de la cible
+Le drapeau **–sT** fait une connection complète (SYN,SYN/ACK,ACK) sur tous les ports de la cible
 
 Pour un balayage plus rapide, on peut faire un balayage à demi ouvert. On ne termine pas la connexion en trois étapes.
 
@@ -39,9 +39,9 @@ Pour un balayage plus rapide, on peut faire un balayage à demi ouvert. On ne te
 
 `nmap -sS 192.168.40.2`
 
-La switch **–sS** fait une connection incomplète (SYN,SYN/ACK) sur tous les ports de la cible
+Le drapeau **–sS** fait une connection incomplète (SYN,SYN/ACK) sur tous les ports de la cible
 
-Autres switch intéressantes :
+Autres drapeaux intéressants :
 
 - **-vv** pour verbose (information plus détaillée)
 - **-T4** pour accélérer le balayage
@@ -58,7 +58,7 @@ Utilise l’empreinte digitale de la cible.
 
 `nmap -sS -O 192.168.40.2`
 
-La switch **–O** essaie de deviner l’OS de la cible selon les ports ouverts et leur réponse.
+Le drapeau **–O** essaie de deviner l’OS de la cible selon les ports ouverts et leur réponse.
 
 ## Découverte active avec OpenVAS
 
