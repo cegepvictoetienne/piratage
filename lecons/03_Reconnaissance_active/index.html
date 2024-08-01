@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
       
 
@@ -2035,15 +2035,15 @@
 
 <h1 id="reconnaissance-active">Reconnaissance active</h1>
 <h2 id="reconnaissance-active-avec-nmap">Reconnaissance active avec nmap</h2>
-<p>Nous allons activement se connecter aux actifs, soit avec des ping, soit des balayages de ports. Ce peut actives des alarmes du côté de la cible.</p>
+<p>Nous allons activement se connecter aux actifs, soit avec des ping, soit des balayages de ports. Ceci peut activer des alarmes du côté de la cible.</p>
 <h3 id="decouverte-dactifs-avec-nmap">Découverte d’actifs avec nmap</h3>
-<p>Nmap (network mapping) peut découvrir quels actifs se retrouve dans un réseau</p>
+<p>Nmap (network mapping) peut découvrir quels actifs se retrouvent dans un réseau</p>
 <p>Utilise le ICMP Ping</p>
 <p><code>nmap -sn 192.168.40.0/24</code></p>
-<p>La switch <strong>–sn</strong> sert à faire un simple ping pour chaque adresse de la plage sélectionnée.</p>
+<p>Le drapeau <strong>–sn</strong> sert à faire un simple ping pour chaque adresse de la plage sélectionnée.</p>
 <h3 id="decouverte-de-services-dun-actif">Découverte de services d'un actif</h3>
 <p>Nmap (network mapping) peut découvrir quels services (ports) sont ouverts chez la cible.</p>
-<p>Une des méthodes de nmap pour découvrir les services d'un actif est de faire une connexion complète TCP. Le diagramme suivant explique l'établissement de la connexion en trois étapes. (3-way handshake)</p>
+<p>Une des méthodes de nmap pour découvrir les services d'un actif est de faire une connexion complète TCP. Le diagramme suivant explique l'établissement de la connexion en trois étapes.</p>
 <div class="admonition figure">
 <p class="admonition-title">Transaction TCP</p>
 <p><img alt="02_Transaction_TCP" src="../../images/2020/05/02-transaction-tcp.png" /><br />
@@ -2051,7 +2051,7 @@
 </div>
 <p>Pour balayer un actif :</p>
 <p><code>nmap -sT 192.168.40.2</code></p>
-<p>La switch <strong>–sT</strong> fait une connection complète (SYN,SYN/ACK,ACK) sur tous les ports de la cible</p>
+<p>Le drapeau <strong>–sT</strong> fait une connection complète (SYN,SYN/ACK,ACK) sur tous les ports de la cible</p>
 <p>Pour un balayage plus rapide, on peut faire un balayage à demi ouvert. On ne termine pas la connexion en trois étapes.</p>
 <div class="admonition figure">
 <p class="admonition-title"> </p>
@@ -2059,8 +2059,8 @@
 L'actif 1 ne termine pas la connexion.</p>
 </div>
 <p><code>nmap -sS 192.168.40.2</code></p>
-<p>La switch <strong>–sS</strong> fait une connection incomplète (SYN,SYN/ACK) sur tous les ports de la cible</p>
-<p>Autres switch intéressantes :</p>
+<p>Le drapeau <strong>–sS</strong> fait une connection incomplète (SYN,SYN/ACK) sur tous les ports de la cible</p>
+<p>Autres drapeaux intéressants :</p>
 <ul>
 <li><strong>-vv</strong> pour verbose (information plus détaillée)</li>
 <li><strong>-T4</strong> pour accélérer le balayage</li>
@@ -2072,7 +2072,7 @@ L'actif 1 ne termine pas la connexion.</p>
 <p>Nmap (network mapping) peut deviner quel OS roule sur la cible.</p>
 <p>Utilise l’empreinte digitale de la cible.</p>
 <p><code>nmap -sS -O 192.168.40.2</code></p>
-<p>La switch <strong>–O</strong> essaie de deviner l’OS de la cible selon les ports ouverts et leur réponse.</p>
+<p>Le drapeau <strong>–O</strong> essaie de deviner l’OS de la cible selon les ports ouverts et leur réponse.</p>
 <h2 id="decouverte-active-avec-openvas">Découverte active avec OpenVAS</h2>
 <p>OpenVAS est un outil qui détecte toutes les vulnérabilités connues et documentées des actifs balayés.</p>
 <p>Pour installer OpenVAS :</p>
@@ -2209,9 +2209,11 @@ L'actif 1 ne termine pas la connexion.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="../../javascript/linktarget.js"></script>
+      
+        <script src="../../javascript/addTranslations.js"></script>
       
     
   </body>

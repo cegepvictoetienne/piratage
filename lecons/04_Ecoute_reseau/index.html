@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
       
 
@@ -2005,7 +2005,7 @@
 
 <h1 id="ecoute-du-reseau-avec-wireshark">Écoute du réseau avec Wireshark</h1>
 <p>Wireshark est un analyseur de protocole réseau. Avec cet outil, nous pouvons collecter tous les paquets IP qui se transigent sur le réseau.</p>
-<p>Dans notre laboratoire, Wireshark sera utilisé dans Kali. Normalement, VirtualBox gère le réseau comme un commutateur (<em>switch</em>). Le trafic réseau entre 2 machines ne peut pas être vu par une 3ème machine.</p>
+<p>Dans notre laboratoire, Wireshark sera utilisé dans Kali. Normalement, VirtualBox gère le réseau comme un commutateur. Le trafic réseau entre 2 machines ne peut pas être vu par une 3ème machine.</p>
 <p>Ex:</p>
 <p>Machine A : Windows XP<br />
 Machine B : Metasploitable<br />
@@ -2059,7 +2059,7 @@ Machine C : Kali  </p>
 <p><code>ip.src == 172.217.13.195 or ip.dst == 172.217.13.195</code>
 <img alt="04-wireshark-ip-src-or-ip-dst" src="../../images/2020/06/04-wireshark-ip-src-or-ip-dst.png" /></p>
 </div>
-<p>Prendre note des 3 premières transactions avec le protocole TCP. On peut y voir clairement la négociation à 3 étapes (<em>3-way-handshake</em>) de TCP entre les deux intervenants.</p>
+<p>Prendre note des 3 premières transactions avec le protocole TCP. On peut y voir clairement la connexion en trois étapes de TCP entre les deux intervenants.</p>
 <p>À noter que <code>ip.addr == 172.217.13.195</code> est équivalent à <code>ip.src == 172.217.13.195 or ip.dst == 172.217.13.195</code></p>
 <p>Autres recherches possibles :</p>
 <p><code>tcp.port == 443</code><br />
@@ -2168,9 +2168,11 @@ Ce n'est pas très facile de voir ce qui se passe. Telnet envoie les touches app
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="../../javascript/linktarget.js"></script>
+      
+        <script src="../../javascript/addTranslations.js"></script>
       
     
   </body>

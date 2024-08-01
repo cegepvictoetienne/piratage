@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
       
 
@@ -2078,14 +2078,14 @@
 <h1 id="penetration-de-reseau-sans-fils">Pénétration de réseau sans-fils</h1>
 <h2 id="nature-du-reseau-sans-fils">Nature du réseau sans-fils</h2>
 <p>Le protocole 802.11 permet la communication entre appareils via les ondes radio. Les ondes radio voyagent librement dans l'air et peuvent être écoutées par n'importe quel appareil qui se trouve assez proche pour recevoir l'onde.</p>
-<p>C'est pourquoi il a fallu avoir des protocoles de cryptage des paquets d'informations envoyées, pour éliminer l'écoute illicite.</p>
+<p>C'est pourquoi il a fallu avoir des protocoles de chiffrement des paquets d'informations envoyées, pour éliminer l'écoute illicite.</p>
 <h2 id="protocoles-de-securite">Protocoles de sécurité</h2>
-<p>Il y a 3 protocoles de cryptage des communications sans-fils :<br />
+<p>Il y a 3 protocoles de chiffrement des communications sans-fils :<br />
 - WEP : Très insécure, utilise l'algorithme RC4<br />
 - WPA : Utilise TKIP et est basé sur WEP<br />
 - WPA2 : Utilise AES, jugé très sécuritaire, même aujourd'hui  </p>
 <h2 id="wpa2-et-lechange-en-4-etapes">WPA2 et l'échange en 4 étapes</h2>
-<p>WPA2 utilise un échange entre le point d'accès (<em>access point ou AP</em>) et le client en 4 étapes (<em>4-way handshake</em>). L'échange est pour prouver que AP et le client connaissent tous les deux la clé de cryptage, sans divulguer la clé. Les deux parties cryptent des messages pour l'autre avec la clé et lorsqu'ils décryptent le message de l'autre, ils ont la certitude que l'autre possède la clé.</p>
+<p>WPA2 utilise un échange entre le point d'accès (<em>access point ou AP</em>) et le client en 4 étapes (<em>4-way handshake</em>). L'échange est pour prouver que AP et le client connaissent tous les deux la clé de chiffrement, sans divulguer la clé. Les deux parties chiffrent des messages pour l'autre avec la clé et lorsqu'ils déchiffrent le message de l'autre, ils ont la certitude que l'autre possède la clé.</p>
 <p><img alt="13-WPA2-4-way-handshake" src="../../images/2020/06/13-wpa2-4-way-handshake.png" /></p>
 <ol>
 <li>L'AP envoie une valeur nonce (ANonce) au client. Le client se sert du nonce pour construire sa clé.</li>
@@ -2190,9 +2190,11 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="../../javascript/linktarget.js"></script>
+      
+        <script src="../../javascript/addTranslations.js"></script>
       
     
   </body>
