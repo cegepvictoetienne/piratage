@@ -1985,23 +1985,23 @@
 <p>Pour l'authentification multi-facteurs, voici un module PHP qui permet d'utiliser l'outil de Google.  </p>
 <p><a href="https://github.com/PHPGangsta/GoogleAuthenticator">PHP Package Google Auth</a>  </p>
 <p>Voici comment intégrer 2FA dans MonMur :  </p>
-<p>login.php :  </p>
-<pre><code>&lt;?php
+<p>login.php :<br />
+<div class="highlight"><pre><span></span><code>&lt;?php
 
-  require_once('database.php');
-  require_once('commun.php');
+  require_once(&#39;database.php&#39;);
+  require_once(&#39;commun.php&#39;);
 
   session_start();
 
-  $erreur = '';
+  $erreur = &#39;&#39;;
 
   if($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;){
-      if(authentifier($_POST['codeutilisateur'], $_POST['motdepasse'])) {
-        if (lireCompteMultifacteur($_POST['codeutilisateur']) =='') {
-          $_SESSION['codeutilisateur'] = $_POST['codeutilisateur'];
+      if(authentifier($_POST[&#39;codeutilisateur&#39;], $_POST[&#39;motdepasse&#39;])) {
+        if (lireCompteMultifacteur($_POST[&#39;codeutilisateur&#39;]) ==&#39;&#39;) {
+          $_SESSION[&#39;codeutilisateur&#39;] = $_POST[&#39;codeutilisateur&#39;];
           retourAuMur();
         } else {
-          $_SESSION['codeutilisateur2FA'] = $_POST['codeutilisateur'];
+          $_SESSION[&#39;codeutilisateur2FA&#39;] = $_POST[&#39;codeutilisateur&#39;];
           aller2FA();
         }
       }else {
@@ -2009,74 +2009,74 @@
       }
    }
 
-   // Dessiner l'interface utilisateur
+   // Dessiner l&#39;interface utilisateur
    $html = debutHtml()
-    . '&lt;div class=&quot;login&quot;&gt;'
-    . '&lt;h2 class=&quot;center&quot;&gt;Se connecter&lt;/h2&gt;'
-    . '&lt;form name=&quot;login&quot; action=&quot;login.php&quot; method=&quot;POST&quot;&gt;'
-    . '&lt;div class=&quot;form-panel&quot;&gt;'
-    . '&lt;div class=&quot;form-group&quot;&gt;'
-    . '&lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Entrez le code utilisateur&quot; name=&quot;codeutilisateur&quot; required&gt;'
-    . '&lt;/div&gt;'
-    . '&lt;div class=&quot;form-group&quot;&gt;'
-    . '&lt;input class=&quot;form-control&quot; type=&quot;password&quot; placeholder=&quot;Entrez le mot de passe&quot; name=&quot;motdepasse&quot; required&gt;'
-    . '&lt;/div&gt;'
-    . &quot;&lt;div class='erreur'&gt;$erreur&lt;/div&gt;&quot;
-    . '&lt;button class=&quot;grosbouton&quot; type=&quot;submit&quot;&gt;CONNEXION&lt;/button&gt;'
-    . '&lt;div class=&quot;petitbouton&quot;&gt;&lt;a href=&quot;creercompte.php&quot;&gt;Créer un compte&lt;/a&gt;&lt;/div&gt;'
-    . '&lt;/div&gt;'
-    . '&lt;/form&gt;'
-    . '&lt;/div&gt;'
+    . &#39;&lt;div class=&quot;login&quot;&gt;&#39;
+    . &#39;&lt;h2 class=&quot;center&quot;&gt;Se connecter&lt;/h2&gt;&#39;
+    . &#39;&lt;form name=&quot;login&quot; action=&quot;login.php&quot; method=&quot;POST&quot;&gt;&#39;
+    . &#39;&lt;div class=&quot;form-panel&quot;&gt;&#39;
+    . &#39;&lt;div class=&quot;form-group&quot;&gt;&#39;
+    . &#39;&lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Entrez le code utilisateur&quot; name=&quot;codeutilisateur&quot; required&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
+    . &#39;&lt;div class=&quot;form-group&quot;&gt;&#39;
+    . &#39;&lt;input class=&quot;form-control&quot; type=&quot;password&quot; placeholder=&quot;Entrez le mot de passe&quot; name=&quot;motdepasse&quot; required&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
+    . &quot;&lt;div class=&#39;erreur&#39;&gt;$erreur&lt;/div&gt;&quot;
+    . &#39;&lt;button class=&quot;grosbouton&quot; type=&quot;submit&quot;&gt;CONNEXION&lt;/button&gt;&#39;
+    . &#39;&lt;div class=&quot;petitbouton&quot;&gt;&lt;a href=&quot;creercompte.php&quot;&gt;Créer un compte&lt;/a&gt;&lt;/div&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
+    . &#39;&lt;/form&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
     . finHtml();
 
    print $html;
 ?&gt;
-</code></pre>
-<p>login2FA.php :  </p>
-<pre><code>&lt;?php
+</code></pre></div></p>
+<p>login2FA.php :<br />
+<div class="highlight"><pre><span></span><code>&lt;?php
 
-  require_once('database.php');
-  require_once('commun.php');
-  require_once('GoogleAuthenticator.php');
+  require_once(&#39;database.php&#39;);
+  require_once(&#39;commun.php&#39;);
+  require_once(&#39;GoogleAuthenticator.php&#39;);
 
   session_start();
 
-  $erreur = '';
+  $erreur = &#39;&#39;;
 
   if($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;){
-      if(isset($_POST['reponse'])) {
-        $secret = lireCompteMultifacteur($_SESSION['codeutilisateur2FA']);
+      if(isset($_POST[&#39;reponse&#39;])) {
+        $secret = lireCompteMultifacteur($_SESSION[&#39;codeutilisateur2FA&#39;]);
 
         $ga = new PHPGangsta_GoogleAuthenticator();
-        $checkResult = $ga-&gt;verifyCode($secret, $_POST['reponse'], 2);    // 2 = 2*30sec clock tolerance
+        $checkResult = $ga-&gt;verifyCode($secret, $_POST[&#39;reponse&#39;], 2);    // 2 = 2*30sec clock tolerance
         if ($checkResult) {
-          $_SESSION['codeutilisateur'] = $_SESSION['codeutilisateur2FA'];
+          $_SESSION[&#39;codeutilisateur&#39;] = $_SESSION[&#39;codeutilisateur2FA&#39;];
           retourAuMur();
         } else {
-            $erreur = &quot;Erreur lors de l'entrée du code. Veuillez réessayer.&quot;;
+            $erreur = &quot;Erreur lors de l&#39;entrée du code. Veuillez réessayer.&quot;;
         }
       }
    }
 
-   // Dessiner l'interface utilisateur
+   // Dessiner l&#39;interface utilisateur
    $html = debutHtml()
-    . '&lt;div class=&quot;login&quot;&gt;'
-    . '&lt;h2 class=&quot;center&quot;&gt;Entrez votre code de l\'authenticateur&lt;/h2&gt;'
-    . '&lt;form name=&quot;login&quot; action=&quot;login2FA.php&quot; method=&quot;POST&quot;&gt;'
-    . '&lt;div class=&quot;form-panel&quot;&gt;'
-    . '&lt;div class=&quot;form-group&quot;&gt;'
-    . '&lt;input class=&quot;form-control&quot; type=&quot;text&quot; name=&quot;reponse&quot; required&gt;'
-    . '&lt;/div&gt;'
-    . &quot;&lt;div class='erreur'&gt;$erreur&lt;/div&gt;&quot;
-    . '&lt;button class=&quot;grosbouton&quot; type=&quot;submit&quot;&gt;CONNEXION&lt;/button&gt;'
-    . '&lt;/div&gt;'
-    . '&lt;/form&gt;'
-    . '&lt;/div&gt;'
+    . &#39;&lt;div class=&quot;login&quot;&gt;&#39;
+    . &#39;&lt;h2 class=&quot;center&quot;&gt;Entrez votre code de l\&#39;authenticateur&lt;/h2&gt;&#39;
+    . &#39;&lt;form name=&quot;login&quot; action=&quot;login2FA.php&quot; method=&quot;POST&quot;&gt;&#39;
+    . &#39;&lt;div class=&quot;form-panel&quot;&gt;&#39;
+    . &#39;&lt;div class=&quot;form-group&quot;&gt;&#39;
+    . &#39;&lt;input class=&quot;form-control&quot; type=&quot;text&quot; name=&quot;reponse&quot; required&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
+    . &quot;&lt;div class=&#39;erreur&#39;&gt;$erreur&lt;/div&gt;&quot;
+    . &#39;&lt;button class=&quot;grosbouton&quot; type=&quot;submit&quot;&gt;CONNEXION&lt;/button&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
+    . &#39;&lt;/form&gt;&#39;
+    . &#39;&lt;/div&gt;&#39;
     . finHtml();
 
    print $html;
 ?&gt;
-</code></pre>
+</code></pre></div></p>
 <h2 id="lecture-supplementaires">Lecture supplémentaires</h2>
 <p><a href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A2-Broken_Authentication">OWASP_Broken_Auth</a>  </p>
 <div class="admonition important">

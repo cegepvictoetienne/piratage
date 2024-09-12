@@ -1977,13 +1977,13 @@
 <p>Essayons ceci :  <code>' and 1=0 Union select database(), version(), null, user() #</code></p>
 <p>C'est clair que notre application Web est susceptible à une attaque par injection SQL.  </p>
 <p>Examinons pourquoi notre application est vulnérable. Prenons le code qui interroge la base de données :  </p>
-<pre><code>function listeCommentaires($criteres_recherche){
+<div class="highlight"><pre><span></span><code>function listeCommentaires($criteres_recherche){
   $conn = creerConnexion();
-  $requete = &quot;SELECT commentaire_id, commentaire, image, codeutilisateur FROM monmur WHERE commentaire like '$criteres_recherche' ORDER BY commentaire_id DESC&quot;;
+  $requete = &quot;SELECT commentaire_id, commentaire, image, codeutilisateur FROM monmur WHERE commentaire like &#39;$criteres_recherche&#39; ORDER BY commentaire_id DESC&quot;;
 
   return $conn-&gt;query($requete);
 }
-</code></pre>
+</code></pre></div>
 <p>Lorsque nous injectons notre SQL, par exemple <code>' and 1=0 Union select database(), version(), null, user() #</code>, la variable <code>$requete</code> contient la requête suivante : <code>SELECT commentaire_id, commentaire, image, codeutilisateur FROM monmur WHERE commentaire like '' and 1=0 Union select database(), version(), null, user() #'</code></p>
 <div class="admonition figure">
 <p class="admonition-title">Exécutons la requête dans MySQL</p>
@@ -1991,19 +1991,19 @@
 </div>
 <h2 id="se-proteger-des-injections">Se protéger des injections</h2>
 <p>Au lieu de composer la requête en manipulant la chaîne de caractères, MySQLi à un outil de préparation de requête :  </p>
-<pre><code>$requete = $dbConnection-&gt;prepare('SELECT * FROM utilisateurs WHERE nom = ?');
-$requete-&gt;bind_param('s', $nom);  // 's' spécifie que le type =&gt; 'string'
+<div class="highlight"><pre><span></span><code>$requete = $dbConnection-&gt;prepare(&#39;SELECT * FROM utilisateurs WHERE nom = ?&#39;);
+$requete-&gt;bind_param(&#39;s&#39;, $nom);  // &#39;s&#39; spécifie que le type =&gt; &#39;string&#39;
 $requete-&gt;execute();
-</code></pre>
+</code></pre></div>
 <p>Donc, pour notre fonction ListeCommentaires :  </p>
-<pre><code>function listeCommentaires($criteres_recherche){
+<div class="highlight"><pre><span></span><code>function listeCommentaires($criteres_recherche){
   $conn = creerConnexion();
   $requete = $conn-&gt;prepare(&quot;SELECT commentaire_id, commentaire, image, codeutilisateur FROM monmur WHERE commentaire like ? ORDER BY commentaire_id DESC&quot;);
-  $requete-&gt;bind_param('s', $criteres_recherche);
+  $requete-&gt;bind_param(&#39;s&#39;, $criteres_recherche);
   $requete-&gt;execute();
   return $requete-&gt;get_result();
 }
-</code></pre>
+</code></pre></div>
 <h2 id="proteger-la-base-de-donnees">Protéger la base de données</h2>
 <h3 id="table-des-droits-de-mysql">Table des droits de MySQL</h3>
 <table>
@@ -2073,12 +2073,12 @@ $requete-&gt;execute();
 </tbody>
 </table>
 <p>Il est facile pour un développeur de donner tous les droits à un utilisateur de bd comme suit :  </p>
-<pre><code>CREATE USER 'monmur'@'localhost' IDENTIFIED BY 'cegep2020';
-GRANT ALL PRIVILEGES ON *.* TO 'monmur'@'localhost';
-</code></pre>
+<div class="highlight"><pre><span></span><code>CREATE USER &#39;monmur&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;cegep2020&#39;;
+GRANT ALL PRIVILEGES ON *.* TO &#39;monmur&#39;@&#39;localhost&#39;;
+</code></pre></div>
 <p>Cependant, c'est très dangereux.  Si quelqu'un a accès au code utilisateur, il peut tout faire, incluant ceci :  </p>
-<pre><code>DROP DATABASE IF EXISTS monmur;
-</code></pre>
+<div class="highlight"><pre><span></span><code>DROP DATABASE IF EXISTS monmur;
+</code></pre></div>
 <p>Il faut donc utiliser un utilisateur avec le minimum de droits possible pour le bon fonctionnement de l'application.  </p>
 <table>
 <thead>
@@ -2108,9 +2108,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'monmur'@'localhost';
 </table>
 <p>Il faut aussi restreindre le code utilisateur à la base de données de l'application seulement.  </p>
 <p>Pour notre application, le script de création d'utilisateur ressemblerait à ceci :  </p>
-<pre><code>CREATE USER 'monmur'@'localhost' IDENTIFIED BY 'cegep2020';
-GRANT SELECT, INSERT, UPDATE, DELETE ON 'monmur'.* TO 'monmur'@'localhost';  
-</code></pre>
+<div class="highlight"><pre><span></span><code>CREATE USER &#39;monmur&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;cegep2020&#39;;
+GRANT SELECT, INSERT, UPDATE, DELETE ON &#39;monmur&#39;.* TO &#39;monmur&#39;@&#39;localhost&#39;;  
+</code></pre></div>
 <p>Pour augmenter la sécurité encore plus, ce serait d'utiliser plusieurs utilisateurs, selon la section de l'application.  Par exemple :  </p>
 <table>
 <thead>

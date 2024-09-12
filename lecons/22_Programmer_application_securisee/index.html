@@ -2094,32 +2094,32 @@
 <li>Permettre à des administrateurs de visualiser les comptes utilisateurs, les supprimer et modérer les commentaires  </li>
 </ul>
 <h3 id="permier-jet-de-monmur">Permier jet de MonMur</h3>
-<pre><code>&lt;?php
+<div class="highlight"><pre><span></span><code>&lt;?php
 // database.php sert à interagir avec la base de données
-require_once('database.php');
-require_once('commun.php');
+require_once(&#39;database.php&#39;);
+require_once(&#39;commun.php&#39;);
 
 session_start();
 
-$erreur = '';
-$commentaire = '';
+$erreur = &#39;&#39;;
+$commentaire = &#39;&#39;;
 
-// Traiter l'image, s'il y a lieu
+// Traiter l&#39;image, s&#39;il y a lieu
 traiterImage($nom_image, $erreur);
 
-// Ajouter le commentaire à la base de données sauf s'il y a une erreur
-if(isset($_POST['commentaire'])) {
-  if($_POST['commentaire'] &amp;&amp; $_POST['commentaire'] != '') {
-    $commentaire = $_POST['commentaire'];
+// Ajouter le commentaire à la base de données sauf s&#39;il y a une erreur
+if(isset($_POST[&#39;commentaire&#39;])) {
+  if($_POST[&#39;commentaire&#39;] &amp;&amp; $_POST[&#39;commentaire&#39;] != &#39;&#39;) {
+    $commentaire = $_POST[&#39;commentaire&#39;];
     enregistrerCommentaire($commentaire, $nom_image, utilisateurCourant());
     retourAuMur();
     exit();
   } else {
-    $erreur = 'Le commentaire est invalide. Veuillez réessayer.';
+    $erreur = &#39;Le commentaire est invalide. Veuillez réessayer.&#39;;
   }
 }
 
-// Dessiner l'interface utilisateur
+// Dessiner l&#39;interface utilisateur
 $html = debutHtml()
  . formulaireCommentaire(&quot;monmur.php&quot;, $commentaire, 0, $erreur)
  . afficherCommentaires()
@@ -2131,12 +2131,12 @@ function afficherCommentaires(){
 
   $resultats = listeCommentaires();
 
-  $monmur = '';
+  $monmur = &#39;&#39;;
 
   while($ligne = $resultats-&gt;fetch_assoc()){
     $commentaire = trim($ligne[&quot;commentaire&quot;]);
-    // Remplacer les retour de chariot par l'équivalent html
-    $commentaire = str_replace(&quot;\n&quot;, '&lt;br/&gt;', $commentaire);
+    // Remplacer les retour de chariot par l&#39;équivalent html
+    $commentaire = str_replace(&quot;\n&quot;, &#39;&lt;br/&gt;&#39;, $commentaire);
     $commentaire_id = $ligne[&quot;commentaire_id&quot;];
     $image = $ligne[&quot;image&quot;];
     $code_utilisateur = trim($ligne[&quot;codeutilisateur&quot;]);
@@ -2151,10 +2151,10 @@ function afficherCommentaires(){
     fin;
 
     if(!empty($image)) {
-      $monmur .= &quot;&lt;img src='/images/{$image}'/&gt;&quot;;
+      $monmur .= &quot;&lt;img src=&#39;/images/{$image}&#39;/&gt;&quot;;
     }
 
-    // Afficher les actions seulement si c'est l'utilisateur qui est l'auteur
+    // Afficher les actions seulement si c&#39;est l&#39;utilisateur qui est l&#39;auteur
     if($code_utilisateur == utilisateurCourant() &amp;&amp; utilisateurCourant() != ANON) {
       $monmur .= &lt;&lt;&lt;fin
       &lt;div class=&quot;commentaire_pied&quot;&gt;
@@ -2174,7 +2174,7 @@ function afficherCommentaires(){
   return $monmur;
 }
 ?&gt;
-</code></pre>
+</code></pre></div>
 <h2 id="traitement-des-erreurs">Traitement des erreurs</h2>
 <p>Le bon traitement des erreurs dans votre code est essentiel pour :  </p>
 <ul>
@@ -2205,38 +2205,38 @@ function afficherCommentaires(){
 </ul>
 <p>Dans votre application, certains choix devrons être faits. Est-ce que l'application devrait accepter le code HTML dans les commentaires?  D'un côté, ce peut être intéressant pour les utilisateurs de mettre en <strong>gras</strong> son commentaire, mais accepter le HTML ouvre la porte aux pirates.  </p>
 <p>Pour enlever le code HTML d'une entrée :  </p>
-<pre><code>$texte_a_nettoyer = &quot;Tu es &lt;em&gt;le&lt;/em&gt; meilleur!&quot;;
+<div class="highlight"><pre><span></span><code>$texte_a_nettoyer = &quot;Tu es &lt;em&gt;le&lt;/em&gt; meilleur!&quot;;
 $texte_propre = strip_tags($texte_a_nettoyer);
-</code></pre>
+</code></pre></div>
 <p>$texte_propre aura la valeur "Tu es le meilleur!".</p>
 <p>Au lieu de permettre le HTML pour formater les commentaires, il est possible d'utiliser un autre langage tel que Markdown. Il y a un module PHP qui aide pour ça :  </p>
 <p><a href="https://github.com/erusev/parsedown">ParseDown sur GitHub</a>  </p>
-<pre><code>$Parsedown = new Parsedown();
+<div class="highlight"><pre><span></span><code>$Parsedown = new Parsedown();
 
 $Parsedown-&gt;setSafeMode(true);
 
 $commentaire = $Parsedown-&gt;text($ligne[&quot;commentaire&quot;]);
-</code></pre>
+</code></pre></div>
 <p>Si c'est important pour vous de permettre le HTML, privilégiez l'utilisation d'un module tel que celui-ci :  </p>
 <p><a href="http://htmlpurifier.org/">HTML purifier</a>  </p>
 <p>Testons MonMur :  </p>
-<p>Caractères de contrôle :  </p>
-<pre><code>&quot;
-</code></pre>
-<p>Comment le corriger :</p>
-<pre><code>$commentaire = addslashes($commentaire);
-</code></pre>
-<p>Commentaire trop long :  </p>
-<pre><code>Da Da, ooooh  
+<p>Caractères de contrôle :<br />
+<div class="highlight"><pre><span></span><code>&quot;
+</code></pre></div></p>
+<p>Comment le corriger :
+<div class="highlight"><pre><span></span><code>$commentaire = addslashes($commentaire);
+</code></pre></div></p>
+<p>Commentaire trop long :<br />
+<div class="highlight"><pre><span></span><code>Da Da, ooooh  
 Well, my friends, the time has come  
 (To) raise the roof and have some fun  
 Throw away the work to be done  
 Let the music play on...(Play on, play on, play on.)  
 Everybody sing, everybody dance  
 Lose yourself in wild romance  
-We're going to Party, Karamu, Fiesta, forever  
+We&#39;re going to Party, Karamu, Fiesta, forever  
 Come on and sing along!  
-We're going to Party, Karamu, Fiesta, forever  
+We&#39;re going to Party, Karamu, Fiesta, forever  
 Come on and sing along!  
 
 All night long (all night), All night (all night)  
@@ -2250,9 +2250,9 @@ Life is good, wild and sweet
 Let the music play on...(Play on, play on, play on...)  
 Feel it in your heart and feel it in your soul  
 Let the music take control  
-We're going to Party, Liming, Fiesta, forever  
+We&#39;re going to Party, Liming, Fiesta, forever  
 Come on and sing along  
-We're going to Party, Liming, Fiesta, forever  
+We&#39;re going to Party, Liming, Fiesta, forever  
 Come on and sing my song!  
 
 All night long (all night), oooh, (all night)  
@@ -2260,30 +2260,30 @@ All night long (all night), yeaz, (all night)
 All night long (all night), yeah, (all night)  
 All night long (all night)...(all night)  
 
-Yeah, once you get started you can't sit down  
-Come join the fun, it's a merry-go-round  
-Everyone's dancing their troubles away  
+Yeah, once you get started you can&#39;t sit down  
+Come join the fun, it&#39;s a merry-go-round  
+Everyone&#39;s dancing their troubles away  
 Come join our party, See how we play!  
 
 [Chant}  
 Tam bo li de say de moi ya  
 Hey Jambo Jumbo  
-Way to parti o we goin'  
+Way to parti o we goin&#39;  
 Oh, jambali  
 Tam bo li de say de moi ya  
 Yeah, Jambo, jumbo  
 
 Oh, O, O, O, yes  
-We're going to have a party! (Yeah... ugh)  
+We&#39;re going to have a party! (Yeah... ugh)  
 
 All night long (all night), All night, (all night)  
 All night long (all night), All night, (all night)  
 All night long (all night), All night, (all night)  
 All night long (all night)...(ugh)  
 
-We're going to Party, Kalamu, Fiesta, forever  
+We&#39;re going to Party, Kalamu, Fiesta, forever  
 Come on and sing along!  
-We're going to Party, Kalamu, Fiesta, forever  
+We&#39;re going to Party, Kalamu, Fiesta, forever  
 Come on and sing my song!  
 
 All night long (all night), All night, (all night)  
@@ -2297,35 +2297,35 @@ All night, (all night), All night, (all night),
 All night, (all night), Ugh, (all night),  
 
 Everyone you meet (all night)  
-They're jamming in the street (all night)  
+They&#39;re jamming in the street (all night)  
 All night long! (All night)  
 Yeah, I said, (All night)  
 Everyone you meet (All night)  
-They're jamming in the street (All night)  
+They&#39;re jamming in the street (All night)  
 All night long! (All night)  
 Feel good! Feel good! (All night)  
 (All night to fade)  
-</code></pre>
+</code></pre></div></p>
 <p><a href="https://youtu.be/HZb6oz0ANyA">All Night long - Rhett and Link</a>  </p>
 <p>Comment corriger :  </p>
 <p>Deux choix :  </p>
-<p>Couper le commentaire à la longueur maximale du champ de la base de données :  </p>
-<pre><code>$commentaire = substr($commentaire, 0, 1000);
-</code></pre>
+<p>Couper le commentaire à la longueur maximale du champ de la base de données :<br />
+<div class="highlight"><pre><span></span><code>$commentaire = substr($commentaire, 0, 1000);
+</code></pre></div></p>
 <p>OU  </p>
-<p>Afficher un message d'erreur que le commentaire est trop long :  </p>
-<pre><code>if(mb_strlen($_POST['commentaire']) &lt;= 1000) {
-  $commentaire = $_POST['commentaire'];
+<p>Afficher un message d'erreur que le commentaire est trop long :<br />
+<div class="highlight"><pre><span></span><code>if(mb_strlen($_POST[&#39;commentaire&#39;]) &lt;= 1000) {
+  $commentaire = $_POST[&#39;commentaire&#39;];
   enregistrerCommentaire($commentaire, $nom_image, utilisateurCourant());
   retourAuMur();
   exit();
 } else {
-    $erreur = 'Le commentaire est trop long. Veuillez réessayer.';
+    $erreur = &#39;Le commentaire est trop long. Veuillez réessayer.&#39;;
 }
-</code></pre>
+</code></pre></div></p>
 <p>XSS :  </p>
-<pre><code>&lt;script&gt;alert('Doh!')&lt;/script&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>&lt;script&gt;alert(&#39;Doh!&#39;)&lt;/script&gt;
+</code></pre></div>
 <p>Comment corriger :  </p>
 <ul>
 <li>En enlevant les tags html complètement  </li>
@@ -2335,10 +2335,10 @@ Feel good! Feel good! (All night)
 <h2 id="televersement-de-fichiers">Téléversement de fichiers</h2>
 <p>L'application MonMur permet de téléverser des images pour les commentaires. Un pirate peut abuser de cette fonctionnalité pour injecter du code PHP dans le serveur pour en prendre possession.</p>
 <p>Téléversons un fichier nommé <strong>liste.php</strong> :  </p>
-<pre><code>&lt;html&gt;&lt;body&gt;
-&lt;?php echo str_replace(&quot;\n&quot;, '&lt;br/&gt;',shell_exec(&quot;ls /etc/&quot;));?&gt;
+<div class="highlight"><pre><span></span><code>&lt;html&gt;&lt;body&gt;
+&lt;?php echo str_replace(&quot;\n&quot;, &#39;&lt;br/&gt;&#39;,shell_exec(&quot;ls /etc/&quot;));?&gt;
 &lt;/body&gt;&lt;/html&gt;
-</code></pre>
+</code></pre></div>
 <p>MonMur copie les images dans le répertoire <code>/images</code>.  Donc, on peut maintenant exécuter le code dans la barre d'adresse : <code>http://192.168.2.222/images/liste.php</code>  </p>
 <div class="admonition figure">
 <p class="admonition-title">Résultat de liste.php</p>
@@ -2346,48 +2346,47 @@ Feel good! Feel good! (All night)
 </div>
 <p>Il faut donc limiter les formats de fichier à accepter.  </p>
 <p>Commençons par interdire les fichiers avec l'extension <strong>.php</strong> :  </p>
-<pre><code>if (substr($image_cible,-3) == 'php') {
-  $nom_image = '';
-  $erreur = 'Ceci n\'est pas une image!';
+<div class="highlight"><pre><span></span><code>if (substr($image_cible,-3) == &#39;php&#39;) {
+  $nom_image = &#39;&#39;;
+  $erreur = &#39;Ceci n\&#39;est pas une image!&#39;;
   return 0;
 }
-</code></pre>
+</code></pre></div>
 <p>On ne peut plus téléverser <strong>liste.php</strong>. Utilisons le bon vieux truc de la double extension et renommons le fichier <code>liste.php.jpg</code>.  </p>
 <p>Le logiciel accepte sans problème le fichier qui peut être exécuté comme suit :<br />
 <code>http://192.168.2.222/images/liste.php.jpg</code>  </p>
 <p>La magie de ceci est une configuration du serveur qui permet d'exécuter tout script qui a la mention php dans son nom :  </p>
-<pre><code>&lt;FilesMatch &quot;.+\.ph(ar|p|tml)&quot;&gt;
+<div class="highlight"><pre><span></span><code>&lt;FilesMatch &quot;.+\.ph(ar|p|tml)&quot;&gt;
     SetHandler application/x-httpd-php
 &lt;/FilesMatch&gt;
 &lt;FilesMatch &quot;.+\.phps&quot;&gt;
     SetHandler application/x-httpd-php-source
     # Deny access to raw php sources by default
-    # To re-enable it's recommended to enable access to the files
+    # To re-enable it&#39;s recommended to enable access to the files
     # only in specific virtual host or directory
     Require all denied
 &lt;/FilesMatch&gt;
-# Deny access to files without filename (e.g. '.php')
+# Deny access to files without filename (e.g. &#39;.php&#39;)
 &lt;FilesMatch &quot;^\.ph(ar|p|ps|tml)&quot;&gt;
     Require all denied
 &lt;/FilesMatch&gt;
-</code></pre>
+</code></pre></div>
 <p>Corrigeons la configuration (le <strong>$</strong> à la fin du regex indique que c'est à la fin du nom du fichier, donc .php accepté, .php.jpg ne l'est pas.):  </p>
-<pre><code>&lt;FilesMatch &quot;.+\.ph(ar|p|tml$)&quot;&gt;
+<div class="highlight"><pre><span></span><code>&lt;FilesMatch &quot;.+\.ph(ar|p|tml$)&quot;&gt;
     SetHandler application/x-httpd-php
 &lt;/FilesMatch&gt;
 &lt;FilesMatch &quot;.+\.phps$&quot;&gt;
     SetHandler application/x-httpd-php-source
     # Deny access to raw php sources by default
-    # To re-enable it's recommended to enable access to the files
+    # To re-enable it&#39;s recommended to enable access to the files
     # only in specific virtual host or directory
     Require all denied
 &lt;/FilesMatch&gt;
-# Deny access to files without filename (e.g. '.php')
+# Deny access to files without filename (e.g. &#39;.php&#39;)
 &lt;FilesMatch &quot;^\.ph(ar|p|ps|tml)$&quot;&gt;
     Require all denied
 &lt;/FilesMatch&gt;
-
-</code></pre>
+</code></pre></div>
 <h2 id="lectures-supplementaires">Lectures supplémentaires</h2>
 <p><a href="https://www.markdownguide.org/">Documentation de MarkDown</a><br />
 <a href="https://www.hackingarticles.in/comprehensive-guide-on-unrestricted-file-upload/">Pirater les fichiers téléversés</a><br />

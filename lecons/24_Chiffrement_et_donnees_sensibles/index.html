@@ -2029,14 +2029,14 @@
 </div>
 <h2 id="chiffrement-du-mot-de-passe">Chiffrement du mot de passe</h2>
 <p>Une méthode simple pour chiffrer le mot de passe en PHP est l'utilisation de la fonction <code>password_hash()</code>.  Dans notre application, la fonction sera utilisée lors de l'écriture du mot de passe :</p>
-<pre><code>function creerCompte($code_utilisateur, $mot_de_passe){
+<div class="highlight"><pre><span></span><code>function creerCompte($code_utilisateur, $mot_de_passe){
   $conn = creerConnexion();
   $requete = $conn-&gt;prepare(&quot;INSERT INTO utilisateurs (codeutilisateur, motdepasse) VALUES(?, ?)&quot;);
   $mot_de_passe_chiffre = password_hash($mot_de_passe, PASSWORD_DEFAULT);
-  $requete-&gt;bind_param('ss', $code_utilisateur, $mot_de_passe_chiffre);
+  $requete-&gt;bind_param(&#39;ss&#39;, $code_utilisateur, $mot_de_passe_chiffre);
   return $requete-&gt;execute();
 }
-</code></pre>
+</code></pre></div>
 <p>Lorsqu'un compte est créé, le mot de passe est maintenant chiffré dans la base de données.</p>
 <div class="admonition figure">
 <p class="admonition-title">Table utilisateurs</p>
@@ -2044,43 +2044,43 @@
 Notez que Carole et Julien ont le même mot de passe, mais la fonction génère un hash différent.  </p>
 </div>
 <p>Il faut aussi changer la manière de vérifier si l'utilisateur a le bon mot de passe, en utilisant la fonction <code>password_verify()</code> :  </p>
-<pre><code>function authentifier($code_utilisateur, $mot_de_passe){
+<div class="highlight"><pre><span></span><code>function authentifier($code_utilisateur, $mot_de_passe){
   $conn = creerConnexion();
   $requete = $conn-&gt;prepare(&quot;SELECT motdepasse FROM utilisateurs WHERE codeutilisateur = ?&quot;);
-  $requete-&gt;bind_param('s', $code_utilisateur);
+  $requete-&gt;bind_param(&#39;s&#39;, $code_utilisateur);
   $requete-&gt;execute();
   $resultats = $requete-&gt;get_result();
   $utilisateur = $resultats-&gt;fetch_assoc();
-  return password_verify($mot_de_passe, $utilisateur['motdepasse']);
+  return password_verify($mot_de_passe, $utilisateur[&#39;motdepasse&#39;]);
 }
-</code></pre>
+</code></pre></div>
 <h2 id="chiffrer-les-donnees-confidentielles">Chiffrer les données confidentielles</h2>
 <p>Disons que nous voulons chiffrer les commentaires des utilisateurs dans notre base de données. Nous utiliserons une chiffrement symétrique. En PHP, nous pouvons utiliser OpenSSL pour gérer le chiffrement, avec <code>openssl_encrypt()</code> et <code>openssl_decrypt()</code>.</p>
 <p>Tout d'abord la création de la clé de chiffrement dans notre fichier <code>secret.php</code> :</p>
-<pre><code>&lt;?php
-define('CLE_CHIFFREMENT', &quot;Latina-Marble-Honda-Speaks-Atomic-Majority-RTnL&quot;);
+<div class="highlight"><pre><span></span><code>&lt;?php
+define(&#39;CLE_CHIFFREMENT&#39;, &quot;Latina-Marble-Honda-Speaks-Atomic-Majority-RTnL&quot;);
 ?&gt;
-</code></pre>
+</code></pre></div>
 <p>Pour l'enregistrement d'un commentaire :  </p>
-<pre><code>function enregistrerCommentaire($commentaire, $nom_image, $code_utilisateur){
+<div class="highlight"><pre><span></span><code>function enregistrerCommentaire($commentaire, $nom_image, $code_utilisateur){
   $conn = creerConnexion();
   $requete = $conn-&gt;prepare(&quot;INSERT INTO monmur (commentaire, image, codeutilisateur) VALUES(?, ?, ?)&quot;);
 
   $commentaire = addslashes($commentaire);
   $commentaire = substr($commentaire, 0, 1000);
   $commentaire_chiffre = openssl_encrypt($commentaire, &quot;AES-128-ECB&quot;, CLE_CHIFFREMENT);
-  $requete-&gt;bind_param('sss', $commentaire_chiffre, $nom_image, $code_utilisateur);
+  $requete-&gt;bind_param(&#39;sss&#39;, $commentaire_chiffre, $nom_image, $code_utilisateur);
 
   if(!$requete-&gt;execute()) {
     die(&quot;Erreur insertion : &quot; . $conn-&gt;error);
   }
 }
-</code></pre>
+</code></pre></div>
 <p>Pour le déchiffrement d'un commentaire :  </p>
-<pre><code>function dechiffrerCommentaire($commentaire_chiffre) {
+<div class="highlight"><pre><span></span><code>function dechiffrerCommentaire($commentaire_chiffre) {
   return openssl_decrypt($commentaire_chiffre, &quot;AES-128-ECB&quot;, CLE_CHIFFREMENT);
 }
-</code></pre>
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Prenez quelques minutes pour faire votre <a href="../../outils/cartographie/">cartographie</a> de la leçon d'aujourd'hui!   </p>

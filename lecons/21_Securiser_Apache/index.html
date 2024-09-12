@@ -2042,9 +2042,9 @@
 Il est simple de découvrir la version d'Apache et de PHP à l'aide d'un fureteur.  </p>
 </div>
 <p>Dans le fichier de configuration de sécurité (<code>/etc/apache2/conf-enabled/security.conf</code>), changer ces deux instructions :  </p>
-<pre><code>ServerTokens Prod
+<div class="highlight"><pre><span></span><code>ServerTokens Prod
 ServerSignature Off
-</code></pre>
+</code></pre></div>
 <p>Redémarrer le serveur :  </p>
 <p><code>sudo /etc/init.d/apache2 restart</code>  </p>
 <div class="admonition figure">
@@ -2056,8 +2056,8 @@ On ne voit maintenant que <strong>Apache</strong>.  </p>
 <p>Comme pour la version d'Apache, il est fortement recommandé de cacher la version de PHP.  </p>
 <p>Les <strong>fichier de configuration PHP</strong> se trouvent dans <code>/etc/php/7.3/apache2/php.ini</code> et <code>/etc/php/7.3/cgi/php.ini</code>.</p>
 <p>Dans les fichiers de configuration de PHP, changer la ligne suivante :  </p>
-<pre><code>expose_php = Off
-</code></pre>
+<div class="highlight"><pre><span></span><code>expose_php = Off
+</code></pre></div>
 <p>Redémarrer le serveur.</p>
 <div class="admonition figure">
 <p class="admonition-title">Vérification dans Firefox après le changement</p>
@@ -2072,11 +2072,11 @@ On ne voit plus la mention PHP.  </p>
 On peut y découvrir des trésors!  </p>
 </div>
 <p>Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire <code>/etc/apache2/sites-enabled</code> :  </p>
-<pre><code>&lt;Directory /var/www&gt;
+<p><div class="highlight"><pre><span></span><code>&lt;Directory /var/www&gt;
 Options -Indexes
 &lt;/Directory&gt;
-</code></pre>
-<p>Redémarrer le serveur.  </p>
+</code></pre></div>
+Redémarrer le serveur.  </p>
 <div class="admonition figure">
 <p class="admonition-title">Parcours d'un répertoire avec Firefox après le changement</p>
 <p><img alt="21-directory-listing-after-change" src="../../images/2020/07/21-directory-listing-after-change.png" />
@@ -2090,9 +2090,9 @@ On ne peut plus accéder à un répertoire.  </p>
 Notez les droits : rw-r--r--  </p>
 </div>
 <p>Pour enlever les droits aux utilisateurs :  </p>
-<pre><code>cd /etc/apache2  
+<div class="highlight"><pre><span></span><code>cd /etc/apache2  
 sudo chmod -R 640 .  
-</code></pre>
+</code></pre></div>
 <div class="admonition figure">
 <p class="admonition-title">Liste des fichiers du répertoire de configuration après le changement</p>
 <p><img alt="21-etc-apache2-apres" src="../../images/2020/07/21-etc-apache2-apres.png" /><br />
@@ -2101,21 +2101,21 @@ Les droits sont maintenant rw-r-----  </p>
 <h2 id="proteger-les-configurations-contre-le-surclassement">Protéger les configurations contre le surclassement</h2>
 <p>Malgré les configurations faites par l'administrateur, les utilisateurs peuvent en modifier certaines à l'aide de fichiers <code>.htaccess</code>. Il est recommandé de désactiver cette fonctionnalité.  </p>
 <p>Trouver l'instruction Directory qui représente la racine du site, qui se trouvent dans un des fichiers du répertoire <code>/etc/apache2/sites-enabled</code> :  </p>
-<pre><code>&lt;Directory /&gt;
+<p><div class="highlight"><pre><span></span><code>&lt;Directory /&gt;
 AllowOverride None  
 &lt;/Directory&gt;
-</code></pre>
-<p>Redémarrer le serveur.  </p>
+</code></pre></div>
+Redémarrer le serveur.  </p>
 <h2 id="les-methodes-de-requetes-http">Les méthodes de requêtes HTTP</h2>
 <p>Les serveurs Web supportent beaucoup de méthodes HTTP qui ne sont pas nécessaires en général et peuvent être dangeureuses.  </p>
 <p>Normalement, on peut limiter les méthodes à <strong>GET</strong>, <strong>POST</strong>, <strong>HEAD</strong>.  </p>
 <p>Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire <code>/etc/apache2/sites-enabled</code> :  </p>
-<pre><code>&lt;Directory /var/www&gt;  
+<div class="highlight"><pre><span></span><code>&lt;Directory /var/www&gt;  
   &lt;LimitExcept GET POST HEAD&gt;  
     deny from all
   &lt;/LimitExcept&gt;  
 &lt;/Directory&gt;  
-</code></pre>
+</code></pre></div>
 <p>Redémarrer le serveur.  </p>
 <h2 id="desactiver-http-trace">Désactiver HTTP TRACE</h2>
 <p>HTTP TRACE est une méthode qui est activée par défaut sur les serveurs Apache. Cette méthode est considérée dangereuse par les experts.  </p>
@@ -2127,9 +2127,9 @@ AllowOverride None
 Le <em>trace</em> est réussi.  </p>
 </div>
 <p>Dans le fichier de configuration, ajouter cette instruction :  </p>
-<pre><code>TraceEnable off
-</code></pre>
-<p>Redémarrer le serveur.  </p>
+<p><div class="highlight"><pre><span></span><code>TraceEnable off
+</code></pre></div>
+Redémarrer le serveur.  </p>
 <div class="admonition figure">
 <p class="admonition-title">Résultat de curl après le changement</p>
 <p><img alt="21-curl-trace-after" src="../../images/2020/07/21-curl-trace-after.png" />
@@ -2138,12 +2138,12 @@ Le <em>trace</em> ne fonctionne plus.  </p>
 <h2 id="protection-contre-le-cross-site-scripting">Protection contre le Cross Site Scripting</h2>
 <p>Vous avez vu à un cours précédent ce qu'est le <em>Cross Site Scripting</em>. Voici comment désactiver ceci.  </p>
 <p>Dans le fichier de configuration, ajouter cette instruction :  </p>
-<pre><code>Header set X-XSS-Protection &quot;1; mode=block&quot;  
-</code></pre>
+<div class="highlight"><pre><span></span><code>Header set X-XSS-Protection &quot;1; mode=block&quot;  
+</code></pre></div>
 <p>Il faut bien sûr avoir activé le module headers en exécutant ces deux commandes :  </p>
-<pre><code>sudo a2enmod headers  
+<div class="highlight"><pre><span></span><code>sudo a2enmod headers  
 sudo /etc/init.d/apache2 force-reload   
-</code></pre>
+</code></pre></div>
 <p>Redémarrer le serveur.  </p>
 <div class="admonition figure">
 <p class="admonition-title">Header tel que vu dans Firefox après le changement</p>

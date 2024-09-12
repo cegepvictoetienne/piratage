@@ -527,6 +527,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#decryptage-des-loot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Décryptage des loot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#testez-vos-connaissances" class="md-nav__link">
     <span class="md-ellipsis">
       Testez vos connaissances
@@ -2004,6 +2013,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#decryptage-des-loot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Décryptage des loot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#testez-vos-connaissances" class="md-nav__link">
     <span class="md-ellipsis">
       Testez vos connaissances
@@ -2131,6 +2149,8 @@
 <p><code>services -p 445</code></p>
 <p><img alt="06-msfconsole-services-ports" src="../../images/2020/06/06-msfconsole-services-ports.png" /></p>
 <h2 id="informations-de-connexion">Informations de connexion</h2>
+<details class="info">
+<summary>Utilisation de l'outil de découverte de mots de passe MySQL ne fonctionne pas avec Kali 2024</summary>
 <p>Utiliser l'outil de découverte de mots de passe MySQL :</p>
 <p><code>use auxiliary/scanner/mysql/mysql_login</code></p>
 <p><code>show options</code></p>
@@ -2141,6 +2161,7 @@
 <p>Les informations se retrouvent dans le contenant creds :</p>
 <p><code>creds</code></p>
 <p><img alt="06-msfconsole-creds" src="../../images/2020/06/06-msfconsole-creds.png" /></p>
+</details>
 <h2 id="les-tresors-loot">Les trésors (<em>loot</em>)</h2>
 <p>Metasploit conserve aussi tous les <em>loot</em> qui sont découverts par ses modules.</p>
 <p>Essayons d'aller chercher les fichiers de mots de passe de Metasploitable :</p>
@@ -2158,9 +2179,20 @@
 <p><img alt="06-msfconsole-hashdump-run" src="../../images/2020/06/06-msfconsole-hashdump-run.png" /></p>
 <p><code>loot</code></p>
 <p><img alt="06-msfconsole-loot" src="../../images/2020/06/06-msfconsole-loot.png" /></p>
+<h2 id="decryptage-des-loot">Décryptage des <em>loot</em></h2>
+<p><code>use auxiliary/analyze/crack_linux</code></p>
+<p><code>show options</code></p>
+<p><code>set CUSTOM_WORDLIST /usr/share/john/password.lst</code></p>
+<p><code>set USE_DEFAULT_WORDLIST false</code></p>
+<p><code>set USE_ROOT_WORDS false</code></p>
+<p><code>run</code></p>
+<p><img alt="06-msfconsole-crack_linux" src="../../images/2020/06/06-msfconsole-crack-linux.png" /></p>
+<details class="info">
+<summary>Décryptage des <em>loot</em> avec <code>john</code> si ça ne marche pas avec crack_linux</summary>
 <p>Après l'extraction des <em>loot</em>, il est possible de les déchiffrer avec l'outil <code>john</code> :  </p>
 <p><code>john --wordlist=/usr/share/john/password.lst --rules /root/.msf4/loot/20200605161359_default_192.168.40.7_linux.hashdump_159137603</code></p>
 <p><img alt="06-john-hashdump" src="../../images/2020/06/06-john-hashdump.png" /></p>
+</details>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Prenez quelques minutes pour faire votre <a href="../../outils/cartographie/">cartographie</a> de la leçon d'aujourd'hui!   </p>

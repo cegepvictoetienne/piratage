@@ -1932,19 +1932,19 @@ O - 3(NML) = L  </p>
 <p>Le chiffrement par transposition réarrange les lettres d'un plain-texte. Par exemple, on pourrait simplement renverser l'ordre des lettres :</p>
 <p>POMME deviendrait EMMOP</p>
 <p>La transposition par colonnes prend une clé et calcule la position de chaque lettre en ordre alphabétique. Si une lettre revient deux fois, la seconde prend la position suivante. Ex :</p>
-<pre><code>P A T A T E
+<div class="highlight"><pre><span></span><code>P A T A T E
  4 1 5 2 6 3
-</code></pre>
+</code></pre></div>
 <p>Pour chiffrer le plain-texte suivant :</p>
 <p><code>LE MOT DE PASSE EST CHEVAL123</code></p>
 <p>Il faut l'écrire dans les colonnes comme suit :</p>
-<pre><code>P A T A T E
+<div class="highlight"><pre><span></span><code>P A T A T E
  4 1 5 2 6 3
  L E M O T D
  E P A S S E
  E S T C H E
  V A L 1 2 3
-</code></pre>
+</code></pre></div>
 <p>Ensuite, il faut écrire le chiffre-texte selon l'ordre des colonnes :</p>
 <p><code>E P S A O S C 1 D E E 3 L E E V M A T L T S H 2</code></p>
 <p>Pour déchiffrer un message par transposition, il faut tout d'abord diviser le nombre de caractères dans le chiffre-texte par la longueur de la clé.</p>
@@ -2183,10 +2183,10 @@ HIQUE  </p>
 2. Localiser la bonne ligne avec la lettre de la clé<br />
 3. L'intersection est la lettre du chiffre-texte    </p>
 <p><img alt="10-Vigenere-chiffrement" src="../../images/2020/10/10-vigenere-chiffrement.png" /></p>
-<pre><code>LE COURS EST SUPER
+<div class="highlight"><pre><span></span><code>LE COURS EST SUPER
 CE GEPCE GEP CEGEP
 NI ISJTW KWI UYVIG
-</code></pre>
+</code></pre></div>
 <p>Pour le déchiffrement :<br />
 1. Localiser la bonne ligne avec la lettre de la clé<br />
 2. Sur cette ligne, localiser la lettre du chiffre-texte<br />
@@ -2199,10 +2199,10 @@ NI ISJTW KWI UYVIG
 <p><img alt="10-vigenere-dechiffrer-2" src="../../images/2020/10/10-vigenere-dechiffrer-2.png" /></p>
 <p>Le haut de la colonne :  </p>
 <p><img alt="10-vigenere-dechiffrer-3" src="../../images/2020/10/10-vigenere-dechiffrer-3.png" /></p>
-<pre><code>ZOHZI KST MQAEDI
+<div class="highlight"><pre><span></span><code>ZOHZI KST MQAEDI
 LUMIE REL UMIERE
 OUVRE TOI SESAME
-</code></pre>
+</code></pre></div>
 <h2 id="masque-jetable">Masque jetable</h2>
 <p>La méthode de substitution la plus sécuritaire est celle du masque jetable (<em>one-time pad</em>). C'est une clé aléatoire aussi longue que le texte à chiffrer. C'est la seule méthode de chiffrement qui est réputée sans faille si les règles suivantes sont respectées :  </p>
 <ol>
@@ -2233,7 +2233,7 @@ OUVRE TOI SESAME
 <p>Pour exporter une clé publique dans un format lisible :</p>
 <p><code>gpg --output cle.pgp --armor --export rivard.etienne@cegepvicto.ca</code></p>
 <p>Ça donne ceci :</p>
-<pre><code class="language-pgp">-----BEGIN PGP PUBLIC KEY BLOCK-----
+<div class="highlight"><pre><span></span><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQENBF9BjU4BCADIXEtcP1Eqptrz0U/lrvYc6j41kk9UOQG5DlIkKL0t6nkm+XSY
 UUDCzTcjgISUBn0UeDXVHLqx2HH6uMhksM++pCVSbajgKinEplx+W8NetLcRM9Vc
@@ -2264,7 +2264,7 @@ X8d9F4qMdgyV5fO0oTbjjdpmUcKteeDXeHyTi55WmFKU1uNeU0oL8XV4Jxq4WAJA
 RN/2NWY=
 =GgRL
 -----END PGP PUBLIC KEY BLOCK-----
-</code></pre>
+</code></pre></div>
 <p>Pour importer la clé publique du futur récipiendaire de vos messages :</p>
 <p><code>gpg --import cle.gpg</code></p>
 <p>Pour chiffrer votre message :</p>

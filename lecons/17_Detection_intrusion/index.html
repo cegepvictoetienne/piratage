@@ -2508,21 +2508,21 @@
 <p>La réaction de snort :  </p>
 <p><img alt="17-nmap-syn-scan-snort" src="../../images/2020/07/17-nmap-syn-scan-snort.png" /></p>
 <h3 id="detecter-un-essai-de-se-connecter-en-ftp-avec-root">Détecter un essai de se connecter en FTP avec root</h3>
-<pre><code>alert tcp any any -&gt; any 21 ( \
+<div class="highlight"><pre><span></span><code>alert tcp any any -&gt; any 21 ( \
   pcre:&quot;/user\s+root/i&quot;; \
   sid: 1000002; \
   msg:&quot;Utilisation de FTP avec user root&quot;;)
-</code></pre>
+</code></pre></div>
 <p>Testons la règle :  </p>
 <p><img alt="17-connect-ftp-root" src="../../images/2020/07/17-connect-ftp-root.png" /></p>
 <p>La réaction de snort :  </p>
 <p><img alt="17-snort-react-ftp-root" src="../../images/2020/07/17-snort-react-ftp-root.png" /></p>
 <h3 id="detecter-un-login-de-telnet-invalide">Détecter un login de telnet invalide</h3>
-<pre><code>alert tcp any 23 -&gt; any any ( \
+<div class="highlight"><pre><span></span><code>alert tcp any 23 -&gt; any any ( \
   content:&quot;Login incorrect&quot;; \
   sid: 1000003; \
   msg:&quot;Essai de login TELNET invalide&quot;;)
-</code></pre>
+</code></pre></div>
 <p>Testons la règle :  </p>
 <p><img alt="17-telnet-login" src="../../images/2020/07/17-telnet-login.png" /></p>
 <p>La réaction de snort :  </p>
