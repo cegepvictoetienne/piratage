@@ -12,10 +12,21 @@ Trouvez les informations suivantes :
 - Noms des membres de sa famille  
 - Adresse civique en 2015  
 - Adresse civique en 2020  
-- Quelles écoles il a fréquenté  
-- Quels diplômes il a reçu  
+- Page de la maison modèle correspondant à l'adresse civique en 2020
+- Numéro de téléphone
+- Année de construction de sa maison actuelle (la même qu'en 2020)  
+- Plus récent diplôme obtenu
+- Endroit où travaille son épouse
+- Endroit où travaille son fils
 - Publication scientifique  
 - Endroit où il s'est marié  
+- Endroit où il a été accepté pour le doctorat
+- Combien d'années il a travaillé au Cégep de Victoriaville
+- Qui a gagné la bourse ATE en 2024 et est pris en photo avec lui
+- Code utilisateur sur GitHub
+- Site de "bookmarks" personnel
+- Instagram du chat de la famille
+
 
 [Inscrivez vos réponses dans ce formulaire](https://forms.office.com/Pages/ResponsePage.aspx?id=JvVsnYGt-EanOqUHqvBs2h4e_CrnfMxFsMr2ZqveBNhURDRTVFZQMVpXRUdYV0JOQzNDUFk3VlpQMi4u)  
 

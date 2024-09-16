@@ -88,6 +88,8 @@ nav:
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.critic
   - attr_list
   - pymdownx.emoji:

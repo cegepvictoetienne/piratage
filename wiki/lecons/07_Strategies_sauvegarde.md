@@ -102,6 +102,34 @@ Voici quelques points à considérer lors de l'analyse du besoin de sauvegarde :
 4. RTO (Recovery time objective)  
 5. RPO (Recovery point objective)  
 
+### RTO vs RPO
+
+![07_RTO_vs_RPO](../images/07_rto_vs_rpo.png)
+
+#### **1. RPO (Recovery Point Objective) :**
+
+- **Définition :** Le RPO représente la période maximale pendant laquelle des données peuvent être perdues en cas de panne.
+- **Dans ce contexte :** Étant donné que le serveur est sauvegardé une fois par jour, le RPO peut atteindre jusqu'à **24 heures**. Cela signifie que toutes les données modifiées entre la dernière sauvegarde et le moment du crash risquent d'être perdues.
+
+#### **2. RTO (Recovery Time Objective) :**
+
+- **Définition :** Le RTO est le temps maximal acceptable pour restaurer le système après une panne et reprendre les opérations normales.
+- **Dans ce contexte :** Il s'agit du temps écoulé entre le **crash du serveur** et le moment où le **système est pleinement opérationnel** après la restauration. Par exemple, si la restauration prend **7 heures**, alors le RTO est de **7 heures**.
+
+### **Scénario détaillé :**
+
+1. **Sauvegarde quotidienne :** Le serveur effectue une sauvegarde complète chaque jour à une heure fixe (par exemple, à minuit).
+2. **Crash du serveur :** Une panne survient à un moment imprévu (par exemple, à 15h00).
+3. **Perte de données (RPO) :** Les données créées ou modifiées entre la dernière sauvegarde (minuit) et le crash (15h00) peuvent être perdues.
+4. **Restauration du système (RTO) :** Le temps nécessaire pour restaurer le serveur à partir de la dernière sauvegarde et remettre le système en service (par exemple, de 15h00 à 22h00).
+
+### **Conclusion :**
+
+- **RPO (15 heures dans cet exemple) :** Indique la quantité maximale de données susceptibles d'être perdues.
+- **RTO (7 heures dans cet exemple) :** Indique le temps maximal pour rétablir le service après une panne.
+
+**Remarque :** Pour réduire le RPO et le RTO, vous pourriez envisager des stratégies telles que des sauvegardes plus fréquentes, la mise en place de systèmes redondants ou l'utilisation de solutions de récupération d'urgence avancées.
+
 ### Scénario 1
 
 La compagnie X doit faire la sauvegarde d'un serveur de 20 gb. La compagnie a une capacité de sauvegarde de 1 tb. Un requis est de conserver les sauvegardes 30 jours.

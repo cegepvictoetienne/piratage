@@ -2,7 +2,7 @@
 
 Télécharger le OVA de Windows XP :
 
-[OVA de Windows XP - Google Drive du cours](https://drive.google.com/file/d/1P_PG5EDwGXc9SRRxUOW6yzm0a9-EJeCZ/view?usp=sharing)
+[OVA de Windows XP - Dans le Teams du groupe -> Fichiers -> Support de cours](https://cegepvicto.sharepoint.com/:u:/s/Section_31421/ESIqO9b4wHpNvmMj_ZFYxNYBSI3lK5C1MA60iqyJMoI-KQ?e=Ck25lX)
 
 Configurations de VirtualBox :
 

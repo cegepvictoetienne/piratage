@@ -1,8 +1,7 @@
 # Exercices - Hameçonnage
 
+## Simulation de courriels de hameçonnage
 
-## Créer une fausse page de login  
+Faîtes le petit exercice suivant pour vous familiariser avec les courriels de hameçonnage.
 
-Faire une page de login comme celle d'Office 365 pour le Cégep de Victo.  
-
-![10-LoginCegep](../images/10-LoginCegep.gif)  
+[Simulateur de boîte de courriels de hameçonnage](https://simulateur.profinfo.ca)

