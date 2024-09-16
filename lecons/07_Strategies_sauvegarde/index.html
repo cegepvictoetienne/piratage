@@ -528,6 +528,57 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#rto-vs-rpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      RTO vs RPO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RTO vs RPO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rpo-recovery-point-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. RPO (Recovery Point Objective) :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rto-recovery-time-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. RTO (Recovery Time Objective) :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-detaille" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scénario détaillé :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#scenario-1" class="md-nav__link">
     <span class="md-ellipsis">
       Scénario 1
@@ -2020,6 +2071,57 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#rto-vs-rpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      RTO vs RPO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RTO vs RPO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rpo-recovery-point-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. RPO (Recovery Point Objective) :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rto-recovery-time-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. RTO (Recovery Time Objective) :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-detaille" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scénario détaillé :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#scenario-1" class="md-nav__link">
     <span class="md-ellipsis">
       Scénario 1
@@ -2216,6 +2318,31 @@ Total : 16 gb par semaine  </p>
 <li>RTO (Recovery time objective)  </li>
 <li>RPO (Recovery point objective)  </li>
 </ol>
+<h3 id="rto-vs-rpo">RTO vs RPO</h3>
+<p><img alt="07_RTO_vs_RPO" src="../../images/07_rto_vs_rpo.png" /></p>
+<h4 id="1-rpo-recovery-point-objective"><strong>1. RPO (Recovery Point Objective) :</strong></h4>
+<ul>
+<li><strong>Définition :</strong> Le RPO représente la période maximale pendant laquelle des données peuvent être perdues en cas de panne.</li>
+<li><strong>Dans ce contexte :</strong> Étant donné que le serveur est sauvegardé une fois par jour, le RPO peut atteindre jusqu'à <strong>24 heures</strong>. Cela signifie que toutes les données modifiées entre la dernière sauvegarde et le moment du crash risquent d'être perdues.</li>
+</ul>
+<h4 id="2-rto-recovery-time-objective"><strong>2. RTO (Recovery Time Objective) :</strong></h4>
+<ul>
+<li><strong>Définition :</strong> Le RTO est le temps maximal acceptable pour restaurer le système après une panne et reprendre les opérations normales.</li>
+<li><strong>Dans ce contexte :</strong> Il s'agit du temps écoulé entre le <strong>crash du serveur</strong> et le moment où le <strong>système est pleinement opérationnel</strong> après la restauration. Par exemple, si la restauration prend <strong>7 heures</strong>, alors le RTO est de <strong>7 heures</strong>.</li>
+</ul>
+<h3 id="scenario-detaille"><strong>Scénario détaillé :</strong></h3>
+<ol>
+<li><strong>Sauvegarde quotidienne :</strong> Le serveur effectue une sauvegarde complète chaque jour à une heure fixe (par exemple, à minuit).</li>
+<li><strong>Crash du serveur :</strong> Une panne survient à un moment imprévu (par exemple, à 15h00).</li>
+<li><strong>Perte de données (RPO) :</strong> Les données créées ou modifiées entre la dernière sauvegarde (minuit) et le crash (15h00) peuvent être perdues.</li>
+<li><strong>Restauration du système (RTO) :</strong> Le temps nécessaire pour restaurer le serveur à partir de la dernière sauvegarde et remettre le système en service (par exemple, de 15h00 à 22h00).</li>
+</ol>
+<h3 id="conclusion"><strong>Conclusion :</strong></h3>
+<ul>
+<li><strong>RPO (15 heures dans cet exemple) :</strong> Indique la quantité maximale de données susceptibles d'être perdues.</li>
+<li><strong>RTO (7 heures dans cet exemple) :</strong> Indique le temps maximal pour rétablir le service après une panne.</li>
+</ul>
+<p><strong>Remarque :</strong> Pour réduire le RPO et le RTO, vous pourriez envisager des stratégies telles que des sauvegardes plus fréquentes, la mise en place de systèmes redondants ou l'utilisation de solutions de récupération d'urgence avancées.</p>
 <h3 id="scenario-1">Scénario 1</h3>
 <p>La compagnie X doit faire la sauvegarde d'un serveur de 20 gb. La compagnie a une capacité de sauvegarde de 1 tb. Un requis est de conserver les sauvegardes 30 jours.</p>
 <table>
