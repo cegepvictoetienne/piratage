@@ -86,7 +86,7 @@ Voici quelques pare-feux disponibles pour Linux :
 
 - IPTables  
 - ShoreWall
-- UFW
+- UFW (Uncomplicated FireWall)
 - pfSense
 - Endian
 

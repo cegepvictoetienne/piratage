@@ -28,5 +28,5 @@ Faites l'extraction de la table users avec une injection SQL manuelle.
 
 Dans Kali, faites les étapes suivantes  :
 
-1. Utiliser BurpSuite et Firefox pour extraire les cookies
-2. Utiliser SQLMap pour découvrir la BD, la liste des table et le contenu de la table users.
+1. Utiliser Firefox pour extraire les cookies
+2. Utiliser SQLMap pour découvrir la BD, la liste des tables de DVWA et le contenu de la table users.

