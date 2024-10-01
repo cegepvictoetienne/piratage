@@ -53,9 +53,14 @@ Voici les statistiques de fréquence pour ce texte :
 
 ![10-frequence-texte-chiffre](../images/2020/10/10-frequence-texte-chiffre.png)  
   
-[Outil pour calculer rapidement la fréquence des lettres](https://www.browserling.com/tools/letter-frequency)  
+[Outil pour calculer rapidement la fréquence des lettres](https://charactercounter.com/letter-frequency-counter)  
 
-La lettre la plus fréquente dans ce texte est la lettre Q. Nous pouvons supposer que le texte a été chiffré avec un décalage de 12 (Q - E = 12).  
+[Outil pour déchiffrer un texte de César](https://rot13.com)
+
+La lettre la plus fréquente dans ce texte est la lettre Q. Nous pouvons supposer que le texte a été chiffré avec un décalage de 12 (Q - E = 12).
+
+!!! note 
+    -12 est pour déchiffrer. Plusieurs outils ont un choix de chiffrement entre ROT1 et ROT25. Alors le -12 serait le ROT14 (26-12).
 
 Voici le texte lorsqu'on le déchiffre avec -12 :  
 
@@ -76,6 +81,25 @@ Un système de chiffrement **asymétrique** utilise une clé pour le chiffrement
 **plain-texte** : Texte lisible par l'humain avant d'être chiffré (représenté par un P)
 
 **chiffre-texte** : Texte chiffré par un algorithme de chiffrement (représenté par un C)
+
+
+## Chiffrement symétrique
+
+![10-Chiffrement-Symetrique](../images/2020/06/10-chiffrement-symetrique.png)
+
+Le chiffrement symétrique implique que la clé secrète est partagée entre l'émetteur et le récipiendaire d'un message.
+
+C'est bon pour la confidentialité, mais ça ne prouve pas l'identité de l'émetteur du message, car la clé secrète est connue d'au moins 2 personnes.
+
+La distribution de la clé est un problème. Il faut avoir un canal de distribution de la clé sécuritaire pour la transmettre sans risquer de se la faire intercepter. (Ne jamais envoyer une clé secrète par courriel, par exemple)
+
+La clé doit être régénérée souvent. En effet, lorsqu'un membre du groupe qui possède la clé quitte, la clé ne peut plus être utilisée.
+
+## Chiffrement asymétrique
+
+Le chiffrement asymétrique est aussi appelé chiffrement à clé publique. L'algorithme utilise une paire de clés, une privée et seulement connue du récipiendaire et l'autre publique, connue de tous.
+
+![10-Chiffrement-Asymetrique](../images/2020/06/10-chiffrement-asymetrique.png)
 
 Le chiffrement aide :
 
@@ -259,24 +283,6 @@ La méthode de substitution la plus sécuritaire est celle du masque jetable (_o
 2. La clé doit être protégée contre le vol, si un ennemi a la clé, le message peut être déchiffré
 3. La clé doit être utilisée qu'une seule fois. Si elle est utilisée plus d'une fois, des experts peuvent en déduire la clé
 4. La clé doit être aussi longue que le plain-texte
-
-## Chiffrement symétrique
-
-![10-Chiffrement-Symetrique](../images/2020/06/10-chiffrement-symetrique.png)
-
-Le chiffrement symétrique implique que la clé secrète est partagée entre l'émetteur et le récipiendaire d'un message.
-
-C'est bon pour la confidentialité, mais ça ne prouve pas l'identité de l'émetteur du message, car la clé secrète est connue d'au moins 2 personnes.
-
-La distribution de la clé est un problème. Il faut avoir un canal de distribution de la clé sécuritaire pour la transmettre sans risquer de se la faire intercepter. (Ne jamais envoyer une clé secrète par courriel, par exemple)
-
-La clé doit être régénérée souvent. En effet, lorsqu'un membre du groupe qui possède la clé quitte, la clé ne peut plus être utilisée.
-
-## Chiffrement asymétrique
-
-Le chiffrement asymétrique est aussi appelé chiffrement à clé publique. L'algorithme utilise une paire de clés, une privée et seulement connue du récipiendaire et l'autre publique, connue de tous.
-
-![10-Chiffrement-Asymetrique](../images/2020/06/10-chiffrement-asymetrique.png)
 
 Pour envoyer un message à l'aide du chiffrement asymétrique, l'expéditeur utilise la clé publique du réceptionnaire pour chiffrer le message, qui sera déchiffré par ce dernier avec sa clé publique.
 

@@ -1,6 +1,6 @@
 # Installation de Gogo dans VirtualBox
 
-[Télécharger GOGO - Google Drive du cours](https://drive.google.com/file/d/1-_kokEaheG3Qknk-Jq88fdveWMu_rNut/view?usp=sharing)
+[Télécharger GOGO - Sharepoint du Cégep](https://cegepvicto.sharepoint.com/:u:/s/guidemac/ETnhGvZxJ4NKq1Avgxt9Xa4BV_0PyreMvq7EEqLDf4LNUA?e=ppSOm0)
 
 Configurations de VirtualBox :
 

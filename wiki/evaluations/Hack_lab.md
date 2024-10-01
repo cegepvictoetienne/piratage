@@ -5,11 +5,11 @@
 
 Le but de cette évaluation est de tester vos connaissances dans la pénétration de systèmes informatiques.
 
-La machine virtuelle que vous allez attaquer s'appelle Dundermifflin. Il y a un code secret caché dans le serveur que vous devrez trouver.
+La machine virtuelle que vous allez attaquer s'appelle GOGO. Il y a un code secret caché dans le serveur que vous devrez trouver.
 
-[Pour installer dundermifflin][dundermifflin]
+[Pour installer gogo][gogo]
 
-Pour ceux qui terminent plus tôt, essayez de cracker [la VM gogo][gogo] et son TRESOR.
+Pour ceux qui terminent plus tôt, essayez de cracker [la VM dundermifflin][dundermifflin] et son SECRET (et l'énigme du secret).
 
 ## Instructions
 
@@ -21,12 +21,31 @@ Voici les sections de votre rapport :
 
 - Résultats de votre reconnaissance active (indiquez tous les outils utilisés et leurs résultats)
 - Le détail de tous vos essais pour pénétrer le serveur (ce que vous avez essayé, quel est le résultat)
-- Le détail de la recherche du SECRET (ce que vous avez essayé, quel est le résultat)
-- Le résultat final : le code secret (résoudre l'énigme dans le fichier)
+- Le détail de la recherche du TRESOR (ce que vous avez essayé, quel est le résultat)
+- Le résultat final : le code secret dans le TRESOR
 
 Vous devrez utiliser Kali comme système d'attaque.
 
 Vous avez trois cours pour faire ce laboratoire.
+
+Voici une liste d'indices pour réussir le défi :
+
+- nikto
+- nmap
+- msfconsole
+- smbclient
+- Algorithme de chiffrement
+- CVE-2011-2523
+- gpg
+- find
+- tar
+- nano
+- passwd
+- less
+- il y a plus d'un utilisateur dans le système
+- Go home!
+- 80
+
 
 ## Grille d'évaluation
 
