@@ -1930,11 +1930,22 @@
 <p>Essayons-le :</p>
 <p><img alt="14-exploit-ipass-pipe-exec-run" src="../../images/2020/06/14-exploit-ipass-pipe-exec-run.png" /></p>
 <p>Cet <em>exploit</em> n'a pas marché, passons au suivant :  </p>
-<p><img alt="14-exploit-ms08-067-info" src="../../images/2020/06/14-exploit-ms08-067-info.png" /></p>
-<p><img alt="14-exploit-ms08-067-detail" src="../../images/2020/06/14-exploit-ms08-067-detail.png" /></p>
-<p>Lançons l'exécution :  </p>
-<p><img alt="14-exploit-ms08-067-success" src="../../images/2020/06/14-exploit-ms08-067-success.png" /></p>
-<p>C'est un succès!!!</p>
+<details class="note">
+<summary>Exploit qui marche en Windows, mais pas sur MacOS.</summary>
+<p><img alt="14-exploit-ms08-067-info" src="../../images/2020/06/14-exploit-ms08-067-info.png" /><br />
+<img alt="14-exploit-ms08-067-detail" src="../../images/2020/06/14-exploit-ms08-067-detail.png" /><br />
+Lançons l'exécution :<br />
+<img alt="14-exploit-ms08-067-success" src="../../images/2020/06/14-exploit-ms08-067-success.png" /><br />
+C'est un succès!!!</p>
+</details>
+<details class="note">
+<summary>Exploit qui marche en MacOS</summary>
+<p><img alt="ms17_010_psexec_info" src="../../images/ms17_010_psexec_info.png" /><br />
+<img alt="ms17_010_psexec_detail" src="../../images/ms17_010_psexec_detail.png" /><br />
+Lançons l'exécution :<br />
+<img alt="ms17_010_psexec_success" src="../../images/ms17_010_psexec_success.png" /><br />
+C'est un succès!!!  </p>
+</details>
 <h2 id="meterpreter">Meterpreter</h2>
 <p>Meterpreter est un <em>payload</em> qui utilise un mécanisme d'injection de DLL en mémoire et donne un puissant outil qui roule sur le système de la victime.</p>
 <p>Pour commencer, il y a une aide contextuelle dans Meterpreter :</p>

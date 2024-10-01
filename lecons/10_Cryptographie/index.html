@@ -1910,6 +1910,15 @@ O - 3(NML) = L  </p>
 <p>Un système de chiffrement <strong>asymétrique</strong> utilise une clé pour le chiffrement et une autre pour le déchiffrement. Ce sont deux clés différentes et il est impossible de déchiffrer avec la clé de chiffrement.</p>
 <p><strong>plain-texte</strong> : Texte lisible par l'humain avant d'être chiffré (représenté par un P)</p>
 <p><strong>chiffre-texte</strong> : Texte chiffré par un algorithme de chiffrement (représenté par un C)</p>
+<h2 id="chiffrement-symetrique">Chiffrement symétrique</h2>
+<p><img alt="10-Chiffrement-Symetrique" src="../../images/2020/06/10-chiffrement-symetrique.png" /></p>
+<p>Le chiffrement symétrique implique que la clé secrète est partagée entre l'émetteur et le récipiendaire d'un message.</p>
+<p>C'est bon pour la confidentialité, mais ça ne prouve pas l'identité de l'émetteur du message, car la clé secrète est connue d'au moins 2 personnes.</p>
+<p>La distribution de la clé est un problème. Il faut avoir un canal de distribution de la clé sécuritaire pour la transmettre sans risquer de se la faire intercepter. (Ne jamais envoyer une clé secrète par courriel, par exemple)</p>
+<p>La clé doit être régénérée souvent. En effet, lorsqu'un membre du groupe qui possède la clé quitte, la clé ne peut plus être utilisée.</p>
+<h2 id="chiffrement-asymetrique">Chiffrement asymétrique</h2>
+<p>Le chiffrement asymétrique est aussi appelé chiffrement à clé publique. L'algorithme utilise une paire de clés, une privée et seulement connue du récipiendaire et l'autre publique, connue de tous.</p>
+<p><img alt="10-Chiffrement-Asymetrique" src="../../images/2020/06/10-chiffrement-asymetrique.png" /></p>
 <p>Le chiffrement aide :</p>
 <table>
 <thead>
@@ -2216,15 +2225,6 @@ OUVRE TOI SESAME
 <li>La clé doit être utilisée qu'une seule fois. Si elle est utilisée plus d'une fois, des experts peuvent en déduire la clé</li>
 <li>La clé doit être aussi longue que le plain-texte</li>
 </ol>
-<h2 id="chiffrement-symetrique">Chiffrement symétrique</h2>
-<p><img alt="10-Chiffrement-Symetrique" src="../../images/2020/06/10-chiffrement-symetrique.png" /></p>
-<p>Le chiffrement symétrique implique que la clé secrète est partagée entre l'émetteur et le récipiendaire d'un message.</p>
-<p>C'est bon pour la confidentialité, mais ça ne prouve pas l'identité de l'émetteur du message, car la clé secrète est connue d'au moins 2 personnes.</p>
-<p>La distribution de la clé est un problème. Il faut avoir un canal de distribution de la clé sécuritaire pour la transmettre sans risquer de se la faire intercepter. (Ne jamais envoyer une clé secrète par courriel, par exemple)</p>
-<p>La clé doit être régénérée souvent. En effet, lorsqu'un membre du groupe qui possède la clé quitte, la clé ne peut plus être utilisée.</p>
-<h2 id="chiffrement-asymetrique">Chiffrement asymétrique</h2>
-<p>Le chiffrement asymétrique est aussi appelé chiffrement à clé publique. L'algorithme utilise une paire de clés, une privée et seulement connue du récipiendaire et l'autre publique, connue de tous.</p>
-<p><img alt="10-Chiffrement-Asymetrique" src="../../images/2020/06/10-chiffrement-asymetrique.png" /></p>
 <p>Pour envoyer un message à l'aide du chiffrement asymétrique, l'expéditeur utilise la clé publique du réceptionnaire pour chiffrer le message, qui sera déchiffré par ce dernier avec sa clé publique.</p>
 <p>Le chiffrement asymétrique peut aussi être utilisé comme signature électronique, pour prouver que le message vient vraiment de l'expéditeur.</p>
 <p>Comme il n'y a pas de distribution de clés privées, il est plus facile d'utiliser ce système.</p>
