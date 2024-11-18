@@ -120,56 +120,6 @@ Pour toutes les instructions Directory qui se trouvent dans les fichiers du rép
 
 Redémarrer le serveur.  
 
-## Désactiver HTTP TRACE  
-
-HTTP TRACE est une méthode qui est activée par défaut sur les serveurs Apache. Cette méthode est considérée dangereuse par les experts.  
-
-Pour vérifier si elle est active :  
-
-`curl -v -X TRACE http://192.168.40.7`  
-
-!!! figure "Résultat de curl"  
-    ![21-curl-trace-before](../images/2020/07/21-curl-trace-before.png)  
-    Le _trace_ est réussi.  
-
-Dans le fichier de configuration, ajouter cette instruction :  
-
-```
-TraceEnable off
-```
-Redémarrer le serveur.  
-
-!!! figure "Résultat de curl après le changement"  
-    ![21-curl-trace-after](../images/2020/07/21-curl-trace-after.png)
-    Le _trace_ ne fonctionne plus.  
-
-## Protection contre le Cross Site Scripting  
-
-Vous avez vu à un cours précédent ce qu'est le _Cross Site Scripting_. Voici comment désactiver ceci.  
-
-Dans le fichier de configuration, ajouter cette instruction :  
-
-```
-Header set X-XSS-Protection "1; mode=block"  
-```
-
-Il faut bien sûr avoir activé le module headers en exécutant ces deux commandes :  
-
-```
-sudo a2enmod headers  
-sudo /etc/init.d/apache2 force-reload   
-```
-
-Redémarrer le serveur.  
-
-!!! figure "Header tel que vu dans Firefox après le changement"
-    ![21-xss-protection-header](../images/2020/07/21-xss-protection-header.png)
-    La protection est là...  
-
-!!! warning "Attention"  
-    Cette protection n'est pas utilisée par tous les fureteurs. Par exemple, Firefox ne supporte pas ce paramètre.  
-
-
 !!! important  
     Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
 

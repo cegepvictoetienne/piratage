@@ -12,7 +12,7 @@ Outils à utiliser :
 4. Aircrack-ng
 
 Pour télécharger le fichier de mot de passe à utiliser, faire la commande suivante dans Kali :  
-`wget https://piratage.professeur.tech/mot_de_passe.txt`   
+`wget https://piratage.profinfo.ca/mot_de_passe.txt`   
 
 2. Trouver le serveur sur le réseau.  Balayez ses services et complétez l'énigme transmise par le serveur (Raspberry PI)  
 
