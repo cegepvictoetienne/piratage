@@ -782,24 +782,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desactiver-http-trace" class="md-nav__link">
-    <span class="md-ellipsis">
-      Désactiver HTTP TRACE
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protection-contre-le-cross-site-scripting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Protection contre le Cross Site Scripting
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#testez-vos-connaissances" class="md-nav__link">
     <span class="md-ellipsis">
       Testez vos connaissances
@@ -1986,24 +1968,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desactiver-http-trace" class="md-nav__link">
-    <span class="md-ellipsis">
-      Désactiver HTTP TRACE
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protection-contre-le-cross-site-scripting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Protection contre le Cross Site Scripting
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#testez-vos-connaissances" class="md-nav__link">
     <span class="md-ellipsis">
       Testez vos connaissances
@@ -2117,43 +2081,6 @@ Redémarrer le serveur.  </p>
 &lt;/Directory&gt;  
 </code></pre></div>
 <p>Redémarrer le serveur.  </p>
-<h2 id="desactiver-http-trace">Désactiver HTTP TRACE</h2>
-<p>HTTP TRACE est une méthode qui est activée par défaut sur les serveurs Apache. Cette méthode est considérée dangereuse par les experts.  </p>
-<p>Pour vérifier si elle est active :  </p>
-<p><code>curl -v -X TRACE http://192.168.40.7</code>  </p>
-<div class="admonition figure">
-<p class="admonition-title">Résultat de curl</p>
-<p><img alt="21-curl-trace-before" src="../../images/2020/07/21-curl-trace-before.png" /><br />
-Le <em>trace</em> est réussi.  </p>
-</div>
-<p>Dans le fichier de configuration, ajouter cette instruction :  </p>
-<p><div class="highlight"><pre><span></span><code>TraceEnable off
-</code></pre></div>
-Redémarrer le serveur.  </p>
-<div class="admonition figure">
-<p class="admonition-title">Résultat de curl après le changement</p>
-<p><img alt="21-curl-trace-after" src="../../images/2020/07/21-curl-trace-after.png" />
-Le <em>trace</em> ne fonctionne plus.  </p>
-</div>
-<h2 id="protection-contre-le-cross-site-scripting">Protection contre le Cross Site Scripting</h2>
-<p>Vous avez vu à un cours précédent ce qu'est le <em>Cross Site Scripting</em>. Voici comment désactiver ceci.  </p>
-<p>Dans le fichier de configuration, ajouter cette instruction :  </p>
-<div class="highlight"><pre><span></span><code>Header set X-XSS-Protection &quot;1; mode=block&quot;  
-</code></pre></div>
-<p>Il faut bien sûr avoir activé le module headers en exécutant ces deux commandes :  </p>
-<div class="highlight"><pre><span></span><code>sudo a2enmod headers  
-sudo /etc/init.d/apache2 force-reload   
-</code></pre></div>
-<p>Redémarrer le serveur.  </p>
-<div class="admonition figure">
-<p class="admonition-title">Header tel que vu dans Firefox après le changement</p>
-<p><img alt="21-xss-protection-header" src="../../images/2020/07/21-xss-protection-header.png" />
-La protection est là...  </p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Attention</p>
-<p>Cette protection n'est pas utilisée par tous les fureteurs. Par exemple, Firefox ne supporte pas ce paramètre.  </p>
-</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Prenez quelques minutes pour faire votre <a href="../../outils/cartographie/">cartographie</a> de la leçon d'aujourd'hui!   </p>
