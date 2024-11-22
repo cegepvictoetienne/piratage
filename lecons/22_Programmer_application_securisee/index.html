@@ -2094,7 +2094,7 @@
 <li>Permettre à des administrateurs de visualiser les comptes utilisateurs, les supprimer et modérer les commentaires  </li>
 </ul>
 <h3 id="permier-jet-de-monmur">Permier jet de MonMur</h3>
-<div class="highlight"><pre><span></span><code>&lt;?php
+<div class="highlight"><pre><span></span><code>&amp;lt;?php
 // database.php sert à interagir avec la base de données
 require_once(&#39;database.php&#39;);
 require_once(&#39;commun.php&#39;);
@@ -2136,39 +2136,39 @@ function afficherCommentaires(){
   while($ligne = $resultats-&gt;fetch_assoc()){
     $commentaire = trim($ligne[&quot;commentaire&quot;]);
     // Remplacer les retour de chariot par l&#39;équivalent html
-    $commentaire = str_replace(&quot;\n&quot;, &#39;&lt;br/&gt;&#39;, $commentaire);
+    $commentaire = str_replace(&quot;\n&quot;, &#39;&amp;lt;br/&gt;&#39;, $commentaire);
     $commentaire_id = $ligne[&quot;commentaire_id&quot;];
     $image = $ligne[&quot;image&quot;];
     $code_utilisateur = trim($ligne[&quot;codeutilisateur&quot;]);
 
     $monmur .= &lt;&lt;&lt;fin
-    &lt;div class=&quot;commentaire&quot;&gt;
-      &lt;div class=&quot;commentaire_entete&quot;&gt;
-        &lt;div class=&quot;utilisateur&quot;&gt;{$code_utilisateur}&lt;/div&gt;
-        &lt;div class=&quot;commentaire_id&quot;&gt;{$commentaire_id}&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;commentaire_texte&quot;&gt;{$commentaire}&lt;/div&gt;
+    &amp;lt;div class=&quot;commentaire&quot;&gt;
+      &amp;lt;div class=&quot;commentaire_entete&quot;&gt;
+        &amp;lt;div class=&quot;utilisateur&quot;&gt;{$code_utilisateur}&amp;lt;/div&gt;
+        &amp;lt;div class=&quot;commentaire_id&quot;&gt;{$commentaire_id}&amp;lt;/div&gt;
+      &amp;lt;/div&gt;
+      &amp;lt;div class=&quot;commentaire_texte&quot;&gt;{$commentaire}&amp;lt;/div&gt;
     fin;
 
     if(!empty($image)) {
-      $monmur .= &quot;&lt;img src=&#39;/images/{$image}&#39;/&gt;&quot;;
+      $monmur .= &quot;&amp;lt;img src=&#39;/images/{$image}&#39;/&gt;&quot;;
     }
 
     // Afficher les actions seulement si c&#39;est l&#39;utilisateur qui est l&#39;auteur
     if($code_utilisateur == utilisateurCourant() &amp;&amp; utilisateurCourant() != ANON) {
       $monmur .= &lt;&lt;&lt;fin
-      &lt;div class=&quot;commentaire_pied&quot;&gt;
-        &lt;div class=&quot;commentaire_action&quot;&gt;
-          &lt;a href=&quot;modifier.php?id={$commentaire_id}&quot;&gt;Modifier&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;commentaire_action&quot;&gt;
-          &lt;a href=&quot;javascript:ConfirmerSupression({$commentaire_id})&quot;&gt;Supprimer&lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+      &amp;lt;div class=&quot;commentaire_pied&quot;&gt;
+        &amp;lt;div class=&quot;commentaire_action&quot;&gt;
+          &amp;lt;a href=&quot;modifier.php?id={$commentaire_id}&quot;&gt;Modifier&amp;lt;/a&gt;
+        &amp;lt;/div&gt;
+        &amp;lt;div class=&quot;commentaire_action&quot;&gt;
+          &amp;lt;a href=&quot;javascript:ConfirmerSupression({$commentaire_id})&quot;&gt;Supprimer&amp;lt;/a&gt;
+        &amp;lt;/div&gt;
+      &amp;lt;/div&gt;
       fin;
     }
 
-    $monmur .= &quot;&lt;/div&gt;&quot;;
+    $monmur .= &quot;&amp;lt;/div&gt;&quot;;
   }
 
   return $monmur;
@@ -2205,7 +2205,7 @@ function afficherCommentaires(){
 </ul>
 <p>Dans votre application, certains choix devrons être faits. Est-ce que l'application devrait accepter le code HTML dans les commentaires?  D'un côté, ce peut être intéressant pour les utilisateurs de mettre en <strong>gras</strong> son commentaire, mais accepter le HTML ouvre la porte aux pirates.  </p>
 <p>Pour enlever le code HTML d'une entrée :  </p>
-<div class="highlight"><pre><span></span><code>$texte_a_nettoyer = &quot;Tu es &lt;em&gt;le&lt;/em&gt; meilleur!&quot;;
+<div class="highlight"><pre><span></span><code>$texte_a_nettoyer = &quot;Tu es &amp;lt;em&gt;le&amp;lt;/em&gt; meilleur!&quot;;
 $texte_propre = strip_tags($texte_a_nettoyer);
 </code></pre></div>
 <p>$texte_propre aura la valeur "Tu es le meilleur!".</p>
@@ -2324,7 +2324,7 @@ Feel good! Feel good! (All night)
 }
 </code></pre></div></p>
 <p>XSS :  </p>
-<div class="highlight"><pre><span></span><code>&lt;script&gt;alert(&#39;Doh!&#39;)&lt;/script&gt;
+<div class="highlight"><pre><span></span><code>&amp;lt;script&gt;alert(&#39;Doh!&#39;)&amp;lt;/script&gt;
 </code></pre></div>
 <p>Comment corriger :  </p>
 <ul>
@@ -2335,9 +2335,9 @@ Feel good! Feel good! (All night)
 <h2 id="televersement-de-fichiers">Téléversement de fichiers</h2>
 <p>L'application MonMur permet de téléverser des images pour les commentaires. Un pirate peut abuser de cette fonctionnalité pour injecter du code PHP dans le serveur pour en prendre possession.</p>
 <p>Téléversons un fichier nommé <strong>liste.php</strong> :  </p>
-<div class="highlight"><pre><span></span><code>&lt;html&gt;&lt;body&gt;
-&lt;?php echo str_replace(&quot;\n&quot;, &#39;&lt;br/&gt;&#39;,shell_exec(&quot;ls /etc/&quot;));?&gt;
-&lt;/body&gt;&lt;/html&gt;
+<div class="highlight"><pre><span></span><code>&amp;lt;html&gt;&amp;lt;body&gt;
+&amp;lt;?php echo str_replace(&quot;\n&quot;, &#39;&amp;lt;br/&gt;&#39;,shell_exec(&quot;ls /etc/&quot;));?&gt;
+&amp;lt;/body&gt;&amp;lt;/html&gt;
 </code></pre></div>
 <p>MonMur copie les images dans le répertoire <code>/images</code>.  Donc, on peut maintenant exécuter le code dans la barre d'adresse : <code>http://192.168.2.222/images/liste.php</code>  </p>
 <div class="admonition figure">
@@ -2356,36 +2356,36 @@ Feel good! Feel good! (All night)
 <p>Le logiciel accepte sans problème le fichier qui peut être exécuté comme suit :<br />
 <code>http://192.168.2.222/images/liste.php.jpg</code>  </p>
 <p>La magie de ceci est une configuration du serveur qui permet d'exécuter tout script qui a la mention php dans son nom :  </p>
-<div class="highlight"><pre><span></span><code>&lt;FilesMatch &quot;.+\.ph(ar|p|tml)&quot;&gt;
+<div class="highlight"><pre><span></span><code>&amp;lt;FilesMatch &quot;.+\.ph(ar|p|tml)&quot;&amp;gt;
     SetHandler application/x-httpd-php
-&lt;/FilesMatch&gt;
-&lt;FilesMatch &quot;.+\.phps&quot;&gt;
+&amp;lt;/FilesMatch&amp;gt;
+&amp;lt;FilesMatch &quot;.+\.phps&quot;&gt;
     SetHandler application/x-httpd-php-source
     # Deny access to raw php sources by default
     # To re-enable it&#39;s recommended to enable access to the files
     # only in specific virtual host or directory
     Require all denied
-&lt;/FilesMatch&gt;
+&amp;lt;/FilesMatch&gt;
 # Deny access to files without filename (e.g. &#39;.php&#39;)
-&lt;FilesMatch &quot;^\.ph(ar|p|ps|tml)&quot;&gt;
+&amp;lt;FilesMatch &quot;^\.ph(ar|p|ps|tml)&quot;&gt;
     Require all denied
-&lt;/FilesMatch&gt;
+&amp;lt;/FilesMatch&gt;
 </code></pre></div>
 <p>Corrigeons la configuration (le <strong>$</strong> à la fin du regex indique que c'est à la fin du nom du fichier, donc .php accepté, .php.jpg ne l'est pas.):  </p>
-<div class="highlight"><pre><span></span><code>&lt;FilesMatch &quot;.+\.ph(ar|p|tml$)&quot;&gt;
+<div class="highlight"><pre><span></span><code>&amp;lt;FilesMatch &quot;.+\.ph(ar|p|tml$)&quot;&gt;
     SetHandler application/x-httpd-php
-&lt;/FilesMatch&gt;
-&lt;FilesMatch &quot;.+\.phps$&quot;&gt;
+&amp;lt;/FilesMatch&gt;
+&amp;lt;FilesMatch &quot;.+\.phps$&quot;&gt;
     SetHandler application/x-httpd-php-source
     # Deny access to raw php sources by default
     # To re-enable it&#39;s recommended to enable access to the files
     # only in specific virtual host or directory
     Require all denied
-&lt;/FilesMatch&gt;
+&amp;lt;/FilesMatch&gt;
 # Deny access to files without filename (e.g. &#39;.php&#39;)
-&lt;FilesMatch &quot;^\.ph(ar|p|ps|tml)$&quot;&gt;
+&amp;lt;FilesMatch &quot;^\.ph(ar|p|ps|tml)$&quot;&gt;
     Require all denied
-&lt;/FilesMatch&gt;
+&amp;lt;/FilesMatch&gt;
 </code></pre></div>
 <h2 id="lectures-supplementaires">Lectures supplémentaires</h2>
 <p><a href="https://www.markdownguide.org/">Documentation de MarkDown</a><br />
