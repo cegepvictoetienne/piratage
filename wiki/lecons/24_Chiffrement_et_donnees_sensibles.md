@@ -39,7 +39,7 @@ Prenons comme exemple un site Web contenant des données sensibles.  Ce site né
 Il y a 3 endroits où le chiffrement sera utilisé :
 
 1- Lors de l'envoi du mot de passe, le site utilisera le hashing.  
-2- Lors de la sauvegarde des données sensibles et lors des lectures subséquentes, le module d'accès à la base de données utilisera un chiffrement symétrique car le module est le seul à posséder le mot de passe. (Données au repos)
+2- Lors de la sauvegarde des données sensibles et lors des lectures subséquentes, le module d'accès à la base de données utilisera un chiffrement symétrique car le module est le seul à posséder le mot de passe. (Données au repos)  
 3- Lors de la transmission des données entre le serveur et le client, il y aura un chiffrement asymétrique initial suivi d'une transmission avec un chiffrement symétrique. (Protocole HTTPS)  
 
 !!! important  
@@ -86,8 +86,8 @@ Disons que nous voulons chiffrer les commentaires des utilisateurs dans notre ba
 
 Tout d'abord la création de la clé de chiffrement dans notre fichier `secret.php` :
 
-```
-<?php
+```php
+&lt;?php
 define('CLE_CHIFFREMENT', "Latina-Marble-Honda-Speaks-Atomic-Majority-RTnL");
 ?>
 ```

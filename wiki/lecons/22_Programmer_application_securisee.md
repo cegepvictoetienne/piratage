@@ -18,7 +18,7 @@
 | A10:2017-Journalisation & Surveillance insuffisantes| L'insuffisance de journalisation et de surveillance, couplée à une intégration avec la réponse aux incidents, inefficace ou absente, permet aux pirates d'attaquer des systèmes de façon plus avancée, de maintenir la persistance, de basculer vers d'autres systèmes, et de falsifier, extraire ou détruire des données. La plupart des études de failles montrent que le temps nécessaire pour détecter une faille est supérieur à 200 jours. Généralement, cette faille est détectée par des parties externes plutôt que par une surveillance ou des processus internes. |
 
 
-À partir du cours 22, nous allons prendre une application simple codée en PHP qui est insécure. À chaque cours, nous allons modifier l'application pour la rendre plus sécuritaire.  
+À partir du cours d'aujourd'hui, nous allons prendre une application simple codée en PHP qui est insécure. À chaque cours, nous allons modifier l'application pour la rendre plus sécuritaire.  
 
 ## MonMur  
 

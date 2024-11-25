@@ -4,7 +4,7 @@
 
 Le code source de l'application MonMur se trouve sur GitHub Classroom.
 
-Connectez-vous et consultez le projet : [Projet du cours de Piratage Éthique](https://classroom.github.com/a/t2z5MGN4)  
+Connectez-vous et consultez le projet : [Projet du cours de Piratage Éthique](https://classroom.github.com/a/0GA0DBRl)  
 
 !!! figure "Choisissez votre nom dans la liste"  
     ![22-github-classroom](../images/2020/08/22-github-classroom.png)  

@@ -26,8 +26,8 @@ Semaine|Cours|Date|Sujet|Exercice
 12|23|2024-11-18 13:15:00|[Sécuriser serveur Apache](lecons/21_Securiser_Apache.md)|[Sécuriser serveur Apache](exercices/21_Securiser_Apache.md)
 12|24|2024-11-22 12:15:00|Examen mi-session   |
 13|25|2024-11-25 13:15:00|[Programmer application sécurisée](lecons/22_Programmer_application_securisee.md) <br/> [Protection injection SQL](lecons/23_Protection_Injection_SQL.md)|[Programmation](exercices/22_Programmer_application_securisee.md) <br/>[Protection injection SQL](exercices/23_Proteger_injection_SQL.md)
-13|26|2024-11-29 12:15:00|[Authentification](lecons/25_Authentification.md)           |[Authentification](exercices/25_Authentification.md)
-14|27|2024-12-02 13:15:00|[Chiffrement et données sensibles](lecons/24_Chiffrement_et_donnees_sensibles.md)|[Chiffrement](exercices/24_Chiffrement.md) 
+13|26|2024-11-29 12:15:00|[Chiffrement et données sensibles](lecons/24_Chiffrement_et_donnees_sensibles.md)|[Chiffrement](exercices/24_Chiffrement.md) 
+14|27|2024-12-02 13:15:00|Terminer MonMur|Terminer MonMur
 14|28|2024-12-06 12:15:00|Terminer MonMur|Terminer MonMur
 15|29|2024-12-09 13:15:00|Examen final - Première partie|Examen final - Première partie
 15|30|2024-12-13 12:15:00|Examen final - Deuxième partie|Examen final - Deuxième partie
