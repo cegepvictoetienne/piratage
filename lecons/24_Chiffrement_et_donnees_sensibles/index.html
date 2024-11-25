@@ -16,7 +16,7 @@
         <link rel="prev" href="../23_Protection_Injection_SQL/">
       
       
-        <link rel="next" href="../25_Authentification/">
+        <link rel="next" href="../99_CacherCodeMalicieux/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -860,27 +860,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../25_Authentification/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Authentification
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../99_CacherCodeMalicieux/" class="md-nav__link">
         
   
@@ -1432,27 +1411,6 @@
   
   <span class="md-ellipsis">
     Chiffrement
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercices/25_Authentification/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Authentification
   </span>
   
 
@@ -2021,7 +1979,7 @@
 <p>Prenons comme exemple un site Web contenant des données sensibles.  Ce site nécessite un code utilisateur avec mot de passe.</p>
 <p>Il y a 3 endroits où le chiffrement sera utilisé :</p>
 <p>1- Lors de l'envoi du mot de passe, le site utilisera le hashing.<br />
-2- Lors de la sauvegarde des données sensibles et lors des lectures subséquentes, le module d'accès à la base de données utilisera un chiffrement symétrique car le module est le seul à posséder le mot de passe. (Données au repos)
+2- Lors de la sauvegarde des données sensibles et lors des lectures subséquentes, le module d'accès à la base de données utilisera un chiffrement symétrique car le module est le seul à posséder le mot de passe. (Données au repos)<br />
 3- Lors de la transmission des données entre le serveur et le client, il y aura un chiffrement asymétrique initial suivi d'une transmission avec un chiffrement symétrique. (Protocole HTTPS)  </p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -2057,9 +2015,9 @@ Notez que Carole et Julien ont le même mot de passe, mais la fonction génère 
 <h2 id="chiffrer-les-donnees-confidentielles">Chiffrer les données confidentielles</h2>
 <p>Disons que nous voulons chiffrer les commentaires des utilisateurs dans notre base de données. Nous utiliserons une chiffrement symétrique. En PHP, nous pouvons utiliser OpenSSL pour gérer le chiffrement, avec <code>openssl_encrypt()</code> et <code>openssl_decrypt()</code>.</p>
 <p>Tout d'abord la création de la clé de chiffrement dans notre fichier <code>secret.php</code> :</p>
-<div class="highlight"><pre><span></span><code>&lt;?php
-define(&#39;CLE_CHIFFREMENT&#39;, &quot;Latina-Marble-Honda-Speaks-Atomic-Majority-RTnL&quot;);
-?&gt;
+<div class="highlight"><pre><span></span><code><span class="x">&amp;lt;?php</span>
+<span class="x">define(&#39;CLE_CHIFFREMENT&#39;, &quot;Latina-Marble-Honda-Speaks-Atomic-Majority-RTnL&quot;);</span>
+<span class="x">?&gt;</span>
 </code></pre></div>
 <p>Pour l'enregistrement d'un commentaire :  </p>
 <div class="highlight"><pre><span></span><code>function enregistrerCommentaire($commentaire, $nom_image, $code_utilisateur){
