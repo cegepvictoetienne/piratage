@@ -57,12 +57,12 @@ Le parcours de la liste de fichiers est une option qui permet d'afficher le cont
     ![21-directory-listing](../images/2020/07/21-directory-listing.png)
     On peut y découvrir des trésors!  
 
-Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire `/etc/apache2/sites-enabled` :  
+Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire `/etc/apache2/sites-enabled` ou `/etc/apache2/apache2.conf` :  
 
 ```
-<Directory /var/www>
+&lt;Directory /var/www>
 Options -Indexes
-</Directory>
+&lt;/Directory>
 ```
 Redémarrer le serveur.  
 
@@ -96,9 +96,9 @@ Malgré les configurations faites par l'administrateur, les utilisateurs peuvent
 Trouver l'instruction Directory qui représente la racine du site, qui se trouvent dans un des fichiers du répertoire `/etc/apache2/sites-enabled` :  
 
 ```
-<Directory />
+&lt;Directory />
 AllowOverride None  
-</Directory>
+&lt;/Directory>
 ```  
 Redémarrer le serveur.  
 
@@ -108,14 +108,14 @@ Les serveurs Web supportent beaucoup de méthodes HTTP qui ne sont pas nécessai
 
 Normalement, on peut limiter les méthodes à **GET**, **POST**, **HEAD**.  
 
-Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire `/etc/apache2/sites-enabled` :  
+Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire `/etc/apache2/sites-enabled`  ou `/etc/apache2/apache2.conf` :  
 
 ```
-<Directory /var/www>  
-  <LimitExcept GET POST HEAD>  
+&lt;Directory /var/www>  
+  &lt;LimitExcept GET POST HEAD>  
     deny from all
-  </LimitExcept>  
-</Directory>  
+  &lt;/LimitExcept>  
+&lt;/Directory>  
 ```
 
 Redémarrer le serveur.  
