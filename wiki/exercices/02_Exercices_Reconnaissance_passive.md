@@ -18,9 +18,9 @@ Trouvez les informations suivantes :
 - Plus récent diplôme obtenu
 - Endroit où travaille son épouse
 - Endroit où travaille son fils
+- Diplôme le plus récent de sa fille
 - Publication scientifique  
 - Endroit où il s'est marié  
-- Endroit où il a été accepté pour le doctorat
 - Combien d'années il a travaillé au Cégep de Victoriaville
 - Qui a gagné la bourse ATE en 2024 et est pris en photo avec lui
 - Code utilisateur sur GitHub
