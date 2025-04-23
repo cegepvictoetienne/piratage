@@ -14,6 +14,11 @@ extra_javascript:
   - javascript/linktarget.js
   - javascript/addTranslations.js
 
+extra:
+  analytics:
+    provider: google
+    property: G-YL9WG21ZB6
+
 nav:
   - 'Page principale': 'index.md'
   - 'Horaire': 'horaire.md'
