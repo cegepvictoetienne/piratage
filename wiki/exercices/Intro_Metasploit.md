@@ -10,4 +10,4 @@ Dans Kali :
 4. Avec **db_nmap**, balayez Metasploitable.
 5. Avec le auxiliary/scanner/portscan/tcp, balayez Metasploitable.
 6. Balayez pour les mots de passe de MySQL. (ça se peut que ça ne fonctionne pas avec Kali 2024)
-7. Allez extraire le hashdump. (Suivez les étapes de la [leçon](../lecons/06_Intro_Metasploit.md))
+7. Allez extraire le hashdump. (Suivez les étapes de la [leçon](../lecons/Intro_Metasploit.md))

@@ -51,4 +51,4 @@ Dans Kali, utiliser l'outil `recon-ng`.
 3. Installer et utiliser les différents modules pour la reconnaissance (certificate_transparency, whois_pocs, brute_hosts, recon/hosts-hosts/resolve)  
 4. Générer un rapport en html  
 
-Référence : [Cours 2 - Reconnaissance passive](../lecons/02_Reconnaissance_passive.md)
+Référence : [Cours 2 - Reconnaissance passive](../lecons/Reconnaissance_passive.md)
