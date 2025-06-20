@@ -1,6 +1,6 @@
-# Exercices - Reconnaissance passive
+# Reconnaissance passive
 
-## Mise en situation - 1
+# Exercice obligatoire  
 
 Vous voulez en savoir plus sur votre professeur. Vous connaissez les informations suivantes :  
 
@@ -30,17 +30,17 @@ Trouvez les informations suivantes :
 
 [Inscrivez vos réponses dans ce formulaire](https://forms.office.com/Pages/ResponsePage.aspx?id=JvVsnYGt-EanOqUHqvBs2h4e_CrnfMxFsMr2ZqveBNhURDRTVFZQMVpXRUdYV0JOQzNDUFk3VlpQMi4u)  
 
-## Mise en situation - 2
+# Exercices supplémentaires
 
 Vous êtes dans une équipe de piratage éthique. Votre rôle est de faire la reconnaissance passive pour votre client. Le client est le Cégep de Victoriaville.
 
-### 1 - Mode manuel
+## 1 - Mode manuel
 
 Commencer avec les outils manuels. Faire la recherche des sous-domaines avec NMMapper's Subdomain Finder.
 
 Voir si vous pouvez trouver d'autres sous-domaines avec le rapport de Google (Google Certificate Transparency Report).
 
-### 2 - Mode automatique
+## 2 - Mode automatique
 
 Dans Kali, utiliser l'outil `recon-ng`.
 
@@ -50,5 +50,8 @@ Dans Kali, utiliser l'outil `recon-ng`.
 2. Ajouter le domaine principal à la base de données  
 3. Installer et utiliser les différents modules pour la reconnaissance (certificate_transparency, whois_pocs, brute_hosts, recon/hosts-hosts/resolve)  
 4. Générer un rapport en html  
+
+# Quiz sur la théorie  
+[Petit quiz sur la reconnaissance passive](https://forms.office.com/r/7qNdDYPMpc)  
 
 Référence : [Cours 2 - Reconnaissance passive](../lecons/Reconnaissance_passive.md)

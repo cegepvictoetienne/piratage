@@ -50,7 +50,7 @@ nav:
       - 'Attaque de Uber': 'lecons/Attaque_Uber.md'
   - 'Exercices':
       - 'Bâtir le laboratoire': 'exercices/Exercices_Laboratoire.md'
-      - 'Reconnaissance passive': 'exercices/Exercices_Reconnaissance_passive.md'
+      - 'Reconnaissance passive': 'exercices/reconnaissance_passive.md'
       - 'Reconnaissance active': 'exercices/Reconnaissance_active.md'
       - 'Écoute du réseau': 'exercices/Ecoute_reseau.md'
       - 'Gestion du risque': 'exercices/Gestion_de_risques.md'
