@@ -119,8 +119,5 @@ Il serait possible de créer plusieurs utilisateurs et les utiliser adéquatemen
 [SQLi et PHP - Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html#escaping-sqli-in-php)  
 [PHP Security](https://phpsecurity.readthedocs.io/en/latest/index.html)  
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 [Petit quiz sur la protection d'injection SQL](https://forms.office.com/r/9NLyJBkyV3)  

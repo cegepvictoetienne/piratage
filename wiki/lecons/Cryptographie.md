@@ -356,9 +356,6 @@ Le récipiendaire pourra déchiffrer le message comme suit :
 
 `gpg --output plain-texte --decrypt chiffre-texte.gpg`
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 
 ## Testez vos connaissances  
 

@@ -33,12 +33,6 @@ Plus vous connaissez la victime, plus il est facile de les faire cliquer sur un 
 - Prendre l'identité d'un fournisseur qui envoie une facture en retard de paiement.  
 - Faire un courriel qui vient du département des ressources humaines qui demande de remplir un formulaire pour avoir droit à un congé férié.  
 
-##
-
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
-
 ## Testez vos connaissances  
 
 [Petit quiz sur l'hameçonnage](https://forms.office.com/r/k6Uhv6ajHu)  

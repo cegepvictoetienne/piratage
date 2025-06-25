@@ -144,10 +144,6 @@ Pour voir ce qui a été capturé :
 
 `keyscan_dump`
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
-
 ## Testez vos connaissances  
 
 [Petit quiz sur les antivirus et pdf malicieux](https://forms.office.com/r/BP5zBu2nDM)  

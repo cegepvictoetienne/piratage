@@ -113,9 +113,6 @@ Dans certains cas, l'entreprise décide d'accepter de vivre avec le risque et le
 
 Aussi appelé l'appétit pour le risque.
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz sur la gestion de risques](https://forms.office.com/r/pANFZCZ8h4)  

@@ -148,9 +148,6 @@ Si vous pouvez téléverser un fichier sur le serveur, vous pouvez prendre contr
 
 ![19-msfconsole-multi-handler-bind-tcp-meterpreter](../images/2020/07/19-msfconsole-multi-handler-bind-tcp-meterpreter.png)
 
-!!! important  
- Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!
-
 ## Testez vos connaissances
 
 [Petit quiz sur les vulnérabilités Web](https://forms.office.com/r/Hymgvx9Avb)

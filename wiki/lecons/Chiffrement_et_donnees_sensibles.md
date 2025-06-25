@@ -118,8 +118,5 @@ function dechiffrerCommentaire($commentaire_chiffre) {
 }
 ```
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 [Petit quiz sur le chiffrement et données sensibles](https://forms.office.com/r/FtLPWPpDSa)  

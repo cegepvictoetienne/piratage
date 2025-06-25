@@ -104,9 +104,6 @@ Le logiciel fait la découverte d'actifs en balayant le réseau :
 
 ![11-lansweeper-scanning](../images/2020/06/11-lansweeper-scanning.png)
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz sur l'inventaire d'actifs](https://forms.office.com/r/Ybvg5jQj53)  

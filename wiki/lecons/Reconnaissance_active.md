@@ -149,9 +149,6 @@ Pour balayer un serveur Web avec Nikto :
 
 Nikto donne des références à OSVDB (une base de données qui a fermé en 2016). Si vous voulez le CVE correspondant, utilisez [cette page de correspondance.](https://cve.mitre.org/data/refs/refmap/source-OSVDB.html)
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz sur la reconnaissance active](https://forms.office.com/r/Vp6RsyUyfp)  

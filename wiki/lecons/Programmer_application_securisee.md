@@ -384,8 +384,5 @@ Corrigeons la configuration (le __$__ à la fin du regex indique que c'est à la
 [Pirater les fichiers téléversés](https://www.hackingarticles.in/comprehensive-guide-on-unrestricted-file-upload/)  
 [OWASP_Top_Ten](https://owasp.org/www-project-top-ten/)
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 [Petit quiz sur la programmation sécurisée](https://forms.office.com/r/WQ3z1mgvdJ)  

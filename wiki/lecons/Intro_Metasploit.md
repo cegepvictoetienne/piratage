@@ -272,10 +272,6 @@ Essayons d'aller chercher les fichiers de mots de passe de Metasploitable :
     ![06-john-hashdump](../images/2020/06/06-john-hashdump.png)
 
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
-
 ## Testez vos connaissances
 
 [Petit quiz sur Metasploit](https://forms.office.com/r/Qkan3UqXan)  

@@ -120,8 +120,5 @@ Pour toutes les instructions Directory qui se trouvent dans les fichiers du rép
 
 Redémarrer le serveur.  
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 [Petit quiz sur la sécurisation d'Apache](https://forms.office.com/r/tiqW75PGse)  

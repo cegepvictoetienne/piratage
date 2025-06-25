@@ -187,10 +187,6 @@ Il y a quelques années, lorsqu'une entreprise subissait une attaque de cryptovi
 
 Dans un but de prévenir ce genre d'attaque, il est fortement recommandé d'avoir un type de sauvegarde hors ligne, qui ne peut être accessible que physiquement. Ce peut être un ruban qu'on retire du lecteur à tous les jours ou un disque dur externe qui n'est connecté que lors de la sauvegarde. Le NAS et l'infonuagique peuvent être compromis à distance.
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
-
 ## Testez vos connaissances
 
 [Petit quiz sur les stratégies de sauvegarde](https://forms.office.com/r/j06fAxj1ZM)  

@@ -104,10 +104,6 @@ Pour démarrer l'attaque par dictionnaire :
 
 Une fois l'outil terminé, nous avons la clé!
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
-
 ## Testez vos connaissances  
 
 [Petit quiz sur la pénétration de réseau sans-fils](https://forms.office.com/r/C3TiPCCbRi)  

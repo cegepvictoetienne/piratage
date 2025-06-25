@@ -296,10 +296,6 @@ Résultat :
 
 ![20-sqlmap-users-table](../images/2020/07/20-sqlmap-users-table.png)
 
-
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz sur l'injection SQL](https://forms.office.com/r/6ZettJa66y)  

@@ -217,9 +217,6 @@ La réaction de snort :
 
 ![17-telnet-login-snort](../images/2020/07/17-telnet-login-snort.png)
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz de la détection d'intrusion](https://forms.office.com/r/VzpVFmG3hm)  

@@ -73,7 +73,6 @@ nav:
       - 'Protection injection SQL': 'exercices/Proteger_injection_SQL.md'
       - 'Chiffrement': 'exercices/Chiffrement.md'
   - 'Outils':
-      - 'Cartographie': 'outils/cartographie.md'
       - 'Labo':
           - 'Kali': 'labo/Installation_Kali_VirtualBox.md'
           - 'Metasploitable': 'labo/Installation_Metasploitable_VirtualBox.md'

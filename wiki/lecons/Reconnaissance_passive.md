@@ -151,9 +151,6 @@ Dans le code source, on peut voir :
 
 C'est un indicatif que le site est fait avec WordPress.
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz sur la reconnaissance passive](https://forms.office.com/r/7qNdDYPMpc)  

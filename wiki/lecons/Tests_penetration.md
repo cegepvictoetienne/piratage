@@ -158,9 +158,6 @@ Résultat :
 
 `reboot` Redémarre le système de la cible
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 
 ## Testez vos connaissances  
 

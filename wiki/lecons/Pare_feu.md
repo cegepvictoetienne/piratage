@@ -169,10 +169,6 @@ Ex : Pour un serveur Web utilisé qu'à l'interne de notre sous-réseau.
 
 `sudo ufw enable`
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
-
 ## Testez vos connaissances  
 
 [Petit quiz sur les pare-feux](https://forms.office.com/r/kGciDMVBy8)

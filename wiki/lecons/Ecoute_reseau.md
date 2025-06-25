@@ -122,9 +122,6 @@ Wireshark peut nous aider à espionner les victimes lorsqu'ils utilisent des pro
 !!! figure "Résultat de suivre le flux"
     ![04-wireshark-follow-telnet-tcp-stream](../images/2020/06/04-wireshark-follow-telnet-tcp-stream.png)
 
-!!! important  
-    Prenez quelques minutes pour faire votre [cartographie](../outils/cartographie.md) de la leçon d'aujourd'hui!   
-
 ## Testez vos connaissances  
 
 [Petit quiz sur l'écoute du réseau](https://forms.office.com/r/21wbTS7464)  
