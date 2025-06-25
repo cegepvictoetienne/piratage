@@ -1,4 +1,11 @@
-# Dossier de sécurité - Classification d'actifs
+# Exercices - Classification d'actifs
+
+# Quiz sur la théorie   
+
+[Petit quiz sur l'inventaire d'actifs](https://forms.office.com/r/Ybvg5jQj53)  
+
+
+# Exercice obligatoire   
 
 ## Mise en situation
 
@@ -18,4 +25,4 @@ Chaque actif doit avoir une fiche sous cette forme :
 
 ## Modèle à utiliser
 
-[Voici le modèle à utiliser pour le travail](modele-classification-actifs.xlsx).
+[Voici le modèle à utiliser pour l'exercice](modele-classification-actifs.xlsx).

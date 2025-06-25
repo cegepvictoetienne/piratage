@@ -1,5 +1,8 @@
 # Reconnaissance passive
 
+# Quiz sur la théorie  
+[Petit quiz sur la reconnaissance passive](https://forms.office.com/r/7qNdDYPMpc)  
+
 # Exercice obligatoire  
 
 Vous voulez en savoir plus sur votre professeur. Vous connaissez les informations suivantes :  
@@ -51,7 +54,5 @@ Dans Kali, utiliser l'outil `recon-ng`.
 3. Installer et utiliser les différents modules pour la reconnaissance (certificate_transparency, whois_pocs, brute_hosts, recon/hosts-hosts/resolve)  
 4. Générer un rapport en html  
 
-# Quiz sur la théorie  
-[Petit quiz sur la reconnaissance passive](https://forms.office.com/r/7qNdDYPMpc)  
 
 Référence : [Cours 2 - Reconnaissance passive](../lecons/Reconnaissance_passive.md)

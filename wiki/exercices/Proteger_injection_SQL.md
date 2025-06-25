@@ -1,10 +1,14 @@
 # Exercices - Protéger injection SQL
 
+# Quiz sur la théorie   
+
+[Petit quiz sur la protection d'injection SQL](https://forms.office.com/r/9NLyJBkyV3)  
+
+# Exercice obligatoire  
+
 ## Code source  
 
-Le code source de l'application MonMur se trouve sur GitHub Classroom.
-
-Continuez le travail du cours précédent et n'oubliez pas de faire un `commit` à la fin du cours.  
+Le code source de l'application MonMur se trouve dans la VM MonMur.
 
 ## VM contenant l'application Web  
 

@@ -1,10 +1,14 @@
 # Exercices - Chiffrement
 
+# Quiz sur la théorie   
+
+[Petit quiz sur le chiffrement et données sensibles](https://forms.office.com/r/FtLPWPpDSa)  
+
+# Exercice obligatoire  
+
 ## Code source  
 
-Le code source de l'application MonMur se trouve sur GitHub Classroom.
-
-Continuez le travail du cours précédent et n'oubliez pas de faire un `commit` à la fin du cours.  
+Le code source de l'application MonMur se trouve dans la VM MonMur.
 
 ## VM contenant l'application Web  
 

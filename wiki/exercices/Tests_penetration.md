@@ -1,5 +1,11 @@
 # Exercices - Tests de pénétration 
 
+# Quiz sur la théorie   
+
+[Petit quiz sur les tests de pénétration](https://forms.office.com/r/6AiAhEjLid)  
+
+# Exercices obligatoires  
+
 ## Windows XP
 
 Avec Kali et Windows XP :
@@ -21,6 +27,8 @@ Essayez l'utilisation de Meterpreter :
 7. Ouvrez un shell
 
 
+# Exercices optionels  
+
 ## Metasploitable
 
 La section de Metasploitable requiert un peu de recherche. Voyez ceci comme un défi :
@@ -37,6 +45,6 @@ Défi 3 - Tomcat, port 8180
 
 Indices : module metasploit (scanner)
 
-Ultime Défi (optionnel) - utiliser nfs pour se donner accès à ssh
+Ultime Défi (avancé) - utiliser nfs pour se donner accès à ssh
 
 Indices : nsf-common, showmount, mount, ssh-keygen

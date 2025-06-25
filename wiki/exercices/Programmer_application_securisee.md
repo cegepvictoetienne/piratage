@@ -1,15 +1,14 @@
 # Exercices - Sécuriser une application Web - Première partie
 
+# Quiz sur la théorie   
+
+[Petit quiz sur la programmation sécurisée](https://forms.office.com/r/WQ3z1mgvdJ)  
+
+# Exercice obligatoire  
+
 ## Code source  
 
-Le code source de l'application MonMur se trouve sur GitHub Classroom.
-
-Connectez-vous et consultez le projet : [Projet du cours de Piratage Éthique](https://classroom.github.com/a/0GA0DBRl)  
-
-!!! figure "Choisissez votre nom dans la liste"  
-    ![22-github-classroom](../images/2020/08/22-github-classroom.png)  
-
-Vous utiliserez GitHub pour les prochains cours. Veuillez faire un `commit` à la fin de chaque classe. Le projet est à remettre à la fin de la session.  
+Le code source de l'application MonMur se trouve dans la VM MonMur.
 
 ## VM contenant l'application Web  
 

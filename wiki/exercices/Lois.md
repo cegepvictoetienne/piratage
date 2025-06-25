@@ -1,5 +1,10 @@
 # Exercice sur les lois
 
+# Quiz sur la théorie 
+
+[Petit quiz sur la loi](https://forms.office.com/r/exFTCptnPy)  
+
+
 # Droit à la déconnexion
 
 En équipe de 4 étudiants, consultez le document de la loi [Ontario - Disconnecting from work](https://www.ontario.ca/document/your-guide-employment-standards-act-0/written-policy-disconnecting-from-work) et répondez aux questions suivantes :  

@@ -1,5 +1,12 @@
 # Exercices - Pare-feu
 
+
+# Quiz sur la théorie   
+
+[Petit quiz sur les pare-feux](https://forms.office.com/r/kGciDMVBy8)
+
+
+# Exercices obligatoires  
 ## Pare-feu Linux
 
 Les exercices suivants utiliseront les VM de Kali et Metasploitable.
@@ -42,6 +49,8 @@ Avec Kali, balayez les ports de Metasploitable.
 
 Notez les ports ouverts.
 
+
+# Exercices optionnels  
 ## Pare-feu Windows
 
 Les exercices suivants utiliseront les VM de Kali et Windows XP.
