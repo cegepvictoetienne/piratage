@@ -161,6 +161,14 @@ Clé secrète : `TROIS`
 EXRUAESPS
 </details>
 
+## 4. Envoyer un message chiffré à l'enseignant  
+
+1. Importez la clé publique de l'enseignant dans votre trousseau gpg. [clé publique](../donnees/cle.gpg)  courriel : rivard.etienne@cegepvicto.ca  
+2. Créez un fichier texte avec votre nom, votre numéro de DA et la date du jour.  
+3. Chiffrez ce fichier texte avec la clé publique.  
+4. Envoyez le fichier chiffré à l'enseignant par courriel.  
+
+
 # Exercice optionnel
 
 ## 4. Transposition sans clé

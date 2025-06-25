@@ -33,6 +33,12 @@ Avec Kali, balayez les ports de Metasploitable.
 
 Notez les ports ouverts.
 
+### Utilisation de OpenVAS
+
+Exécutez un balayage avec OpenVAS pour Metasploitable.
+
+Une fois le balayage terminé, que remarquez-vous?
+
 ### Effacer une règle
 
 Effacez la règle pour le port Telnet.

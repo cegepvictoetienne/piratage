@@ -88,7 +88,19 @@ Pouvez-vous retrouver dans la capture de Wireshark le mot de passe saisi?
 
 Pouvez-vous expliquer pourquoi le code utilisateur entré est écrit dans la capture comme `mmssffaaddmmiinn`?  
 
-## 6 - MySQL (Avancé seulement)  
+## 6 - OpenVAS
+
+Démarrer la capture dans Wireshark.
+
+Dans la VM Kali, démarrez un balayage avec OpenVAS.
+
+Attendez quelques minutes...
+
+Arrêtez la capture dans Wireshark.
+
+Quels sont les protocoles utilisés?
+
+## 7 - MySQL (Avancé seulement)  
 
 Démarrer la capture dans Wireshark.
 
