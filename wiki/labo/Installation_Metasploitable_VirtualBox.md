@@ -1,10 +1,10 @@
 # Installation de Metasploitable dans VirtualBox
 
-Aller à la page de téléchargement de Metasploitable :
+Télécharger le vmdk de Windows XP via la page de téléchargement :
 
-[Metasploitable Download](https://sourceforge.net/projects/metasploitable/)
+[Page de téléchargement](https://cegepvicto.sharepoint.com/:u:/s/Piratageethique/EVrPSZtUtX5KleUH_veBYQMBupRliViJ5GykQql_LJALmQ?e=1R31sI)
 
-Télécharger le ZIP. Extraire les fichiers du zip.
+Télécharger le ZIP. **Extraire** les fichiers du zip.
 
 Copier le fichier **Metasploitable.vmdk** dans votre dossier VirtualBox.
 

@@ -1,10 +1,8 @@
 # Installation de MonMur dans VirtualBox
 
-Télécharger le OVA de MonMur :
+Télécharger le OVA de MonMur via la page de téléchargement :
 
-[OVA de MonMur - Google Drive du cours](https://drive.google.com/file/d/1ssTb2e8cICyXSVvO6zNFBeA50VgTJgmY/view?usp=sharing).
-
-[UTM de MonMur (Mac M1)](https://cegepvicto.sharepoint.com/:u:/s/guidemac/Ee6cto2cbrhEveYc24FuxCgBcYIB6wZtdfDH1SFwTKiYbg?e=7hb77g)
+[Page de téléchargement](https://cegepvicto.sharepoint.com/:u:/s/Piratageethique/EVrPSZtUtX5KleUH_veBYQMBupRliViJ5GykQql_LJALmQ?e=1R31sI)
 
 Configurations de VirtualBox :
 

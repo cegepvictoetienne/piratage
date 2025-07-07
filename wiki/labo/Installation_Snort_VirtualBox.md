@@ -1,10 +1,8 @@
 # Installation de Snort dans VirtualBox
 
-Télécharger le OVA de Snort :
+Télécharger le OVA de Snort via la page de téléchargement :
 
-[OVA de Snort](https://drive.google.com/file/d/1b3OFpO_63eMTtQkV9thmRnaq6WJgVCIF/view?usp=sharing)  
-
-[UTM de Snort - Pour Mac M1](https://cegepvicto.sharepoint.com/:u:/s/guidemac/EeOQjqyumaFLuL4_fMGUCIkB263-Na_v8W8EjLOYWCcgfw?e=h009ft)   
+[Page de téléchargement](https://cegepvicto.sharepoint.com/:u:/s/Piratageethique/EVrPSZtUtX5KleUH_veBYQMBupRliViJ5GykQql_LJALmQ?e=1R31sI)
 
 Configurations de VirtualBox :
 

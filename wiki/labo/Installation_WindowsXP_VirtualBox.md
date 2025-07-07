@@ -1,8 +1,8 @@
 # Installation de Windows XP dans VirtualBox
 
-Télécharger le OVA de Windows XP :
+Télécharger le OVA de Windows XP via la page de téléchargement :
 
-[OVA de Windows XP - Dans le Teams du groupe -> Fichiers -> Support de cours](https://cegepvicto.sharepoint.com/:u:/s/Section_31421/ESIqO9b4wHpNvmMj_ZFYxNYBSI3lK5C1MA60iqyJMoI-KQ?e=Ck25lX)
+[Page de téléchargement](https://cegepvicto.sharepoint.com/:u:/s/Piratageethique/EVrPSZtUtX5KleUH_veBYQMBupRliViJ5GykQql_LJALmQ?e=1R31sI)
 
 Configurations de VirtualBox :
 
