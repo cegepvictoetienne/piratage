@@ -1,0 +1,2246 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Étienne Rivard">
+      
+      
+        <link rel="canonical" href="https://piratage.kerzo.ca/lecons/Inventaire_Actifs/">
+      
+      
+        <link rel="prev" href="../Pare_feu/">
+      
+      
+        <link rel="next" href="../Vulnerabilites_Web/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Inventaire d'actifs - Cours de piratage éthique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-YL9WG21ZB6"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-YL9WG21ZB6",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-YL9WG21ZB6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inventaire-dactifs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Cours de piratage éthique" class="md-header__button md-logo" aria-label="Cours de piratage éthique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cours de piratage éthique
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inventaire d'actifs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours de piratage éthique" class="md-nav__button md-logo" aria-label="Cours de piratage éthique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cours de piratage éthique
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Page principale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../horaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Horaire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Leçons
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Leçons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mots_de_passe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mots de passe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reconnaissance_passive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reconnaissance passive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reconnaissance_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reconnaissance active
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ecoute_reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Écoute du réseau
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gestion_de_risques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion de risques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Intro_Metasploit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction à Metasploit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Strategies_sauvegarde/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stratégies de sauvegarde
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pare_feu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pare-feux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Inventaire d'actifs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventaire d'actifs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-dactifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types d'actifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification-dactifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification d'actifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proprietaire-dactifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétaire d'actifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dossier-de-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dossier de sécurité
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils-de-decouverte-dinventaire-dactifs-sur-le-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outils de découverte d'inventaire d'actifs sur le réseau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testez-vos-connaissances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testez vos connaissances
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vulnerabilites_Web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vulnérabilités Web
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Injection_SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Injections SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cryptographie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cryptographie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Penetration_reseau_sans_fils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pénétration de réseaux sans-fils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tests_penetration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests de pénétration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Detection_intrusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Détection d'intrusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lois/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lois
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Antivirus_et_PDF_malicieux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Antivirus et PDF malicieux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hameconnage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hameçonnage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Securiser_Apache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sécuriser serveur Apache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmer_application_securisee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmer application sécurisée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Protection_Injection_SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protection injection SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chiffrement_et_donnees_sensibles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chiffrement et données sensibles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CacherCodeMalicieux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cacher du code malicieux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Attaque_Uber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attaque de Uber
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exercices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Exercices_Laboratoire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bâtir le laboratoire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/reconnaissance_passive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reconnaissance passive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Reconnaissance_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reconnaissance active
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Ecoute_reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Écoute du réseau
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Gestion_de_risques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion du risque
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Intro_Metasploit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro à Metasploit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/dossier_securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dossier de sécurité
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/strategie_sauvegarde/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stratégie de sauvegarde
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Pare_feu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pare-feux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/classification_actifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classification d'actifs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Vulnerabilites_Web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vulnérabilités Web
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Injection_SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Injections SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Cryptographie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cryptographie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Penetration_reseau_sans_fils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pénétration réseau sans-fils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Tests_penetration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests de pénétration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Detection_intrusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Détection d'intrusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Lois/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lois
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/PDF_Malicieux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PDF Malicieux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Hameconnage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hameçonnage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Securiser_Apache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sécuriser serveur Apache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Programmer_application_securisee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmer application sécurisée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Proteger_injection_SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protection injection SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/Chiffrement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chiffrement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Labo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Labo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_Kali_VirtualBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kali
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/installation_openvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenVAS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_Metasploitable_VirtualBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metasploitable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_WindowsXP_VirtualBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows XP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_Gogo_VirtualBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gogo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_DunderMifflin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dundermifflin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_Snort_VirtualBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Snort
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/Installation_MonMur_VirtualBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MonMur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/capturer_trafic_virtualbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Capturer le trafic dans VirtualBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labo/kali_demarrer_bd_postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Démarrer PostGreSQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Évaluations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Évaluations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluations/evaluation_sommative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Évaluation sommative
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluations/examen_mi_session/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen mi-session
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluations/Hack_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack Lab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-dactifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types d'actifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification-dactifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification d'actifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proprietaire-dactifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétaire d'actifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dossier-de-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dossier de sécurité
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils-de-decouverte-dinventaire-dactifs-sur-le-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outils de découverte d'inventaire d'actifs sur le réseau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testez-vos-connaissances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testez vos connaissances
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inventaire-dactifs">Inventaire d'actifs</h1>
+<h2 id="types-dactifs">Types d'actifs</h2>
+<p>Un actif peut être :</p>
+<ul>
+<li>Un ordinateur</li>
+<li>Un serveur</li>
+<li>Une base de données</li>
+<li>Un logiciel</li>
+<li>Un périphérique</li>
+<li>Etc.</li>
+</ul>
+<h2 id="classification-dactifs">Classification d'actifs</h2>
+<p>La classification d'actifs en entreprise peut changer d'une compagnie à l'autre. On rencontre souvent ces classes :</p>
+<ol>
+<li>Public : Réfère à un actif qui peut être consulté par tout le monde, même à l'extérieur de l'entreprise. Par exemple : le site Web de l'entreprise  </li>
+<li>Interne : À usage interne de l'entreprise seulement. Par exemple : Le ERP de l'entreprise.  </li>
+<li>Confidentiel : Pour un usage réservé à certaines personnes dans l'organisation. Par exemple : Les données de paie.  </li>
+</ol>
+<p>La classification aide dans la pratique de cybersécurité pour déterminer les moyens à prendre pour sécuriser les actifs.</p>
+<h2 id="proprietaire-dactifs">Propriétaire d'actifs</h2>
+<p>En entreprise, il est important de déterminer qui est le propriétaire de l'actif. C'est ce dernier qui prendra les décisions selon vos recommandations de sécurité.</p>
+<p>Le propriétaire a la responsabilité de :</p>
+<ul>
+<li>Classifier l'actif  </li>
+<li>Déterminer la politique d'accès de l'actif  </li>
+<li>Déléguer les responsabilités de gestion à un gardien  </li>
+</ul>
+<p>Le gardien (souvent le département TI) a la responsabilité de :  </p>
+<ul>
+<li>Prendre les sauvegardes  </li>
+<li>S'assurer des bons niveaux d'accès  </li>
+<li>Protéger les actifs  </li>
+<li>Ajouter ou retirer des utilisateurs  </li>
+<li>Documenter l'actif  </li>
+</ul>
+<h2 id="dossier-de-securite">Dossier de sécurité</h2>
+<p>Dans le dossier de sécurité d'une entreprise, il y aura une section sur l'inventaire où la liste des actifs et les informations suivantes :<br />
+- Le nom de l'actif<br />
+- Une brève description<br />
+- Le propriétaire de l'actif<br />
+- La classification<br />
+- La fréquence de sauvegarde  </p>
+<p>Ex :  </p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Description</th>
+<th>Propriétaire</th>
+<th>Classification</th>
+<th>Fréquence de sauvegarde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAIE</td>
+<td>Base de données de la paie des employés</td>
+<td>Serge Gagnon, directeur RH</td>
+<td>Confidentiel</td>
+<td>Complet le mercredi soir</td>
+</tr>
+<tr>
+<td>ERP</td>
+<td>Serveur du progiciel de gestion intégrée</td>
+<td>Sandra Houle, vice-présidente</td>
+<td>Interne</td>
+<td>Complet le dimanche, différentiel les autres soirs</td>
+</tr>
+<tr>
+<td>BUREAU</td>
+<td>Serveur de fichiers</td>
+<td>Pierre Michaud, directeur d'usine</td>
+<td>Interne</td>
+<td>Complet le dimanche, différentiel les autres soirs</td>
+</tr>
+<tr>
+<td>WEB</td>
+<td>Site Web de l'entreprise</td>
+<td>Mireille Boucher, directrice des communications</td>
+<td>Public</td>
+<td>Complet le dimanche seulement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="outils-de-decouverte-dinventaire-dactifs-sur-le-reseau">Outils de découverte d'inventaire d'actifs sur le réseau</h2>
+<p>Avoir un inventaire de tout ce qui est connecté sur le réseau de l'entreprise est une nécessité pour un professionnel de la cybersécurité. En effet, il ne faut qu'un actif non protégé pour que le pirate puisse prendre d'assault le réseau interne.  </p>
+<p>Pour être bien protégé, il faut connaître ces informations :  </p>
+<ul>
+<li>Les systèmes d'exploitation, leurs versions et leurs niveaux de rustines  </li>
+<li>Les logiciels installés et leurs versions  </li>
+<li>Les aspects matériels tels que le processeur et autres périphériques</li>
+</ul>
+<p>Ce peut être très fastidieux de comptabiliser tout ça à la main et le risque est grand que l'information ne soit pas à jour.</p>
+<p>Pourquoi faut-il savoir tout ça?  <strong>Pour déterminer quel actif est à risque lorsque le fournisseur émet un avis de faille.</strong></p>
+<p>Ex: Le mardi de chaque semaine, Microsoft annonce les nouvelles rustines qui colmatent les trous de sécurité. (<em>Microsoft Patch Tuesday</em>). Avec un inventaire à jour, il est facile de déterminer quel actif doit recevoir la rustine.</p>
+<p>Un outil très connu sur le marché se nomme <strong>LanSweeper</strong>.</p>
+<p>Page principale de LanSweeper :  </p>
+<p><img alt="11-lansweeper-dashboard" src="../../images/2020/06/11-lansweeper-dashboard.png" /></p>
+<p>Page des actifs de LanSweeper :  </p>
+<p><img alt="11-lansweeper-actifs" src="../../images/2020/06/11-lansweeper-actifs.png" /></p>
+<p>Sélectionner les actifs fonctionnant sur Windows :  </p>
+<p><img alt="11-lansweeper-select-windows" src="../../images/2020/06/11-lansweeper-select-windows.png" /></p>
+<p>Le résultat de la sélection :  </p>
+<p><img alt="11-lansweeper-actifs-avec-windows" src="../../images/2020/06/11-lansweeper-actifs-avec-windows.png" /></p>
+<p>Le détail d'un actif :  </p>
+<p><img alt="11-lansweeper-detail-actif" src="../../images/2020/06/11-lansweeper-detail-actif.png" /></p>
+<p>Les logiciels installés :  </p>
+<p><img alt="11-lansweeper-logiciels-installes" src="../../images/2020/06/11-lansweeper-logiciels-installes.png" /></p>
+<p>Le logiciel fait la découverte d'actifs en balayant le réseau :  </p>
+<p><img alt="11-lansweeper-scanning" src="../../images/2020/06/11-lansweeper-scanning.png" /></p>
+<h2 id="testez-vos-connaissances">Testez vos connaissances</h2>
+<p><a href="https://forms.office.com/r/Ybvg5jQj53">Petit quiz sur l'inventaire d'actifs</a>  </p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascript/linktarget.js"></script>
+      
+        <script src="../../javascript/addTranslations.js"></script>
+      
+    
+  </body>
+</html>
