@@ -75,6 +75,7 @@ nav:
   - 'Outils':
       - 'Labo':
           - 'Kali': 'labo/Installation_Kali_VirtualBox.md'
+          - 'OpenVAS': 'labo/installation_openvas.md'
           - 'Metasploitable': 'labo/Installation_Metasploitable_VirtualBox.md'
           - 'Windows XP': 'labo/Installation_WindowsXP_VirtualBox.md'
           - 'Gogo': 'labo/Installation_Gogo_VirtualBox.md'

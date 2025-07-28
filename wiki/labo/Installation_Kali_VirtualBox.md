@@ -30,6 +30,10 @@ Sélectionner la version Virtual Machine pour VirtualBox 64bits.
 
 ## Actions Post-Installation
 
+Mettre à jour apt :  
+
+`sudo apt update`  
+
 Installer les outils VM :  
 
 `sudo apt-get install open-vm-tools`  

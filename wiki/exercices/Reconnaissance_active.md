@@ -23,16 +23,7 @@ Avec Nitko, balayez votre VM Metasploitable.
 
 ## Installation d'OpenVAS (à faire à la maison)
 
-Pour installer OpenVAS :
-
-`sudo apt install openvas`
-
-Pour la configuration initiale :
-
-`sudo gvm-setup`
-
-!!! Warning   
-    Prenez bien soin de prendre en note le mot de passe généré par `gvm-setup`. C'est essentiel pour se connecter au portail d'OpenVAS.  
+[Voir la procédure d'installation.](../labo/installation_openvas.md)  
 
 ## Balayage de vulnérabilités (à faire à la maison)
 
