@@ -66,23 +66,9 @@ OpenVAS est un outil qui détecte toutes les vulnérabilités connues et documen
 
 Pour installer OpenVAS :
 
-`sudo apt install openvas`
-
-Pour la configuration initiale :
-
-`sudo gvm-setup`
-
-Pour démarrer GVM :  
-
-`sudo gvm-start`
-
-!!! important  
-    Lors de la première exécution, veuillez attendre 2 heures pour que la base de données de GVM se génère.    
+[Voir la procédure d'installation.](../labo/installation_openvas.md)  
 
 
-Ouvrir la console web :
-
-https://127.0.0.1:9392/
 
 ### Démarrer un balayage
 
