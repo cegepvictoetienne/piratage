@@ -25,8 +25,7 @@ Quelques outils pour découvrir de l'information sur une entreprise et ses emplo
 Outil  | Utilité    
 --|--
 [LinkedIn](https://www.linkedin.com) | On peut voir facilement la liste des employés d'une entreprise    
-[Registre des entreprise (Québec)](https://www.quebec.ca/entreprises-et-travailleurs-autonomes/obtenir-renseignements-entreprise/recherche-registre-entreprises/acceder-registre-entreprises)  |  Donne de l'information sur l'entreprise, incluant le nom du propriétaire et possiblement des adresses
-[Cadastre du Québec](https://appli.mern.gouv.qc.ca/infolot/) | Consultation du cadastre du Québec  
+[Registre des entreprise (Québec)](https://www.quebec.ca/entreprises-et-travailleurs-autonomes/obtenir-renseignements-entreprise/recherche-registre-entreprises/acceder-registre-entreprises)  |  Donne de l'information sur l'entreprise, incluant le nom du propriétaire et possiblement des adresses 
 [CanLII](https://www.canlii.org/fr/)  |  Tous les documents des tribunaux canadiens  
 [Ancestry](https://www.ancestry.ca)  |  Pour trouver des informations sur les membres de la famille, mariages, divorces, etc.
 

@@ -29,6 +29,8 @@ Trouvez les informations suivantes :
 - Code utilisateur sur GitHub
 - Site de "bookmarks" personnel
 - Instagram du chat de la famille
+- Dernier jeu joué sur son iPhone  
+- Nom du livre écrit par sa soeur  
 
 
 [Inscrivez vos réponses dans ce formulaire](https://forms.office.com/Pages/ResponsePage.aspx?id=JvVsnYGt-EanOqUHqvBs2h4e_CrnfMxFsMr2ZqveBNhURDRTVFZQMVpXRUdYV0JOQzNDUFk3VlpQMi4u)  
