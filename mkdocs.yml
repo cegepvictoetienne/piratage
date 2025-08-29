@@ -20,74 +20,73 @@ extra:
     property: G-YL9WG21ZB6
 
 nav:
-  - 'Page principale': 'index.md'
-  - 'Horaire': 'horaire.md'
-  - 'Leçons':
-      - 'Introduction': 'lecons/Introduction.md'
-      - 'Mots de passe': 'lecons/Mots_de_passe.md'
-      - 'Reconnaissance passive': 'lecons/Reconnaissance_passive.md'
-      - 'Reconnaissance active': 'lecons/Reconnaissance_active.md'
-      - 'Écoute du réseau': 'lecons/Ecoute_reseau.md'
-      - 'Gestion de risques': 'lecons/Gestion_de_risques.md'
-      - 'Introduction à Metasploit': 'lecons/Intro_Metasploit.md'
-      - 'Stratégies de sauvegarde': 'lecons/Strategies_sauvegarde.md'
-      - 'Pare-feux': 'lecons/Pare_feu.md'
-      - "Inventaire d'actifs": 'lecons/Inventaire_Actifs.md'
-      - 'Vulnérabilités Web': 'lecons/Vulnerabilites_Web.md'
-      - 'Injections SQL': 'lecons/Injection_SQL.md'
-      - 'Cryptographie': 'lecons/Cryptographie.md'
-      - 'Pénétration de réseaux sans-fils': 'lecons/Penetration_reseau_sans_fils.md'
-      - 'Tests de pénétration': 'lecons/Tests_penetration.md'
-      - "Détection d'intrusion": 'lecons/Detection_intrusion.md'
-      - 'Lois': 'lecons/Lois.md'
-      - 'Antivirus et PDF malicieux': 'lecons/Antivirus_et_PDF_malicieux.md'
-      - 'Hameçonnage': 'lecons/Hameconnage.md'
-      - 'Sécuriser serveur Apache': 'lecons/Securiser_Apache.md'
-      - 'Programmer application sécurisée': 'lecons/Programmer_application_securisee.md'
-      - 'Protection injection SQL': 'lecons/Protection_Injection_SQL.md'
-      - 'Chiffrement et données sensibles': 'lecons/Chiffrement_et_donnees_sensibles.md'
-      - 'Cacher du code malicieux': 'lecons/CacherCodeMalicieux.md'
-      - 'Attaque de Uber': 'lecons/Attaque_Uber.md'
-  - 'Exercices':
-      - 'Bâtir le laboratoire': 'exercices/Exercices_Laboratoire.md'
-      - 'Reconnaissance passive': 'exercices/reconnaissance_passive.md'
-      - 'Reconnaissance active': 'exercices/Reconnaissance_active.md'
-      - 'Écoute du réseau': 'exercices/Ecoute_reseau.md'
-      - 'Gestion du risque': 'exercices/Gestion_de_risques.md'
-      - 'Intro à Metasploit': 'exercices/Intro_Metasploit.md'
-      - 'Dossier de sécurité': 'exercices/dossier_securite.md'
-      - 'Stratégie de sauvegarde': 'exercices/strategie_sauvegarde.md'
-      - 'Pare-feux': 'exercices/Pare_feu.md'
-      - "Classification d'actifs": 'exercices/classification_actifs.md'
-      - 'Vulnérabilités Web': 'exercices/Vulnerabilites_Web.md'
-      - 'Injections SQL': 'exercices/Injection_SQL.md'
-      - 'Cryptographie': 'exercices/Cryptographie.md'
-      - 'Pénétration réseau sans-fils': 'exercices/Penetration_reseau_sans_fils.md'
-      - 'Tests de pénétration': 'exercices/Tests_penetration.md'
-      - "Détection d'intrusion": 'exercices/Detection_intrusion.md'
-      - 'Lois': 'exercices/Lois.md'
-      - 'PDF Malicieux': 'exercices/PDF_Malicieux.md'
-      - 'Hameçonnage': 'exercices/Hameconnage.md'
-      - 'Sécuriser serveur Apache': 'exercices/Securiser_Apache.md'
-      - 'Programmer application sécurisée': 'exercices/Programmer_application_securisee.md'
-      - 'Protection injection SQL': 'exercices/Proteger_injection_SQL.md'
-      - 'Chiffrement': 'exercices/Chiffrement.md'
-  - 'Outils':
-      - 'Labo':
-          - 'Kali': 'labo/Installation_Kali_VirtualBox.md'
-          - 'OpenVAS': 'labo/installation_openvas.md'
-          - 'Metasploitable': 'labo/Installation_Metasploitable_VirtualBox.md'
-          - 'Windows XP': 'labo/Installation_WindowsXP_VirtualBox.md'
-          - 'Gogo': 'labo/Installation_Gogo_VirtualBox.md'
-          - 'Dundermifflin': 'labo/Installation_DunderMifflin.md'
-          - 'Snort': 'labo/Installation_Snort_VirtualBox.md'
-          - 'MonMur': 'labo/Installation_MonMur_VirtualBox.md'
-          - 'Capturer le trafic dans VirtualBox': 'labo/capturer_trafic_virtualbox.md'
-          - 'Démarrer PostGreSQL': 'labo/kali_demarrer_bd_postgresql.md'
-  - 'Évaluations':
-      - 'Évaluation sommative': 'evaluations/evaluation_sommative.md'
-      - 'Examen mi-session': 'evaluations/examen_mi_session.md'
-      - 'Hack Lab': 'evaluations/Hack_lab.md'
+  - "Page principale": "index.md"
+  - "Horaire": "horaire.md"
+  - "Leçons":
+      - "Introduction": "lecons/Introduction.md"
+      - "Mots de passe": "lecons/Mots_de_passe.md"
+      - "Reconnaissance passive": "lecons/Reconnaissance_passive.md"
+      - "Reconnaissance active": "lecons/Reconnaissance_active.md"
+      - "Écoute du réseau": "lecons/Ecoute_reseau.md"
+      - "Gestion de risques": "lecons/Gestion_de_risques.md"
+      - "Introduction à Metasploit": "lecons/Intro_Metasploit.md"
+      - "Stratégies de sauvegarde": "lecons/Strategies_sauvegarde.md"
+      - "Pare-feux": "lecons/Pare_feu.md"
+      - "Inventaire d'actifs": "lecons/Inventaire_Actifs.md"
+      - "Vulnérabilités Web": "lecons/Vulnerabilites_Web.md"
+      - "Injections SQL": "lecons/Injection_SQL.md"
+      - "Cryptographie": "lecons/Cryptographie.md"
+      - "Pénétration de réseaux sans-fils": "lecons/Penetration_reseau_sans_fils.md"
+      - "Tests de pénétration": "lecons/Tests_penetration.md"
+      - "Détection d'intrusion": "lecons/Detection_intrusion.md"
+      - "Lois": "lecons/Lois.md"
+      - "Antivirus et PDF malicieux": "lecons/Antivirus_et_PDF_malicieux.md"
+      - "Hameçonnage": "lecons/Hameconnage.md"
+      - "Sécuriser serveur Apache": "lecons/Securiser_Apache.md"
+      - "Programmer application sécurisée": "lecons/Programmer_application_securisee.md"
+      - "Protection injection SQL": "lecons/Protection_Injection_SQL.md"
+      - "Chiffrement et données sensibles": "lecons/Chiffrement_et_donnees_sensibles.md"
+      - "Cacher du code malicieux": "lecons/CacherCodeMalicieux.md"
+      - "Attaque de Uber": "lecons/Attaque_Uber.md"
+  - "Exercices":
+      - "Bâtir le laboratoire": "exercices/Exercices_Laboratoire.md"
+      - "Reconnaissance passive": "exercices/reconnaissance_passive.md"
+      - "Reconnaissance active": "exercices/Reconnaissance_active.md"
+      - "Écoute du réseau": "exercices/Ecoute_reseau.md"
+      - "Gestion du risque": "exercices/Gestion_de_risques.md"
+      - "Intro à Metasploit": "exercices/Intro_Metasploit.md"
+      - "Dossier de sécurité": "exercices/dossier_securite.md"
+      - "Stratégie de sauvegarde": "exercices/strategie_sauvegarde.md"
+      - "Pare-feux": "exercices/Pare_feu.md"
+      - "Classification d'actifs": "exercices/classification_actifs.md"
+      - "Vulnérabilités Web": "exercices/Vulnerabilites_Web.md"
+      - "Injections SQL": "exercices/Injection_SQL.md"
+      - "Cryptographie": "exercices/Cryptographie.md"
+      - "Pénétration réseau sans-fils": "exercices/Penetration_reseau_sans_fils.md"
+      - "Tests de pénétration": "exercices/Tests_penetration.md"
+      - "Détection d'intrusion": "exercices/Detection_intrusion.md"
+      - "Lois": "exercices/Lois.md"
+      - "PDF Malicieux": "exercices/PDF_Malicieux.md"
+      - "Hameçonnage": "exercices/Hameconnage.md"
+      - "Sécuriser serveur Apache": "exercices/Securiser_Apache.md"
+      - "Programmer application sécurisée": "exercices/Programmer_application_securisee.md"
+      - "Protection injection SQL": "exercices/Proteger_injection_SQL.md"
+      - "Chiffrement": "exercices/Chiffrement.md"
+  - "Laboratoire":
+      - "Kali": "labo/Installation_Kali_VirtualBox.md"
+      - "OpenVAS": "labo/installation_openvas.md"
+      - "Metasploitable": "labo/Installation_Metasploitable_VirtualBox.md"
+      - "Windows XP": "labo/Installation_WindowsXP_VirtualBox.md"
+      - "Gogo": "labo/Installation_Gogo_VirtualBox.md"
+      - "Dundermifflin": "labo/Installation_DunderMifflin.md"
+      - "Snort": "labo/Installation_Snort_VirtualBox.md"
+      - "MonMur": "labo/Installation_MonMur_VirtualBox.md"
+      - "Capturer le trafic dans VirtualBox": "labo/capturer_trafic_virtualbox.md"
+      - "Démarrer PostGreSQL": "labo/kali_demarrer_bd_postgresql.md"
+  - "Évaluations":
+      - "Évaluation sommative": "evaluations/evaluation_sommative.md"
+      - "Examen mi-session": "evaluations/examen_mi_session.md"
+      - "Hack Lab": "evaluations/Hack_lab.md"
 
 markdown_extensions:
   - admonition
@@ -99,6 +98,6 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-docs_dir: 'wiki'
-site_dir: 'www'
+docs_dir: "wiki"
+site_dir: "www"
 use_directory_urls: True
