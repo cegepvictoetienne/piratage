@@ -17,7 +17,7 @@ Activez les vms : Kali, Windows XP et Metasploitable
 
 ## Balayage de serveur Web
 
-Avec Nitko, balayez votre VM Metasploitable.
+Avec Nikto, balayez votre VM Metasploitable.
 
 # Exercices optionnels  
 

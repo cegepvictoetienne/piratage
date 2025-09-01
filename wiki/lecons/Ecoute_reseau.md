@@ -82,16 +82,16 @@ Exécutons la commande suivante :
     ![04-wireshark-after-nmap](../images/2020/06/04-wireshark-after-nmap.png)
     Disons que ce n'est pas discret!!!
 
-## Nitko
+## Nikto
 
-Qu'arrive-t'il lorsque nous utilisons la commande nitko?
+Qu'arrive-t'il lorsque nous utilisons la commande nikto?
 
 Exécutons la commande suivante :
 
-`nitko -h 192.168.40.7`
+`nikto -h 192.168.40.7`
 
-!!! figure "Résultats de nitko dans Wireshark"
-    ![04-wireshark-nitko](../images/2020/06/04-wireshark-nitko.png)
+!!! figure "Résultats de nikto dans Wireshark"
+    ![04-wireshark-nikto](../images/2020/06/04-wireshark-nikto.png)
     Impossible de passer inaperçu!
 
 ## Protocoles insécures
