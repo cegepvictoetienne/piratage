@@ -3,6 +3,8 @@ site_author: Étienne Rivard
 site_url: https://piratage.kerzo.ca
 theme:
   name: material
+  logo: images/logo.png
+  favicon: images/favicon.png
 
 plugins:
   - search
