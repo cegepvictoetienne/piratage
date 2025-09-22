@@ -215,6 +215,20 @@ De plus, n’oubliez pas que chaque demande de désabonnement doit être traité
 
 [Pour plus de détails](https://www.combattrelepourriel.gc.ca/eic/site/030.nsf/fra/accueil)  
 
+## Facturation obligatoire dans le secteur de la restauration
+
+Certaines lois ont des impacts sur la mise en place de systèmes informatiques. Exemple intéressant, la loi sur la facturation obligatoire dans le secteur de la restauration, qui requiert l'utilisation d'un module d'enregistrement des ventes (MEV). Ce module créé un code QR sur chaque facture qui en revanche pointe sur un site gouvernemental.
+
+Voici un exemple de facture respectant la loi :  
+
+![Facture McDonalds](../images/facture_mcdo.png)  
+
+Voici la page pointée par le code QR :  
+
+![Site MEV](../images/site_gouvernement_mev.png)
+
+[Site MEV pour la facture](https://qr.mev-web.ca/?f=m4P7xFLCrR4h%2FIHtCQGoqvfJfdsdIlS2yoA6HkLk%2BQ%2F4Totkukvft5liR9ulFDleqxhv3Zkp4aorYQ7PpX37%2Fd9hucpm5WCNfQoiE4MQftS9tB8hvJnBEpvxsx4H1s4tHAQjYbK%2BFfGcC0ifkfDKnQL190jXLs1waGHrPvKNiAgvEH3WQzno6Tn425PtdoD6TXyBaYx3efxQ9q%2BUljiDs3nyex0riPIa8UNO4lAcfzdZWclv8S9EVdNfCVu8H%2FTpbHBkaULgk3z%2FkSNd%2B2Uq3slBIVnpixsxjNOq%2BK3VL8Hs%2Fr0k56fajR3cRJMIRGTTwEXqQ5vdUDt83kTFFyLO8%2FAaiPds1ZLWMggxEHAxT6Byhw6%2BqWwWKds0jgcJhrgWRvZJ%2FR05ME8PyN4OWh1f6y3FsvAZ1AZ2HG7FOeozrK0loKgW4iU%2BtqATtaEyW34EuZ%2Bj6i5iSzhudbeCMct4rWyiaRhEqhtYi06%2BInYvMPfoTCyAr%2F%2FxUMeD2U3mi8m7)  
+
 
 ## Testez vos connaissances  
 
