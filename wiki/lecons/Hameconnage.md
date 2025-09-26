@@ -4,6 +4,9 @@
 
 L’hameçonnage est une forme de fraude par laquelle des personnes malintentionnées utilisent de faux courriels, textos ou appels pour amener des utilisateurs à divulguer des renseignements sensibles ou à télécharger un logiciel malveillant.  
 
+## Cas réel de fraude par hameçonnage, vécu au Cégep de Victoriaville  
+
+![Hameconnage-fraude-paie](../images/fraude-paie-specimen-cheque.png)  
 
 ## Comment détecter un courriel d'hameçonnage  
 
