@@ -25,8 +25,8 @@ Semaine|Cours|Date|Sujet|Exercice
 11|22|2025-11-14 15:15:00|[Détection d'intrusion](lecons/Detection_intrusion.md)       |[Détection d'intrusion](exercices/Detection_intrusion.md)
 12|23|2025-11-18 14:15:00|[Sécuriser serveur Apache](lecons/Securiser_Apache.md)|[Sécuriser serveur Apache](exercices/Securiser_Apache.md)
 12|24|2025-11-21 15:15:00|Examen mi-session   |
-13|25|2025-11-25 14:15:00|[Programmer application sécurisée](lecons/Programmer_application_securisee.md) <br/> [Protection injection SQL](lecons/Protection_Injection_SQL.md)|[Programmation](exercices/Programmer_application_securisee.md) <br/>[Protection injection SQL](exercices/Proteger_injection_SQL.md)
-13|26|2025-11-28 15:15:00|[Chiffrement et données sensibles](lecons/Chiffrement_et_donnees_sensibles.md)|[Chiffrement](exercices/Chiffrement.md) 
+13|25|2025-11-25 14:15:00|[Programmer application sécurisée](lecons/Programmer_application_securisee.md) <br/> [Protection injection SQL](lecons/Protection_Injection_SQL.md) <br/>[Chiffrement et données sensibles](lecons/Chiffrement_et_donnees_sensibles.md)|[Programmation](exercices/Programmer_application_securisee.md) <br/>[Protection injection SQL](exercices/Proteger_injection_SQL.md) <br/>[Chiffrement](exercices/Chiffrement.md) 
+13|26|2025-11-28 15:15:00|Terminer MonMur|Terminer MonMur
 14|27|2025-12-02 14:15:00|Terminer MonMur|Terminer MonMur
 14|28|2025-12-05 15:15:00|Terminer MonMur|Terminer MonMur
 15|29|2025-12-09 14:15:00|Examen final - Première partie|Examen final - Première partie
