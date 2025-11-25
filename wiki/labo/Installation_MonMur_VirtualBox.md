@@ -2,7 +2,7 @@
 
 Télécharger le OVA de MonMur via la page de téléchargement :
 
-[Page de téléchargement](https://cegepvicto.sharepoint.com/:u:/s/Piratageethique/EVrPSZtUtX5KleUH_veBYQMBupRliViJ5GykQql_LJALmQ?e=1R31sI)
+[Page de téléchargement](https://cegepvicto.sharepoint.com/sites/Piratageethique/Documents%20partages/Forms/AllItems.aspx?id=%2Fsites%2FPiratageethique%2FDocuments%20partages%2FVM&viewid=28158d5b%2Dd870%2D4d75%2D9721%2D77bd58ef9523)
 
 Configurations de VirtualBox :
 
