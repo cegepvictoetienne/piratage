@@ -2365,7 +2365,7 @@ Feel good! Feel good! (All night)
 &amp;lt;/FilesMatch&gt;
 </code></pre></div>
 <p>Corrigeons la configuration (le <strong>$</strong> à la fin du regex indique que c'est à la fin du nom du fichier, donc .php accepté, .php.jpg ne l'est pas.):  </p>
-<div class="highlight"><pre><span></span><code>&amp;lt;FilesMatch &quot;.+\.ph(ar|p|tml$)&quot;&gt;
+<div class="highlight"><pre><span></span><code>&amp;lt;FilesMatch &quot;.+\.ph(ar|p|tml)$&quot;&gt;
     SetHandler application/x-httpd-php
 &amp;lt;/FilesMatch&gt;
 &amp;lt;FilesMatch &quot;.+\.phps$&quot;&gt;
