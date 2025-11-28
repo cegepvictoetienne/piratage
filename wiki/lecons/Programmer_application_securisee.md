@@ -340,7 +340,7 @@ La magie de ceci est une configuration du serveur qui permet d'exécuter tout sc
 Corrigeons la configuration (le __$__ à la fin du regex indique que c'est à la fin du nom du fichier, donc .php accepté, .php.jpg ne l'est pas.):  
 
 ```
-&lt;FilesMatch ".+\.ph(ar|p|tml$)">
+&lt;FilesMatch ".+\.ph(ar|p|tml)$">
     SetHandler application/x-httpd-php
 &lt;/FilesMatch>
 &lt;FilesMatch ".+\.phps$">
