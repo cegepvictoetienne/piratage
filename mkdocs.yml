@@ -89,6 +89,7 @@ nav:
       - "Évaluation sommative": "evaluations/evaluation_sommative.md"
       - "Examen mi-session": "evaluations/examen_mi_session.md"
       - "Hack Lab": "evaluations/Hack_lab.md"
+  - "Déclaration de l'utilisation de l'IA": "declaration-ia.md"
 
 markdown_extensions:
   - admonition
