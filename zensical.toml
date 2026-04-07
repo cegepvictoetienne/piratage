@@ -80,10 +80,11 @@ nav = [
   {"Déclaration de l'utilisation de l'IA" = "declaration-ia.md"},
 ]
 
-extra_css = ["css/all.css", "css/extra.css"]
+extra_css = ["stylesheets/all.css", "stylesheets/extra.css"]
 
 [project.theme]
 name = "material"
+custom_dir = "overrides"
 logo = "images/logo.png"
 favicon = "favicon.ico"
 language = "fr"
@@ -105,10 +106,6 @@ features = [
   "navigation.tracking",
   "search.highlight",
 ]
-
-[project.theme.font]
-text = "Space Grotesk"
-code = "JetBrains Mono"
 
 [[project.theme.palette]]
 scheme = "default"
