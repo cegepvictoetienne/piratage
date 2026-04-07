@@ -85,7 +85,7 @@ extra_css = ["css/all.css", "css/extra.css"]
 [project.theme]
 name = "material"
 logo = "images/logo.png"
-favicon = "images/favicon.png"
+favicon = "favicon.ico"
 language = "fr"
 features = [
   "content.code.annotate",

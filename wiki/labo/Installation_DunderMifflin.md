@@ -2,7 +2,7 @@
 
 Télécharger le OVA de Dunder Mifflin via la page de téléchargement :
 
-[Page de téléchargement](https://cegepvicto.sharepoint.com/:u:/s/Piratageethique/EQ-cO9uWo1VLo23fNF-zS2cB4kbAUjZnMOpU1ZJlE9n2HA?e=vSv8Sf)
+[Page de téléchargement](https://cegepvicto.sharepoint.com/sites/Piratageethique/Documents%20partages/Forms/AllItems.aspx?id=%2Fsites%2FPiratageethique%2FDocuments%20partages%2FVM&viewid=28158d5b-d870-4d75-9721-77bd58ef9523)
 
 Configurations de VirtualBox :
 
