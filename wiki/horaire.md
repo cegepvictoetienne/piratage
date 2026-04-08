@@ -1,4 +1,4 @@
-# Horaire du cours de piratage éthique
+# Horaire
 Semaine|Cours|Date|Sujet|Exercice
 --|--|--|--|--
 1|1|2025-08-22 15:15:00|[Introduction](lecons/Introduction.md) <br/>[Mots de passe](lecons/Mots_de_passe.md)            |[Bâtir le laboratoire](exercices/Exercices_Laboratoire.md)
