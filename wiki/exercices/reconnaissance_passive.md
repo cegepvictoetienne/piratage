@@ -15,9 +15,6 @@ Trouvez les informations suivantes :
 - Noms des membres de sa famille  
 - Adresse civique en 2015  
 - Adresse civique en 2020  
-- Page de la maison modèle correspondant à l'adresse civique en 2020
-- Numéro de téléphone
-- Année de construction de sa maison actuelle (la même qu'en 2020)  
 - Plus récent diplôme obtenu
 - Endroit où travaille son épouse
 - Endroit où travaille son fils
@@ -29,7 +26,7 @@ Trouvez les informations suivantes :
 - Code utilisateur sur GitHub
 - Site de "bookmarks" personnel
 - Instagram du chat de la famille
-- Dernier jeu joué sur son iPhone  
+- Quel jeu il a terminé complètement en 2026  
 - Nom du livre écrit par sa soeur  
 
 
