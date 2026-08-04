@@ -29,6 +29,48 @@ Outil  | Utilité
 [CanLII](https://www.canlii.org/fr/)  |  Tous les documents des tribunaux canadiens  
 [Ancestry](https://www.ancestry.ca)  |  Pour trouver des informations sur les membres de la famille, mariages, divorces, etc.
 
+## Medias sociaux  
+
+[Social Searcher](https://www.social-searcher.com)  
+
+## Bug Me Not  
+
+Pas un site de recherche en soi, mais permet de trouver des codes utilisateurs pour certains sites qui oblige des logins pour utiliser leurs services. 
+
+[Bug Me Not](https://bugmenot.com/)  
+
+## Outil de recherche 
+
+Voici un outil de recherche pour diverses communautés : 
+
+[Intel Techniques](https://inteltechniques.com/tools/Communities.html)  
+
+## Mots de passe et sites utilisés par un utilisateur  
+
+[DeHashed](https://dehashed.com/)  
+[Have I Been Pwned](https://haveibeenpwned.com/)  
+[LeakPeak - mots de passe partiels](https://leakpeek.com/)  
+[BreachDirectory](https://breachdirectory.org/)  Essayez avec test@email.com  
+[Outil pour décrypter MD5 et SHA1](https://md5decrypt.net/en/Sha1/)  
+
+## Outils pour vérifier si un courriel existe et est valide  
+
+[Hunter Verify](https://hunter.io/verify/etienne@kerzo.ca)  
+
+## Outil pour vérifier si un server coule des fichiers qu'il ne devrait pas  
+
+[Leakix](https://leakix.net/)  
+
+## Outil de recherche général  
+
+[IntelligenceX](https://intelx.io/)  
+
+## Ordinateurs infectés?  
+
+Outil de recherche pour voir si une entreprise a eu une cyber attaque :  
+
+[HudsonRock](https://www.hudsonrock.com/threat-intelligence-cybercrime-tools)  
+
 ## Recherche de sous-domaines
 
 Souvent, les sous-domaines sont des serveurs dans la DMZ de l’entreprise, bons points d’entrées dans le réseau.
@@ -39,124 +81,7 @@ Outils utilisés :
 
 [NMMapper's Subdomain Finder](https://www.nmmapper.com/sys/tools/subdomainfinder/)
 
-## Recherche par certificats émis
-
-Pour trouver l'adresse IP du nom de domaine :
-
-`nslookup aeti.cegepvicto.ca`
-
-Pour trouver de l'information sur le propriétaire de l'adresse IP :
-
-`whois 206.167.10.37`
-
-Pour avoir plus d'information, censys.io peut aider :
-
-[censys.io search](https://censys.io/ipv4)
-
-## SpiderFoot
-
-SpiderFoot est un outil qui automatise la reconnaissance passive. Pour l'utiliser :
-
-`cd /usr/share/spiderfoot`
-
-`python3 ./sf.py -l 127.0.0.1:5009`
-
-Ouvrir le fureteur de Kali à cette adresse : http://127.0.0.1:5009
-
-## Recon-ng
-
-Recon-ng est une plateforme modulaire pour la reconnaissance. Basée sur les mêmes principes que MetaSploit, cet plateforme regroupe beaucoup d'outils pour aider à faire de la reconnaissance.
-
-Pour démarrer :
-
-`recon-ng`
-
-L'outil recueille ses résultats dans des espaces de travail. Pour créer un espace, par exemple pour le cégep :
-
-`workspaces create cegep`
-
-la commande **db** permet d'interagir avec la base de données de l'espace de travail. Par exemple, pour ajouter le domaine du cégep :
-
-`db insert domains`
-
-Renseigner les champs :
-
-`domain (TEXT) : cegepvicto.ca`
-
-`Note (TEXT) : Cégep de Victoriaville`
-
-Ajouter le cégep comme compagnie :
-
-`db insert companies`
-
-Renseigner les champs :
-
-`company (TEXT) : Cegep de Victoriaville`
-
-
-Les modules de recon-ng sont accessibles via le marketplace.
-
-Pour rechercher un module :
-
-`marketplace search whois`
-
-Retourne la liste des modules relatifs aux domaines.
-
-Pour installer un module :
-
-`marketplace install recon/companies-multi/whois_miner`
-
-Pour utiliser un module :
-
-`modules load whois_miner`
-
-Pour avoir de l'information sur le module :
-
-`info`
-
-Commencer par voir la liste des options :
-
-`options list`
-
-Exécuter le module :
-
-`run`
-
-Avec le module whois_miner, la découverte des contacts ajoute les éléments dans la BD. Pour voir la liste des contacts :
-
-`db query select * from contacts`
-
-Pour faire le suivi de notre reconnaissance, utiliser la commande suivante :
-
-`dashboard`
-
-Voici quelques modules intéressants :
-
-- whois_pocs
-- brute_hosts
-- recon/hosts-hosts/resolve
-
-Recon-ng permet de faire des rapports :
-
-Module: reporting/html
-
-## Recherche de surfaces d'attaque en analysant le code source de pages web
-
-Ex: [Site de Christiane](https://christianelagace.com)
-
-Dans le code source, on peut voir :
-
-`wp-content`
-
-C'est un indicatif que le site est fait avec WordPress.
 
 ## Testez vos connaissances  
 
 [Petit quiz sur la reconnaissance passive](https://forms.office.com/r/7qNdDYPMpc)  
-
-## Lectures supplémentaires
-
-[Outils d'intelligence ouverte - OSINT](https://securitytrails.com/blog/osint-tools)  
-[Tutoriel de Recon-ng](https://warroom.rsmus.com/recon-ng-tutorial/)  
-[Autres outils de recherche de sous-domaines](https://securitytrails.com/blog/subdomain-scanner-find-subdomains)   
-[Tutoriel Google Dorks et Hacks](https://myhackingworld.com/google-hacking-and-google-dorking-basics/)   
