@@ -1,5 +1,7 @@
 # Variables
-PYTHON      := python3
+# zensical exige Python >= 3.10 (voir https://pypi.org/project/zensical/) ;
+# le python3 système (Xcode CLT) est souvent en 3.9, d'où cette recherche explicite.
+PYTHON      := $(shell command -v python3.12 || command -v python3.13 || command -v python3.11 || command -v python3.10 || command -v python3)
 VENV        := venv
 VENV_BIN    := $(VENV)/bin
 DOCS_DIR    := wiki
@@ -19,7 +21,11 @@ help:
 
 # --- Installation ---
 $(VENV)/bin/activate:
+	@$(PYTHON) -c 'import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)' || \
+		(echo "Erreur : zensical exige Python >= 3.10, mais $(PYTHON) est en $$($(PYTHON) --version 2>&1)."; \
+		 echo "Installez une version récente (ex. brew install python@3.12) et relancez make."; exit 1)
 	$(PYTHON) -m venv $(VENV)
+	$(VENV_BIN)/pip install --upgrade pip
 	$(VENV_BIN)/pip install -r requirements.txt
 
 install: $(VENV)/bin/activate

@@ -65,6 +65,128 @@ Voici un outil de recherche pour diverses communautés :
 
 [IntelligenceX](https://intelx.io/)  
 
+## Métadonnées dans les images  
+
+Les images ont des métadonnées que l'on nomme EXIF.  
+
+L'outil [ExifTool](https://exiftool.org) permet de lire les données, incluant les données GPS.  
+
+``` console
+exiftool -p '$GPSLatitude#, $GPSLongitude#' image.jpg 
+``` 
+
+Donne les coordonnées GPS en décimales de l'appareil qui a pris la photo.  
+
+Exemple :  
+
+![Voyage](../images/img8221.jpg)  
+
+```
+ExifTool Version Number         : 13.55
+File Name                       : img8221.jpg
+Directory                       : .
+File Size                       : 2000 kB
+File Modification Date/Time     : 2026:08:07 09:41:52-04:00
+File Access Date/Time           : 2026:08:07 09:45:38-04:00
+File Inode Change Date/Time     : 2026:08:07 09:45:36-04:00
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Big-endian (Motorola, MM)
+Make                            : Apple
+Camera Model Name               : iPhone 5
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : 7.0.2
+Modify Date                     : 2013:10:26 12:36:16
+Y Cb Cr Positioning             : Centered
+Exposure Time                   : 1/20
+F Number                        : 2.4
+Exposure Program                : Program AE
+ISO                             : 200
+Exif Version                    : 0221
+Date/Time Original              : 2013:10:26 12:36:16
+Create Date                     : 2013:10:26 12:36:16
+Components Configuration        : Y, Cb, Cr, -
+Shutter Speed Value             : 1/20
+Aperture Value                  : 2.4
+Brightness Value                : 1.180513595
+Metering Mode                   : Multi-segment
+Flash                           : Off, Did not fire
+Focal Length                    : 4.1 mm
+Subject Area                    : 1630 1221 734 440
+Maker Note Version              : 0
+Run Time Scale                  : 1000000000
+Run Time Epoch                  : 0
+Run Time Value                  : 313078813370500
+Run Time Flags                  : Valid
+AE Stable                       : Yes
+AE Target                       : 156
+AE Average                      : 143
+AF Stable                       : Yes
+Sub Sec Time Original           : 542
+Sub Sec Time Digitized          : 542
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 3264
+Exif Image Height               : 2448
+Sensing Method                  : One-chip color area
+Scene Type                      : Directly photographed
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Focal Length In 35mm Format     : 33 mm
+Scene Capture Type              : Standard
+Lens Info                       : 4.12mm f/2.4
+Lens Make                       : Apple
+Lens Model                      : iPhone 5 back camera 4.12mm f/2.4
+GPS Latitude Ref                : North
+GPS Longitude Ref               : West
+GPS Altitude Ref                : Above Sea Level
+GPS Time Stamp                  : 16:36:12.41
+GPS Img Direction Ref           : True North
+GPS Img Direction               : 331.3275109
+Compression                     : JPEG (old-style)
+Thumbnail Offset                : 1254
+Thumbnail Length                : 8994
+Image Width                     : 3264
+Image Height                    : 2448
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Run Time Since Power Up         : 3 days 14:57:59
+Aperture                        : 2.4
+Image Size                      : 3264x2448
+Megapixels                      : 8.0
+Scale Factor To 35 mm Equivalent: 8.0
+Shutter Speed                   : 1/20
+Create Date                     : 2013:10:26 12:36:16.542
+Date/Time Original              : 2013:10:26 12:36:16.542
+Thumbnail Image                 : (Binary data 8994 bytes, use -b option to extract)
+GPS Altitude                    : 64 m Above Sea Level
+GPS Latitude                    : 45 deg 25' 46.48" N
+GPS Longitude                   : 75 deg 42' 30.23" W
+Circle Of Confusion             : 0.004 mm
+Field Of View                   : 57.2 deg
+Focal Length 35mm Equiv         : 4.1 mm (35 mm equivalent: 33.0 mm)
+GPS Position                    : 45 deg 25' 46.48" N, 75 deg 42' 30.23" W
+Hyperfocal Distance             : 1.89 m
+Light Value                     : 5.8
+Lens ID                         : iPhone 5 back camera 4.12mm f/2.4
+``` 
+
+Si on convertit la position GPS en décimales :  
+
+```
+45.4295777777778, -75.7083972222222
+```
+
+[Dans Google Maps](https://www.google.com/maps/place/45°25'46.5%22N+75°42'30.2%22W/@45.4295815,-75.7109721,17z/data=!3m1!4b1!4m4!3m3!8m2!3d45.4295778!4d-75.7083972?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D)  
+
+
 ## Ordinateurs infectés?  
 
 Outil de recherche pour voir si une entreprise a eu une cyber attaque :  

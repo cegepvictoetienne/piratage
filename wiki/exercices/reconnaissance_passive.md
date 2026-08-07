@@ -29,6 +29,10 @@ Trouvez les informations suivantes :
 - Quel jeu il a terminé complètement en 2026  
 - Nom du livre écrit par sa soeur  
 
+Voici une photo de voyage, où étaient-ils ?  
+
+![Photo](../images/img8434.JPG)  
+
 
 [Inscrivez vos réponses dans ce formulaire](https://forms.office.com/Pages/ResponsePage.aspx?id=JvVsnYGt-EanOqUHqvBs2h4e_CrnfMxFsMr2ZqveBNhURDRTVFZQMVpXRUdYV0JOQzNDUFk3VlpQMi4u)  
 
