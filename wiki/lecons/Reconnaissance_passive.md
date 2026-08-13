@@ -57,6 +57,10 @@ Voici un outil de recherche pour diverses communautés :
 
 [Hunter Verify](https://hunter.io/verify/etienne@kerzo.ca)  
 
+## Si vous trouvez un code utilisateur, vérifiez quel média social utilise ce code  
+
+[Username Search](https://instantusername.com)  
+
 ## Outil pour vérifier si un server coule des fichiers qu'il ne devrait pas  
 
 [Leakix](https://leakix.net/)  

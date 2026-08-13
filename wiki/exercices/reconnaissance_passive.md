@@ -28,6 +28,9 @@ Trouvez les informations suivantes :
 - Instagram du chat de la famille
 - Quel jeu il a terminé complètement en 2026  
 - Nom du livre écrit par sa soeur  
+- Ville où sa soeur a participé à un salon du livre comme auteure  
+- Qu'est-ce qu'il y a de commun dans le choix des noms des enfants de sa soeur?  
+- Endroit où travaille son frère  
 
 Voici une photo de voyage, où étaient-ils ?  
 
@@ -38,24 +41,70 @@ Voici une photo de voyage, où étaient-ils ?
 
 # Exercices supplémentaires
 
-Vous êtes dans une équipe de piratage éthique. Votre rôle est de faire la reconnaissance passive pour votre client. Le client est le Cégep de Victoriaville.
+CHALLENGE OSINT • #01 - Tiré d'un forum Discord  
 
-## 1 - Mode manuel
+- Description
 
-Commencer avec les outils manuels. Faire la recherche des sous-domaines avec NMMapper's Subdomain Finder.
+Bien avant que GitHub ne devienne la référence de l'open source, un chercheur en sécurité a publié un script Python capable de collecter des adresses e-mail, sous-domaines et noms d'employés à partir de sources publiques.
 
-Voir si vous pouvez trouver d'autres sous-domaines avec le rapport de Google (Google Certificate Transparency Report).
+Aujourd'hui, cet outil est préinstallé sur Kali Linux, mais son premier hébergement a disparu depuis longtemps.
 
-## 2 - Mode automatique
+Votre mission consiste à remonter jusqu'à son origine et à retrouver la date exacte de sa plus ancienne archive publique.
 
-Dans Kali, utiliser l'outil `recon-ng`.
+━━━━━━━━━━━━━━━━━━
 
-Étapes :  
+Objectifs
 
-1. Créer un espace de travail  
-2. Ajouter le domaine principal à la base de données  
-3. Installer et utiliser les différents modules pour la reconnaissance (certificate_transparency, whois_pocs, brute_hosts, recon/hosts-hosts/resolve)  
-4. Générer un rapport en html  
+- Identifier l'outil.
 
+- Identifier son créateur ainsi que son organisation.
+
+- Retrouver l'adresse e-mail publique historiquement associée au projet (présente dans le code de l'outil).
+
+- Identifier la plateforme d'hébergement d'origine, avant sa migration vers GitHub.
+
+- Retrouver, via la Wayback Machine, la date du plus ancien instantané archivé de cette page.
+
+━━━━━━━━━━━━━━━━━━
+
+Format du flag
+
+OSINT{DD-MM-YYYY}
+
+
+━━━━━━━━━━━━━━━━━━
+
+Sources autorisées
+
+• GitHub
+• Wayback Machine
+• Google Code Archive
+• Moteurs de recherche
+• Dépôts de code publics
+
+━━━━━━━━━━━━━━━━━━
+
+Interdictions
+
+• Contacter le développeur
+• Social Engineering
+• Intrusion ou tentative d'accès non autorisé
+• Utilisation de données privées
+
+━━━━━━━━━━━━━━━━━━
+
+Pistes
+
+• Le nom de l'outil apparaît dans sa bannière ASCII au démarrage.
+>
+• Les anciens forks GitHub conservent parfois le README ou le changelog d'origine.
+>
+• La plateforme d'hébergement historique a été fermée, mais une archive statique existe toujours.
+>
+• La Wayback Machine archive également les pages qui ne sont pas hébergées sur GitHub.
+
+━━━━━━━━━━━━━━━━━━
+
+Bonne enquête, et n'oubliez pas : en OSINT, chaque détail compte. 
 
 Référence : [Cours 2 - Reconnaissance passive](../lecons/Reconnaissance_passive.md)
