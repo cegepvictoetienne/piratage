@@ -29,6 +29,8 @@ Outil  | Utilité
 [CanLII](https://www.canlii.org/fr/)  |  Tous les documents des tribunaux canadiens  
 [Ancestry](https://www.ancestry.ca)  |  Pour trouver des informations sur les membres de la famille, mariages, divorces, etc.
 
+[OSINT Québec - Regroupement d'outils de données ouvertes au Québec](https://osintquebec.profinfo.ca)  
+
 ## Medias sociaux  
 
 [Social Searcher](https://www.social-searcher.com)  

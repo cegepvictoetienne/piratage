@@ -31,13 +31,14 @@ Trouvez les informations suivantes :
 - Ville où sa soeur a participé à un salon du livre comme auteure  
 - Qu'est-ce qu'il y a de commun dans le choix des noms des enfants de sa soeur?  
 - Endroit où travaille son frère  
+- L'année que le professeur et sa famille ont vécu un accident d'auto  
 
 Voici une photo de voyage, où étaient-ils ?  
 
 ![Photo](../images/img8434.JPG)  
 
 
-[Inscrivez vos réponses dans ce formulaire](https://forms.office.com/Pages/ResponsePage.aspx?id=JvVsnYGt-EanOqUHqvBs2h4e_CrnfMxFsMr2ZqveBNhURDRTVFZQMVpXRUdYV0JOQzNDUFk3VlpQMi4u)  
+Faire un document Word avec les réponses et les preuves (impressions d'écran).  
 
 # Exercices supplémentaires
 
