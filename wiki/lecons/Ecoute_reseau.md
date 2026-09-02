@@ -12,10 +12,32 @@ Machine C : Kali
 
 Quand la machine A communique avec la machine B, seulement la machine A et la machine B _voient_ les paquets. Ceux-ci sont invisibles pour la machine C.
 
-Il y a cependant une manière de contourner ceci, pour que Kali puisse _voir_ le trafic des autres VM. C'est le mode _promiscuous_.
+Il y a cependant une manière de contourner ceci, pour que Kali puisse _voir_ le trafic des autres VM. C'est le __arp spoofing__.
 
-!!! figure "Dans les configurations de la VM Kali, dans la section Network, changez le Promiscuous Mode_ à Allow All"
-    ![04-VirtualBox-Promiscuous-Mode](../images/2020/06/04-virtualbox-promiscuous-mode.png)
+## ARP Spoofing  
+
+Un rappel de ce qu'est ARP. Address Resolution Protocol, c'est avec ce protocole que l'adresse IP est convertie en adresse MAC. 
+
+Avec Kali, on peut empoisonner la table ARP des machines victimes pour que leur traffic réseau passent par Kali.
+
+Pour ce faire, il faut configurer Kali pour le renvoi de paquets IP (ip forwarding).  
+
+`sudo sysctl -w net.ipv4.ip_forward=1` 
+
+Ensuite il faut lancer deux instances de arpspoof, pour dire à Windows XP que Kali est Metasploitable et vice versa.  
+
+Première fenêtre de terminal :  
+
+`sudo arpspoof -i eth0 -t <XP_IP> <Metasploitable_IP>` 
+
+Seconde fenêtre de terminal :  
+
+`sudo arpspoof -i eth0 -t <Metasploitable_IP> <XP_IP>` 
+
+
+Ensuite, utiliser Wireshark.  
+
+Petit truc, utilisez le filtre `!(arp)` dans Wireshark pour cacher le spoofing.  
 
 ## Démarrer une écoute du réseau
 
