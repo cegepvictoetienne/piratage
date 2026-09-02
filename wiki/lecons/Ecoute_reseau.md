@@ -35,6 +35,18 @@ Seconde fenêtre de terminal :
 `sudo arpspoof -i eth0 -t <Metasploitable_IP> <XP_IP>` 
 
 
+### Effet de arp spoofing  
+
+
+La table ARP avant le spoofing :  
+
+![avant](../images/arp_avant_spoofing.webp)  
+
+La table ARP après le spoofing :  
+
+![après](../images/arp_apres_spoofing.webp)  
+
+
 Ensuite, utiliser Wireshark.  
 
 Petit truc, utilisez le filtre `!(arp)` dans Wireshark pour cacher le spoofing.  
