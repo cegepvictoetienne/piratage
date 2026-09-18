@@ -8,27 +8,12 @@ Dans Kali, pour démarrer Metasploit, faire la commande suivante :
 
 `msfconsole`
 
-## Architecture de Metasploit
-
-![06-Metasploit-Architecture](../images/2020/06/06-metasploit-architecture.png)
-
-Dans Kali, les packages de Metasploit sont dans le dossier suivant :
-
-`/usr/share/metasploit-framework`
-
-Un dossier en particulier est important, celui des modules :
-
-`/usr/share/metasploit-framework/modules`
-
-Ce dossier contient tous les outils qui peuvent être utilisés pour découvrir des failles, de les exploiter et autres tâches connexes.
-
-Sous modules, il y a ces dossiers :
+Metasploit est modulaire. Voici les différents types modules que vous allez voir dans le cours :  
 
 - Exploits - Pour exploiter les failles d'un système.
 - Auxiliary - Outils comme des balayeurs de ports, sniffers et autres
 - Payloads - Code qui peut être exécuté sur la machine de la victime
-- Encoders - Outils qui transforment les payloads pour qu'ils arrivent à destination correctement
-- Nops - Pour garder un poids du payload consistant
+
 
 ## Commandes de la console
 
