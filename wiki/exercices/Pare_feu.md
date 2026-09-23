@@ -19,7 +19,7 @@ Notez les ports ouverts.
 
 ### Installer le pare-feu sur Metasploitable
 
-Installez UFW sur Metasploitable et activez-le.
+Activez le pare-feu dans Metasploitable.
 
 Avec Kali, balayez les ports de Metasploitable.
 
@@ -33,7 +33,7 @@ Avec Kali, balayez les ports de Metasploitable.
 
 Notez les ports ouverts.
 
-### Utilisation de OpenVAS
+### Utilisation de OpenVAS (si vous l'avez d'installé)
 
 Exécutez un balayage avec OpenVAS pour Metasploitable.
 
