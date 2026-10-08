@@ -24,7 +24,7 @@ Regardons quels services sont actifs sur la cible :
 
 Le port 445 correspond au service SMB. Regardons quel _exploit_ peut être utilisé :
 
-`search smb type:exploit os:windows`  
+`search smb type:exploit platform:windows`  
 
 ![14-search-exploit-smb-windows](../images/2020/06/14-search-exploit-smb-windows.png)
 
