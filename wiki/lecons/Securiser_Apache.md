@@ -60,9 +60,9 @@ Le parcours de la liste de fichiers est une option qui permet d'afficher le cont
 Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire `/etc/apache2/sites-enabled` ou `/etc/apache2/apache2.conf` :  
 
 ```
-&lt;Directory /var/www>
+<Directory /var/www>
 Options -Indexes
-&lt;/Directory>
+</Directory>
 ```
 Redémarrer le serveur.  
 
@@ -96,9 +96,9 @@ Malgré les configurations faites par l'administrateur, les utilisateurs peuvent
 Trouver l'instruction Directory qui représente la racine du site, qui se trouvent dans un des fichiers du répertoire `/etc/apache2/sites-enabled` :  
 
 ```
-&lt;Directory />
+<Directory />
 AllowOverride None  
-&lt;/Directory>
+</Directory>
 ```  
 Redémarrer le serveur.  
 
@@ -111,11 +111,11 @@ Normalement, on peut limiter les méthodes à **GET**, **POST**, **HEAD**.
 Pour toutes les instructions Directory qui se trouvent dans les fichiers du répertoire `/etc/apache2/sites-enabled`  ou `/etc/apache2/apache2.conf` :  
 
 ```
-&lt;Directory /var/www>  
-  &lt;LimitExcept GET POST HEAD>  
+<Directory /var/www>  
+  <LimitExcept GET POST HEAD>  
     deny from all
-  &lt;/LimitExcept>  
-&lt;/Directory>  
+  </LimitExcept>  
+</Directory>  
 ```
 
 Redémarrer le serveur.  
