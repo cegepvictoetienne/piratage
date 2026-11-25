@@ -15,7 +15,7 @@ MonMur est une application qui permet à vos amis d'écrire des petits mots sur 
 ### Permier jet de MonMur  
 
 ```
-&lt;?php
+<?php
 // database.php sert à interagir avec la base de données
 require_once('database.php');
 require_once('commun.php');
@@ -57,39 +57,39 @@ function afficherCommentaires(){
   while($ligne = $resultats->fetch_assoc()){
     $commentaire = trim($ligne["commentaire"]);
     // Remplacer les retour de chariot par l'équivalent html
-    $commentaire = str_replace("\n", '&lt;br/>', $commentaire);
+    $commentaire = str_replace("\n", '<br/>', $commentaire);
     $commentaire_id = $ligne["commentaire_id"];
     $image = $ligne["image"];
     $code_utilisateur = trim($ligne["codeutilisateur"]);
 
     $monmur .= <<<fin
-    &lt;div class="commentaire">
-      &lt;div class="commentaire_entete">
-        &lt;div class="utilisateur">{$code_utilisateur}&lt;/div>
-        &lt;div class="commentaire_id">{$commentaire_id}&lt;/div>
-      &lt;/div>
-      &lt;div class="commentaire_texte">{$commentaire}&lt;/div>
+    <div class="commentaire">
+      <div class="commentaire_entete">
+        <div class="utilisateur">{$code_utilisateur}</div>
+        <div class="commentaire_id">{$commentaire_id}</div>
+      </div>
+      <div class="commentaire_texte">{$commentaire}</div>
     fin;
 
     if(!empty($image)) {
-      $monmur .= "&lt;img src='/images/{$image}'/>";
+      $monmur .= "<img src='/images/{$image}'/>";
     }
 
     // Afficher les actions seulement si c'est l'utilisateur qui est l'auteur
     if($code_utilisateur == utilisateurCourant() && utilisateurCourant() != ANON) {
       $monmur .= <<<fin
-      &lt;div class="commentaire_pied">
-        &lt;div class="commentaire_action">
-          &lt;a href="modifier.php?id={$commentaire_id}">Modifier&lt;/a>
-        &lt;/div>
-        &lt;div class="commentaire_action">
-          &lt;a href="javascript:ConfirmerSupression({$commentaire_id})">Supprimer&lt;/a>
-        &lt;/div>
-      &lt;/div>
+      <div class="commentaire_pied">
+        <div class="commentaire_action">
+          <a href="modifier.php?id={$commentaire_id}">Modifier</a>
+        </div>
+        <div class="commentaire_action">
+          <a href="javascript:ConfirmerSupression({$commentaire_id})">Supprimer</a>
+        </div>
+      </div>
       fin;
     }
 
-    $monmur .= "&lt;/div>";
+    $monmur .= "</div>";
   }
 
   return $monmur;
@@ -129,7 +129,7 @@ Dans votre application, certains choix devrons être faits. Est-ce que l'applica
 Pour enlever le code HTML d'une entrée :  
 
 ```
-$texte_a_nettoyer = "Tu es &lt;em>le&lt;/em> meilleur!";
+$texte_a_nettoyer = "Tu es <em>le</em> meilleur!";
 $texte_propre = strip_tags($texte_a_nettoyer);
 ```
 
@@ -274,7 +274,7 @@ if(mb_strlen($_POST['commentaire']) <= 1000) {
 XSS :  
 
 ```
-&lt;script>alert('Doh!')&lt;/script>
+<script>alert('Doh!')</script>
 ```
 
 Comment corriger :  
@@ -291,9 +291,9 @@ L'application MonMur permet de téléverser des images pour les commentaires. Un
 Téléversons un fichier nommé __liste.php__ :  
 
 ```
-&lt;html>&lt;body>
-&lt;?php echo str_replace("\n", '&lt;br/>',shell_exec("ls /etc/"));?>
-&lt;/body>&lt;/html>
+<html><body>
+<?php echo str_replace("\n", '<br/>',shell_exec("ls /etc/"));?>
+</body></html>
 ```
 
 MonMur copie les images dans le répertoire `/images`.  Donc, on peut maintenant exécuter le code dans la barre d'adresse : `http://192.168.2.222/images/liste.php`  
@@ -321,39 +321,39 @@ Le logiciel accepte sans problème le fichier qui peut être exécuté comme sui
 La magie de ceci est une configuration du serveur qui permet d'exécuter tout script qui a la mention php dans son nom :  
 
 ```
-&lt;FilesMatch ".+\.ph(ar|p|tml)"&gt;
+<FilesMatch ".+\.ph(ar|p|tml)">
     SetHandler application/x-httpd-php
-&lt;/FilesMatch&gt;
-&lt;FilesMatch ".+\.phps">
+</FilesMatch>
+<FilesMatch ".+\.phps">
     SetHandler application/x-httpd-php-source
     # Deny access to raw php sources by default
     # To re-enable it's recommended to enable access to the files
     # only in specific virtual host or directory
     Require all denied
-&lt;/FilesMatch>
+</FilesMatch>
 # Deny access to files without filename (e.g. '.php')
-&lt;FilesMatch "^\.ph(ar|p|ps|tml)">
+<FilesMatch "^\.ph(ar|p|ps|tml)">
     Require all denied
-&lt;/FilesMatch>
+</FilesMatch>
 ```  
 
 Corrigeons la configuration (le __$__ à la fin du regex indique que c'est à la fin du nom du fichier, donc .php accepté, .php.jpg ne l'est pas.):  
 
 ```
-&lt;FilesMatch ".+\.ph(ar|p|tml)$">
+<FilesMatch ".+\.ph(ar|p|tml)$">
     SetHandler application/x-httpd-php
-&lt;/FilesMatch>
-&lt;FilesMatch ".+\.phps$">
+</FilesMatch>
+<FilesMatch ".+\.phps$">
     SetHandler application/x-httpd-php-source
     # Deny access to raw php sources by default
     # To re-enable it's recommended to enable access to the files
     # only in specific virtual host or directory
     Require all denied
-&lt;/FilesMatch>
+</FilesMatch>
 # Deny access to files without filename (e.g. '.php')
-&lt;FilesMatch "^\.ph(ar|p|ps|tml)$">
+<FilesMatch "^\.ph(ar|p|ps|tml)$">
     Require all denied
-&lt;/FilesMatch>
+</FilesMatch>
 
 ```
 

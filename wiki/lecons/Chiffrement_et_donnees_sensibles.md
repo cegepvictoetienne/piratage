@@ -87,7 +87,7 @@ Disons que nous voulons chiffrer les commentaires des utilisateurs dans notre ba
 Tout d'abord la création de la clé de chiffrement dans notre fichier `secret.php` :
 
 ```php
-&lt;?php
+<?php
 define('CLE_CHIFFREMENT', "Latina-Marble-Honda-Speaks-Atomic-Majority-RTnL");
 ?>
 ```
